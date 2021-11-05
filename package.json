@@ -1,0 +1,31 @@
+{
+  "name": "hex-blog",
+  "version": "1.0.0",
+  "private": true,
+  "hexo": {
+    "version": "5.4.0"
+  },
+  "scripts": {
+    "new": "hexo new",
+    "start": "npm run serve",
+    "build": "hexo generate",
+    "serve": "hexo serve"
+  },
+  "dependencies": {
+    "hexo": "^5.4.0",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^4.0.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
+    "hexo-sliding-spoiler": "^1.2.1",
+    "hexo-static-math": "0.1.0",
+    "hexo-theme-next": "^8.3.0"
+  },
+  "devDependencies": {
+    "hexo-cli": "^4.2.0"
+  }
+}
