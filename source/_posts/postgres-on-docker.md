@@ -1,7 +1,7 @@
 ---
 title: 使用docker上的postgres代替本机安装
 date: 2021-11-05 11:08:26
-tags: postgres docker
+tags: [postgres, docker]
 description: 自从有了docker，恨不得把所有软件都搬进去，以保持系统纯净
 ---
 本机安装postgresql后，pgadmin4老是提示版本低，但升级起来却麻烦，不如直接塞到docker里去，更新什么的简单不要太方便。

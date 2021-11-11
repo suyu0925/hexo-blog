@@ -1,7 +1,7 @@
 ---
 title: 在windows上安装redis
 date: 2021-05-31 13:44:59
-tags: redis
+tags: [redis, docker]
 description: 在*nix系统上安装redis通常很简单，既可以从源码编译，也可以从包管理器安装。但在windows上就不同了……
 ---
 redis是个[开源项目](https://github.com/redis/redis)，它在[主页](https://redis.io/download)上提供了从源码编译的安装方法。
