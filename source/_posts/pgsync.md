@@ -63,6 +63,10 @@ SHOW max_replication_slots;
 
 本地安装的默认值是10，阿里云上的RDS是64。
 
+### 阿里云RDS
+
+如使用阿里云RDS，可参考最佳实践相关文档：[开发运维建议](https://www.alibabacloud.com/help/zh/doc-detail/281785.html)和[逻辑订阅](https://www.alibabacloud.com/help/zh/doc-detail/119393.html?spm=a2c63.p38356.0.0.342ffd5a7jqWGy)。
+
 ## [schema](https://pgsync.com/schema/)
 
 [schema](https://pgsync.com/schema/)是核心，在常规使用时，只需要修改schema文件就可以完成所有操作。
@@ -90,3 +94,11 @@ pgsync --config /optional/path/to/schema.json --daemon
 ### 环境变量
 
 在使用python时要注意[环境变量](https://pgsync.com/env-vars/)要否成功设置，可考虑使用[python-dotenv](https://saurabh-kumar.com/python-dotenv/)在一开始就载入。
+
+## 注意事项
+
+打开逻辑订阅后会极大的增加硬盘使用量，一定要监控硬盘使用量，避免硬盘爆掉。
+
+[max_wal_size](https://postgresqlco.nf/doc/en/param/max_wal_size/)只是一个软限制，在高负载的情况下会超出这个值。
+
+在阿里云RDS中，每周的备份会极大的增加wal占用的容量。一个20G硬盘的实例打开逻辑订阅后会在一周内爆掉，推荐值未知，待观察。
