@@ -91,6 +91,8 @@ docker exec -u 0 -it pgadmin4 bash
 
 ### 从host中访问volumes
 
+[docker官方推荐](https://docs.docker.com/storage/volumes/#backup-restore-or-migrate-data-volumes)不要直接从host中访问volumes，如果是需要备份，可以用docker命令，可参见[讨论帖](https://github.com/microsoft/WSL/discussions/4176)。
+
 如果使用的是wsl2 (Ubuntu)，
 
 docker的卷可在host上的`\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\${volume_id}\_data`找到，
