@@ -21,4 +21,5 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 - [npm](http://www.npmmirror.com/)
 - [maven](https://mirrors.163.com/.help/maven.html)
 - [rustup](https://mirrors.tuna.tsinghua.edu.cn/help/rustup/)
+- [crates.io-index.git](https://mirrors.tuna.tsinghua.edu.cn/help/crates.io-index.git/)
 - [docker hub](https://help.aliyun.com/document_detail/60750.html)
