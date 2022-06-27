@@ -47,6 +47,6 @@ ding dev web --targetH5Url http://127.0.0.1:3000
 
 ## 服务端
 
-钉钉官方提供了统一的[SDK]((https://open.dingtalk.com/document/resourcedownload/download-server-sdk)，使用SDK可以便捷地调用[服务端API](https://open.dingtalk.com/document/orgapp-server/api-overview)。
+钉钉官方提供了统一的[SDK](https://open.dingtalk.com/document/resourcedownload/download-server-sdk)，使用SDK可以便捷地调用[服务端API](https://open.dingtalk.com/document/orgapp-server/api-overview)。
 
 [API Explorer](https://open.dingtalk.com/document/resourcedownload/api-explorer)是一款可视化的[API在线调试工具](https://open-dev.dingtalk.com/apiExplorer)，集成了API总览、快速检索、开发文档、可视化调试、同步动态生成可执行SDK Demo代码，功能丰富、简单易用。可以在API Explorer中查看Demo代码，来了解SDK的用法。
