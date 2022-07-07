@@ -37,3 +37,8 @@ tags:
 另一个和语言有关的参数是[**lr**](https://developers.google.com/custom-search/docs/xml_results#searching-for-documents-written-in-specific-languages)，如果指定参数，它会过滤网页内容使用的语言。在[这里](https://developers.google.com/custom-search/docs/xml_results_appendices#language-collection-values)可以找到可用的值。比如搜索简体和繁体中文的网页内容，可以使用`https://google.com/search?hl=zh-CN&lr=lang_zh-TW|lang_zh-CN&c2coff=0`。
 
 综上，我们只需要将搜索引擎的页面改为`https://google.com?hl=zh-CN`，不管使用的代理IP是哪个国家，搜索结果都不会太受影响。
+
+**示例**
+
+比如在Edge浏览器中，我们可以基于[内置的谷歌搜索引擎URL](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#defaultsearchprovidersearchurl)改写为
+`{google:baseURL}search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchboxStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}&hl=zh-CN`
