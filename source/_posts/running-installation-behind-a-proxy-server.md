@@ -15,24 +15,36 @@ description: 即使设置了操作系统的代理，在命令行下也不会默�
 
 但它还不是[标准](https://about.gitlab.com/blog/2021/01/27/we-need-to-talk-no-proxy/)，所以并不是所有的命令行工具都支持。
 
+powershell
+```powershell
+$env:http_proxy="http://127.0.0.1:10809"
+$env:https_proxy="http://127.0.0.1:10809"
+```
+
+linux bash
+```bash
+export http_proxy="http://127.0.0.1:10809"
+export https_proxy="http://127.0.0.1:10809"
+```
+
 ## [npm](https://docs.npmjs.com/cli/v8/using-npm/config#proxy)和[yarn](https://classic.yarnpkg.com/en/docs/cli/config)
 
 使用代理
 ```bash
-$> npm config set proxy http://127.0.0.1:10809
-$> yarn config set https_proxy http://127.0.0.1:10809
+npm config set proxy http://127.0.0.1:10809
+yarn config set https_proxy http://127.0.0.1:10809
 ```
 
 关闭代理
 ```bash
-$> yarn config delete proxy
-$> npm config delete https_proxy
+yarn config delete proxy
+npm config delete https_proxy
 ```
 
 ## [pip](https://pip.pypa.io/en/stable/user_guide/#using-a-proxy-server)
 
 ```bash
-$> pip install --proxy http://127.0.0.1:10809 -r requirements.txt
+pip install --proxy http://127.0.0.1:10809 -r requirements.txt
 ```
 
 ## [curl](https://linux.die.net/man/1/curl)和[Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2)
