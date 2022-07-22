@@ -23,6 +23,10 @@ OpenWrt官方已经给出了指南：[在Virtualbox虚拟机中运行OpenWrt](ht
 
 除了内存部分。OpenWrt推荐的值是128MiB，这有点太少了，后续我们会运行docker，128M绝对不够，这里我推荐2GB。
 
+## OpenWrt国内镜像站
+
+国内有[阿里](https://developer.aliyun.com/mirror/openwrt/)和[上交大](https://mirror.sjtu.edu.cn/openwrt/)两个镜像站任君选择。
+
 ## 语言
 
 如果想将luci显示语言换成中文，安装中文语言包再刷新下页面就好了。后面可以进到“系统”->“系统”->“语言和界面”里切换。
