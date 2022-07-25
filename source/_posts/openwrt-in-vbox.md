@@ -25,7 +25,15 @@ OpenWrt官方已经给出了指南：[在Virtualbox虚拟机中运行OpenWrt](ht
 
 ## OpenWrt国内镜像站
 
-国内有[阿里](https://developer.aliyun.com/mirror/openwrt/)和[上交大](https://mirror.sjtu.edu.cn/openwrt/)两个镜像站任君选择。
+国内有[阿里](https://developer.aliyun.com/mirror/openwrt/)和[上交大](https://mirror.sjtu.edu.cn/openwrt/)两个[官方镜像站](https://openwrt.org/downloads#mirrors)任君选择。
+
+还有[腾讯](https://mirrors.cloud.tencent.com/openwrt/)、[清华](https://mirrors.tuna.tsinghua.edu.cn/help/openwrt/)等非官方的镜像站。
+
+配置源特别简单，修改`/etc/opkg/distfeeds.conf`中的网址就好。
+
+```bash
+sed -i 's_downloads.openwrt.org_mirror.sjtu.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+```
 
 ## 语言
 
@@ -281,3 +289,6 @@ chmod -R 777 /root/aria2
 
 ### docker
 
+### 解锁网易云音乐
+
+见另一篇博文：{% post_link openwrt-unblock-netease-music [OpenWrt]解除网易云音乐播放限制 %}
