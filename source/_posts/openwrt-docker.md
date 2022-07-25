@@ -83,7 +83,7 @@ $> docker info
 WARNING: No swap limit support
 ```
 
-需要注意的是，使用国内源后，latest版本的更新可能不会那么及时，如果需要使用docker hub上的最新版，还得恢复到官方源，使用代理来拉取。
+需要注意的是，使用国内源后，latest版本的更新可能不会那么及时，如果需要使用docker hub上的最新版，还得恢复到官方源，[使用代理](https://docs.docker.com/network/proxy/)来拉取。
 
 2. 创建一个持久化的目录来保存配置和缓存
 
