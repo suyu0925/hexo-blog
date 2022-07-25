@@ -225,6 +225,17 @@ tmpfs                   512.0K         0    512.0K   0% /dev
 
 保存并应用。
 
+这一步就相当于下面的命令：
+
+```bash
+uci set fstab.@mount[-2].enabled='0'
+
+uci set fstab.@mount[-1].target='/'
+uci set fstab.@mount[-1].enabled='1'
+
+uci commit fstab
+```
+
 3. 运行命令迁移根目录
 
 ```bash
