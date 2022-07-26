@@ -303,3 +303,41 @@ chmod -R 777 /root/aria2
 ### 解锁网易云音乐
 
 见另一篇博文：{% post_link openwrt-unblock-netease-music [OpenWrt]解除网易云音乐播放限制 %}
+
+## 宿主机使用虚拟机中的OpenWrt上网
+
+实现宿主机使用虚拟机上网有蛮多路径，我们实现最简单的一种：虚拟机桥接模式。
+
+虚拟机需要设置两块网卡，一块Host Only，一块桥接网卡。其中，
+- Host Only网卡，视为lan。用以连接宿主机。
+- 桥接网卡，视为wlan。用以连接宿主机的上游，通常是路由器。注意宿主机还可能有Hyper-V等虚拟网卡，不要选错了。
+
+在上面[创建虚拟机](https://openwrt.org/zh/docs/guide-user/virtualization/virtualbox-vm#vm%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE)时，多半已经设置了这两个网卡，而且还多出一个`网络地址转换NAT`网卡，需要把NAT网卡先删除掉。
+
+我们的思路是，宿主机使用Host Only网卡连接虚拟机，虚拟机使用桥接网卡连接上游路由器，同时禁掉宿主机到上游路由器的ipv4，迫使网络走仅剩的虚拟机通道。
+
+要实现这点，需要修改宿主机和虚拟机中的Host Only网卡的配置，将网关反过来。
+
+1. 修改虚拟机的lan ip为`192.168.8.1`
+```bash
+uci set network.lan.ipaddr='192.168.8.1'
+uci commit
+reboot
+```
+2. 修改宿主机的`VirtualBox Host-Only Network`的ipv4为`192.168.8.2`，同时网关和dns为`192.168.8.1`
+
+{% asset_img "Host-Only Network.png" "Host-Only Network" %}
+
+3. 禁掉宿主机的以太网ipv4
+
+{% asset_img "ethnet.png" "禁掉宿主机的以太网ipv4" %}
+
+## 开机自启
+
+在`"$ENV:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"`创建一个`vbox.bat`，内容为：
+
+```bat
+VBoxManage startvm OpenWrt --type headless
+```
+
+即可实现开机自启。
