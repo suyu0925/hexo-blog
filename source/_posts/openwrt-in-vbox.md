@@ -265,44 +265,10 @@ tmpfs                   512.0K         0    512.0K   0% /dev
 
 ## 安装软件
 
-### aria2
-
-1. 安装
-
-aria2包括三部分：
-- 内核: aria2
-- web控制台: ariang
-- luci页面: luci-app-aria2。中文语言包，luci-i18n-aria2-zh-cn。
-
-```bash
-opkg install aria2
-opkg install ariang
-opkg install luci-app-aria2
-opkg install luci-i18n-aria2-zh-cn
-```
-
-2. 启用服务
-
-在去控制台启用aria2服务之前，要先确定下载目录存在并且aria2用户有写入权限。
-
-假设下载目录为`/root/aria2`，我们需要先
-
-```bash
-mkdir /root/aria2
-chmod -R 777 /root/aria2
-```
-
-才可以启用aria2，保存并应用，等待并检查aria2服务是否正确启用。
-
-3. 设置
-
-在第一次使用前，需要设置BitTorrent Trackers。可以参考[trackers_best_ip.txt](https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt)，注意要将2个换行符替换成`,`来适配语法。
-
-### docker
-
-### 解锁网易云音乐
-
-见另一篇博文：{% post_link openwrt-unblock-netease-music [OpenWrt]解除网易云音乐播放限制 %}
+- {% post_link openwrt-aria2 [OpenWrt]使用aria2 %}
+- {% post_link openwrt-openclash [OpenWrt]使用OpenClash科学上网 %}
+- {% post_link openwrt-docker [OpenWrt]使用docker %}
+- {% post_link openwrt-unblock-netease-music [OpenWrt]解除网易云音乐播放限制 %}
 
 ## 宿主机使用虚拟机中的OpenWrt上网
 
