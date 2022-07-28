@@ -123,6 +123,12 @@ type = http
 local_ip = 192.168.8.1
 local_port = 80
 custom_domains = luci.frp.yourdomain.com
+
+[web3]
+type = http
+local_ip = 192.168.8.1
+local_port = 6800
+custom_domains = aria2.frp.yourdomain.com
 ```
 
 ### ssh服务
@@ -132,3 +138,21 @@ ssh -oPort=6000 x.x.x.x
 ```
 
 frps在接收到客户端的`remote_port = 6000`后就会代理6000端口，于是可以使用ssh直接登录内网机器。
+
+### ariang
+
+需要修改ariang的rpc地址，把默认的`http://${host}:6800/jsonrpc`改成`http://aria2.frp.yourdomain.com:80/jsonrpc`才能使用。
+
+### 使用docker
+
+在本地创建`frpc.ini`，比如`f:/frp/frpc.ini`。
+
+然后使用[第三方docker image](https://github.com/stilleshan/frpc)：
+```bash
+docker run -d --name=frpc --restart=always -v f:/frp/frpc.ini:/frp/frpc.ini stilleshan/frpc
+```
+
+修改配置则需要重启docker：
+```bash
+docker restart frpc
+```
