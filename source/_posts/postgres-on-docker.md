@@ -28,6 +28,7 @@ services:
   db:
     container_name: pg12
     image: postgres:12
+    command: postgres -c 'max_connections=200'
     restart: always
     environment:
       POSTGRES_USER: root
@@ -40,7 +41,7 @@ services:
       - "pgswap:/pgswap"
   pgadmin:
     container_name: pgadmin4
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:latest
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: $PGADMIN_DEFAULT_EMAIL
@@ -61,6 +62,20 @@ volumes:
   pgadmin:
     name: pgadmin
 ```
+
+### 配置
+
+使用yml中的command我们可以指定[postgres的运行参数](https://www.postgresql.org/docs/12/config-setting.html#id-1.6.6.4.5)：
+
+```yml
+services:
+  db:
+    container_name: pg12
+    image: postgres:12
+    command: postgres -c 'max_connections=200'
+```
+
+[max_connections](https://www.postgresql.org/docs/12/runtime-config-connection.html#RUNTIME-CONFIG-CONNECTION-SETTINGS)的默认值是`100`，很难够用。做为对比参考，阿里云的postgresql服务是`500`。
 
 ### volumes
 
