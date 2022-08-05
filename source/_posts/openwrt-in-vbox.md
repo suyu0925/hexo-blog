@@ -298,6 +298,9 @@ reboot
 
 {% asset_img "ethnet.png" "禁掉宿主机的以太网ipv4" %}
 
+> 注意：禁掉宿主机的以太网ipv4后，有些应用会直接无法连接网络，比如Office。它不会去使用VirtualBox Host-Only网卡，而是判断到以太网网卡无ipv4就认为断网。
+> 如果需要联网则需要暂时恢复本地以太网ipv4。
+
 ## 开机自启
 
 在`"$ENV:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"`创建一个`vbox.bat`，内容为：
