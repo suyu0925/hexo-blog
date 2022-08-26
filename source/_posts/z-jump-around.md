@@ -28,3 +28,9 @@ PS C:\>Install-Module z -AllowClobber
 PS C:\>z des(press Tab)
 PS C:\>z 'C:\Users\user\Desktop'
 ```
+
+如果提示脚本权限问题，需要先设置[PowerShell执行策略](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
+```powershell
+PS C:\>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+PS C:\>Install-Module z
+```
