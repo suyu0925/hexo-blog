@@ -75,6 +75,20 @@ rm clash-linux-amd64.tar.gz
 
 {% asset_img "openclash-subscribe.png" "订阅转换" %}
 
+有时候订阅服务器会出问题，可以试着使用其它备用订阅转换网站的转换网址。
+
+- ACL4SSR 订阅转换
+
+  比较知名的规则转换网站。
+
+  https://acl4ssr-sub.github.io/
+
+- つつの订阅转换 · 鲸歌
+
+  TAG 机场合作的订阅转换网站。
+
+  https://sub.tsutsu.one/
+
 ### 仪表盘
 
 如果订阅链接没有问题，此时应该一切正常。
