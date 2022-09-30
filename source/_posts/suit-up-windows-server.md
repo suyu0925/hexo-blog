@@ -1,0 +1,110 @@
+---
+title: Windows Server云服务器装机必备
+date: 2022-09-30 10:33:19
+tags:
+description: 最近想升级一下Windows Server版本，记录一下装机必备。
+---
+# 以往可以通过Microsoft Store安装的App
+首先一个很大的区别是[Server没有Microsoft Store](https://learn.microsoft.com/en-us/windows/msix/msix-server-2019#considerations)，所以很多App只能通过命令行的形式来安装。
+
+比如巨好用的[Windows Terminal](https://github.com/microsoft/terminal)，以及很顺手的包管理器[winget](https://github.com/microsoft/winget-cli)，甚至是[Ubuntu 22.04.1 LTS](https://www.microsoft.com/store/apps/9PN20MSR04DW)。
+
+# 无脑攻略
+
+## VC++ v14 Desktop Framework Package
+
+很多App都依赖[VC++ v14 Desktop Framework Package](https://docs.microsoft.com/troubleshoot/cpp/c-runtime-packages-desktop-bridge#how-to-install-and-update-desktop-framework-packages)，比如`Windows Terminal`和`winget`，所以第一步先安装它。
+
+下载[Microsoft.VCLibs.x64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx)，然后使用命令行安装：
+
+```powershell
+Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
+```
+
+## Dotnet
+
+[Dotnet运行时](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)也算是装机必备了，一次到位我们直接安装[SDK](https://dotnet.microsoft.com/en-us/download)。目前的LTS版本是6.0，截止写这篇博客时的最新版是[6.0.401](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.401-windows-x64-installer)。
+
+## Visual Studio和Visual Studio Code
+
+[VS](https://visualstudio.microsoft.com/vs/)和[VS Code](https://code.visualstudio.com/)就不用多说了。
+
+## Microsoft.UI.Xaml
+
+[Microsoft.UI.Xaml](https://github.com/microsoft/microsoft-ui-xaml)是一个UI库，被很多App使用（比如winget）。
+
+Microsoft.UI.Xaml是一个面向开发者的库，它并没有直接提供可安装的msixbundle，所以安装方式有一点不一样。
+
+首先去[nuget](https://www.nuget.org/packages/Microsoft.UI.Xaml)下载最新的稳定版[nupkg文件](https://www.nuget.org/api/v2/package/Microsoft.UI.Xaml/2.7.3)，然后解压，再安装包里的bundle。
+
+```powershell
+Rename-Item -Path "microsoft.ui.xaml.2.7.3.nupkg" -NewName "microsoft.ui.xaml.2.7.3.zip"
+Expand-Archive "microsoft.ui.xaml.2.7.3.zip" -DestinationPath "./microsoft.ui.xaml"
+Add-AppxPackage "microsoft.ui.xaml\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx"
+```
+
+## *winget，不支持Windows Server
+
+去[发布页](https://github.com/microsoft/winget-cli/releases)下载`Microsoft.DesktopAppInstaller_<versionNumber>.msixbundle`，然后使用命令行安装：
+
+```powershell
+Add-AppxPackage Microsoft.DesktopAppInstaller_<versionNumber>.msixbundle
+```
+
+**注意**
+
+原来winget不支持Windows Server，请参见[issue中的讨论](https://github.com/microsoft/winget-cli/issues/702#issuecomment-764997870)。
+
+### 依赖
+
+- [VC++ v14 Desktop Framework Package](#VC-v14-Desktop-Framework-Package)。
+
+- [Microsoft.UI.Xaml](#Microsoft-UI-Xaml)
+
+## Windows Terminal
+
+以往我们可以[在微软商店里](https://aka.ms/terminal)安装[Windows Terminal](https://github.com/microsoft/terminal)，现在只能去github项目的[release页面](https://github.com/microsoft/terminal/releases)下载msixbundle文件。
+
+然后手动运行命令安装：
+
+```powershell
+# NOTE: If you are using PowerShell 7+, please run
+# Import-Module Appx -UseWindowsPowerShell
+# before using Add-AppxPackage.
+
+Add-AppxPackage Microsoft.WindowsTerminal_<versionNumber>.msixbundle
+```
+
+### 依赖
+
+- [VC++ v14 Desktop Framework Package](#VC-v14-Desktop-Framework-Package)。
+
+## z-jump
+
+z-dump的安装方法参照{% post_link z-jump-around 另一篇博文 %}，Windows Server没有区别。
+
+## *wsl，云服务器不支持二次虚拟化
+
+在Windows Server上，只需要很简单的`wsl --install`就可以[全部配置好](https://learn.microsoft.com/en-us/windows/wsl/install-on-server)，也可以[一步步的手动操作](https://learn.microsoft.com/en-us/windows/wsl/install-manual)。
+
+在服务器上下载Ubuntu LTS实在是太慢了，所以推荐[在本地下载好](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)，再拷贝到服务器上去离线安装。其它服务器在海外的安装包也都可以这么操作。
+
+1. 开启Linux子系统
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+2. 从本地拷贝Linux发行版到服务器上，再运行
+```powershell
+Rename-Item .\Ubuntu2204-220620.AppxBundle .\Ubuntu2204-220620.zip
+Expand-Archive .\Ubuntu2204-220620.zip .\Ubuntu2204-220620
+Add-AppxPackage .\Ubuntu2204-220620\Ubuntu_2204.0.10.0_x64.appx
+```
+
+然后发现安装失败…… 云服务器本来建议在虚拟化之上，所以[没办法再虚拟一个Linux](https://help.aliyun.com/document_detail/25412.html#section-nxc-2zs-2gb)了。真难受。
+
+## docker
+
+docker只能使用windows container，使用场景大幅受限。
+
+而且docker desktop在Windows Server 2022运行不起来，晚些再来弄这个问题。
