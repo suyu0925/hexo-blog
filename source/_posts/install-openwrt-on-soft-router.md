@@ -19,7 +19,9 @@ description: 之前在虚拟机里玩了下，现在弄了一台J4105的软路�
 
 #### 版本号
 
-我试了下最新的[22.03.0](https://downloads.openwrt.org/releases/22.03.0/targets/x86/64/)，发现docker daemon无法正常工作。建议不要使用小版本号为0的版本，还是回退到上一个稳定版[22.02.3](https://downloads.openwrt.org/releases/21.02.3/targets/x86/64/)比较保险。
+试了下最新的[22.03.0](https://downloads.openwrt.org/releases/22.03.0/targets/x86/64/)，发现docker daemon无法正常工作。
+
+建议不要使用小版本号为0的版本，还是回退到上一个稳定版[22.02.3](https://downloads.openwrt.org/releases/21.02.3/targets/x86/64/)比较保险。
 
 #### 选哪个镜像
 
@@ -131,6 +133,8 @@ DISPART> exit
 
 DiskGenius的使用方法就不多说了，扩展rootfs分区使用剩余未分区空间再保存就行。
 
+**注意**，我在使用DiskGenius扩容rootfs分区时，`generic-squashfs-combined-efi`会出现错误，最后使用了`generic-squashfs-combined`。
+
 ## 安装Openwrt
 
 将软路由接上显示器，键盘，鼠标，U盘，然后插电。
@@ -193,5 +197,5 @@ opkg install luci-i18n-base-zh-cn
 - {% post_link openwrt-openclash OpenClash %}
 - {% post_link openwrt-aria2 Aria2 %}
 - {% post_link openwrt-samba Samba %}
-- {% post_link z-jump-around 解锁网易云 %}
-- {% post_link openwrt-unblock-netease-music Docker %}
+- {% post_link openwrt-unblock-netease-music 解锁网易云 %}
+- {% post_link openwrt-docker Docker %}
