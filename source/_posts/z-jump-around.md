@@ -21,7 +21,7 @@ z的原理非常简单，它hack了cd命令，维护记录用户cd的目录列�
 
 原版只支持bash，windows下可使用PowerShell的[移植版](https://github.com/badmotorfinger/z)。
 ```powershell
-PS C:\>Install-Module z -AllowClobber
+PS C:\>Install-Module z -AllowClobber -Force
 ```
 
 ```powershell
