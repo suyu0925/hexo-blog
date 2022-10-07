@@ -109,7 +109,9 @@ Add-AppxPackage .\Ubuntu2204-220620\Ubuntu_2204.0.10.0_x64.appx
 
 docker在云服务器上只能使用windows container，使用场景大幅受限，几近鸡肋。
 
-**注意**，docker desktop在Windows Server上运行不起来，因为默认会使用Hyper-V，只建议在Windows 10/11上使用而不是Server。
+### *Docker Desktop，不支持Windows Server
+
+**注意**，[Docker Desktop](https://www.docker.com/products/docker-desktop/)在Windows Server上运行不起来，因为默认会使用Hyper-V，只建议在Windows 10/11上使用而不是Server。
 
 在Server上我们有Server的打开方式。
 
