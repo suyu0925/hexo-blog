@@ -63,7 +63,9 @@ Add-AppxPackage Microsoft.DesktopAppInstaller_<versionNumber>.msixbundle
 
 ## Windows Terminal
 
-截止本文更新时间，最新版本[Windows Terminal v1.15.252](https://github.com/microsoft/terminal/releases/tag/v1.15.2524.0)在阿里云的Windows Server上只支持2022，其它版本都嫌弃版本低。
+截止本文更新时间，最新版本是[Windows Terminal v1.15.252](https://github.com/microsoft/terminal/releases/tag/v1.15.2524.0)。
+
+Windows Terminal从第一个版本开始，最低支持Windows内部版本18362.0。在阿里云的Windows Server上只支持2022，其它版本都嫌弃版本低（阿里云的2019内部版本是17763.3287）。
 
 以往我们可以[在微软商店里](https://aka.ms/terminal)安装[Windows Terminal](https://github.com/microsoft/terminal)，现在只能去github项目的[release页面](https://github.com/microsoft/terminal/releases)下载msixbundle文件。
 
