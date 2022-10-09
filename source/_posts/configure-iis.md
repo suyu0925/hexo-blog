@@ -34,7 +34,7 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 
 ### URL重写
 
-这里简单记录一下反向代理域名到本地端口的设置方式，关于后引用比如`{R:1}`和`{C:1}`的使用可查看[微软官方文档](https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference#using-back-references-in-rewrite-rules)。
+这里简单记录一下反向代理域名到本地端口的设置方式。
 
 1. 添加空白入站规则。
 
@@ -48,7 +48,9 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 
 4. 操作
 
-重写到本地端口，如`http://localhost:3000`
+重写到本地端口，如`http://localhost:3000/{R:1}`。
+
+关于后引用比如`{R:1}`和`{C:1}`的使用可查看[微软官方文档](https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/url-rewrite-module-configuration-reference#using-back-references-in-rewrite-rules)
 
 5. **勾选**停止处理后续规则
 
