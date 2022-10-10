@@ -110,7 +110,7 @@ deploy:
   type: ''
 
 search:
-  path: search.xml
+  path: search.json
   field: post
   content: true
   format: html
