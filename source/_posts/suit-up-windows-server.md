@@ -45,6 +45,8 @@ Add-AppxPackage "microsoft.ui.xaml\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.
 
 ## *winget，不支持Windows Server
 
+{% spoiler winget %}
+
 去[发布页](https://github.com/microsoft/winget-cli/releases)下载`Microsoft.DesktopAppInstaller_<versionNumber>.msixbundle`，然后使用命令行安装：
 
 ```powershell
@@ -60,6 +62,8 @@ Add-AppxPackage Microsoft.DesktopAppInstaller_<versionNumber>.msixbundle
 - [VC++ v14 Desktop Framework Package](#VC-v14-Desktop-Framework-Package)。
 
 - [Microsoft.UI.Xaml](#Microsoft-UI-Xaml)
+
+{% endspoiler %}
 
 ## Windows Terminal
 
@@ -89,6 +93,8 @@ z-dump的安装方法参照{% post_link z-jump-around 另一篇博文 %}，Windo
 
 ## *wsl，云服务器不支持二次虚拟化
 
+{% spoiler wsl %}
+
 在Windows Server上，只需要很简单的`wsl --install`就可以[全部配置好](https://learn.microsoft.com/en-us/windows/wsl/install-on-server)，也可以[一步步的手动操作](https://learn.microsoft.com/en-us/windows/wsl/install-manual)。
 
 在服务器上下载Ubuntu LTS实在是太慢了，所以推荐[在本地下载好](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions)，再拷贝到服务器上去离线安装。其它服务器在海外的安装包也都可以这么操作。
@@ -106,6 +112,8 @@ Add-AppxPackage .\Ubuntu2204-220620\Ubuntu_2204.0.10.0_x64.appx
 ```
 
 然后发现安装失败…… 云服务器本来建议在虚拟化之上，所以[没办法再虚拟一个Linux](https://help.aliyun.com/document_detail/25412.html#section-nxc-2zs-2gb)了。真难受。
+
+{% endspoiler %}
 
 ## docker
 

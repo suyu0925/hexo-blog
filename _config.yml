@@ -97,9 +97,9 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-# plugins:
+plugins:
 #  - hexo-server
-#  - hexo-sliding-spoiler
+  - hexo-sliding-spoiler
 
 ## Themes: https://hexo.io/themes/
 theme: next
