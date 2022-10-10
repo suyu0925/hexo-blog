@@ -10,7 +10,10 @@ description: 如果不是特别的性能敏感，应该没有什么能比用dock
 ```bash
 opkg install dockerd
 opkg install luci-app-dockerman
+reboot
 ```
+
+安装完后需要重启一次，docker0 bridge interface才会生效。
 
 ## 硬盘
 
