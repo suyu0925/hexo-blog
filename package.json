@@ -8,7 +8,7 @@
   "scripts": {
     "new": "hexo new",
     "start": "npm run serve",
-    "build": "hexo generate",
+    "build": "hexo clean && hexo generate",
     "serve": "hexo serve"
   },
   "dependencies": {
