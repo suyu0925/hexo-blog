@@ -151,3 +151,7 @@ Current core version: 7cbc0acff167f78748f69709894dd6a0747ccdbc.
 注意截止至本文编写时，win10客户端的最新版本2.10.2无法使用代理，请参见[github issue](https://github.com/UnblockNeteaseMusic/server/issues/695)。
 
 解决方法：降级使用[2.9.9版本客户端](https://d1.music.126.net/dmusic/cloudmusicsetup2.9.9.199909.exe)。
+
+安装低版本客户端后，请关闭自动更新，避免又自动恢复到高版本。
+
+{% asset_img "turn-off-auto-update.png" "关闭自动更新" %}
