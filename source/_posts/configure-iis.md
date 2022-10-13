@@ -55,3 +55,43 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 5. **勾选**停止处理后续规则
 
 当反向代理匹配成功后，停止继续匹配后续规则，防止出现幺娥子。
+
+## 开启https
+
+### 安装SSL证书
+
+首先需要有SSL证书，推荐的有两种方式：
+1. 使用[阿里云免费SSL证书](https://help.aliyun.com/document_detail/156645.htm)
+2. 使用[acme.sh](https://github.com/acmesh-official/acme.sh)
+
+其中，acme是linux专供，但它的续期是自动的，不需要每年一次额外的手动更新证书。
+
+如果用在IIS，就只能使用阿里云。安装方法参见阿里云文档[在IIS服务器上安装SSL证书](https://help.aliyun.com/document_detail/98729.html)。
+
+### 导入证书
+
+既可以通过`mmc`Windows服务器控制台（MMC，Microsoft Management Console）导入，也可以通过IIS的`服务器证书`导入。
+
+### 绑定证书
+
+进入绑定界面
+
+{% asset_img "binding.png" "进入绑定界面" %}
+
+添加绑定
+
+{% asset_img "add-binding.png" "添加绑定" %}
+
+完成配置
+
+{% asset_img "commit_binding.png" "完成配置" %}
+
+注意要将类型切换至https，并且填入正确的域名（免费证书只对应一个单域名）。
+
+### 将http重定向至https
+
+已经有了https，就不需要再保留不安全的http了。
+
+创建一个新的URL重写规则，判断`{HTTPS}`为`^OFF$`，且域名为已开启https的域名，则重定向至`https://{HTTP_POST}/{R:1}`。
+
+**注意**，要将此条规则优化级挪至反向代理的规则之上。
