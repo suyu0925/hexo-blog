@@ -134,6 +134,10 @@ Install-WindowsFeature -Name Containers
 Restart-Computer -Force
 ```
 
+不同版本的Windows Server对Windows Container的适配性可以在[这里](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility?tabs=windows-server-2022%2Cwindows-11#windows-server-host-os-compatibility)查看，简单来说，在阿里云上最佳系统是Windows Server2019。
+
+因为阿里云没有Hyper-V，在没有Hyper-V的情况下，宿主只适配本版本的容器。而当前docker hub上镜像文件比较充足的是2019。
+
 ### 安装docker
 
 ```powershell
