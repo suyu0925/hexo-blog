@@ -92,6 +92,16 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 
 已经有了https，就不需要再保留不安全的http了。
 
-创建一个新的URL重写规则，判断`{HTTPS}`为`^OFF$`，且域名为已开启https的域名，则重定向至`https://{HTTP_POST}/{R:1}`。
+创建一个新的URL重写规则，判断`{HTTPS}`为`^OFF$`，`{HTTP_METHOD}`为`^GET$`，且域名为已开启https的域名，则重定向至`https://{HTTP_POST}/{R:1}`。
 
-**注意**，要将此条规则优化级挪至反向代理的规则之上。
+重定向类型可以用[302 Found](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#redirection_messages)。
+
+**注意**
+
+- 要将此条规则优化级挪至反向代理的规则之上，避免直接走了反向代理的规则执行不到这里。
+
+- 重定向一定要指定仅对get方法生效，避免影响post。
+
+不同的客户端对post返回的状态码处理方法有不同，会生产不同的效果。
+
+比如.Net的HttpClient对307的第二次请求就会去除Authentication信息，而nodejs的axios和postman会带上。
