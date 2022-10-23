@@ -86,7 +86,9 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 
 {% asset_img "commit_binding.png" "完成配置" %}
 
-注意要将类型切换至https，并且填入正确的域名（免费证书只对应一个单域名）。
+注意要将类型切换至https，填入正确的域名（免费证书只对应一个单域名），且选中需要服务器名称指示（Server Name Indication）。
+
+如不选中需要服务器名称指示，会使用同一个证书。
 
 ### 将http重定向至https
 
