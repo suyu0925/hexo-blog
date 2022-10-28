@@ -21,4 +21,4 @@ taskkill /IM "Docker Desktop.exe" /F
 wsl --shutdown
 ```
 
-优化完后，`ext4.vhdx`占用空间降到了80G，终于又可以苟一段时间。
+优化完后，`ext4.vhdx`占用空间降到了138G，优化出了7G，终于又可以苟一段时间。
