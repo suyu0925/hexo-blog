@@ -15,11 +15,15 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 - [上交大](https://mirrors.sjtug.sjtu.edu.cn/)
 - [北交大](https://mirror.bjtu.edu.cn/)
 - [浙大](http://mirrors.zju.edu.cn/)
+- [中科大](https://mirrors.ustc.edu.cn/)
 
 这些镜像站通常在提供镜像的同时还会提供用法，比如：
 - [pypi](https://mirrors.cloud.tencent.com/help/pypi.html)
 - [npm](http://www.npmmirror.com/)
+- [debian](https://mirrors.ustc.edu.cn/help/debian.html)
 - [maven](https://mirrors.163.com/.help/maven.html)
 - [rustup](https://mirrors.tuna.tsinghua.edu.cn/help/rustup/)
 - [crates.io-index.git](https://mirrors.tuna.tsinghua.edu.cn/help/crates.io-index.git/)
 - [docker hub](https://help.aliyun.com/document_detail/60750.html)
+
+阿里的镜像已经被列入黑名单，竟然限速至200KB/s，本来就是为了加速，现在变成龟速。
