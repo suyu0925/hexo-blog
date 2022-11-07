@@ -10,7 +10,7 @@ categories:
 
 ## 下载PostgreSQL JDBC driver
 
-如果之前没有配置过JDBC，那么第一步是前往[postgresql官网](https://jdbc.postgresql.org/download.html)下载JDBC驱动。
+如果之前没有配置过JDBC，那么第一步是前往[postgresql官网](https://jdbc.postgresql.org/download)下载JDBC驱动。
 
 要注意的是，一定要下载**匹配的java版本**。
 
@@ -32,11 +32,11 @@ ans =
 
 JDBC driver只是一个jar文件，还需要让matlab能读到。
 
-matlab[搜索java库](https://www.mathworks.com/help/matlab/matlab_external/java-class-path.html)有两种方式，[静态路径](https://www.mathworks.com/help/matlab/matlab_external/static-path.html)和[动态路径](https://www.mathworks.com/help/matlab/matlab_external/dynamic-path.html)。前者更简单，我们用这个。
+matlab[搜索java库](https://www.mathworks.com/help/matlab/matlab_external/java-class-path.html)有两种方式，[静态路径](https://www.mathworks.com/help/matlab/matlab_external/static-path-of-java-class-path.html)和[动态路径](https://www.mathworks.com/help/matlab/matlab_external/dynamic-path-of-java-class-path.html)。前者更简单，我们用这个。
 
 matlab会在启动时读取用户首选项文件夹下的javaclasspath.txt来载入java路径，我们只需要将下载好的jar路径写入这个文件。
 
-* 在matlab中编译javaclasspath.txt
+* 在matlab中编辑javaclasspath.txt
 ```matlab
 cd(prefdir)
 edit javaclasspath.txt
@@ -57,7 +57,7 @@ conn = database('database-name','username','password','Vendor','POSTGRESQL','Ser
 
 %% Execute query and fetch results
 data = fetch(conn,['SELECT * ' ...
-    'FROM db.schema.table']);
+    'FROM schema.table']);
 %% Close connection to database
 close(conn)
 ```
