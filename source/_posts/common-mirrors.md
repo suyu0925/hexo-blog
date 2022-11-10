@@ -29,3 +29,34 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 阿里的镜像已经被列入黑名单，竟然限速至200KB/s，本来就是为了加速，现在变成龟速。
 
 较推荐几个大学的镜像站，比如中科大mirros。
+
+## dockerhub
+
+### 国内源
+
+- [网易数帆](https://sf.163.com/help/documents/56918246390157312)
+
+https://hub-mirror.c.163.com
+
+- [百度云](https://cloud.baidu.com/doc/CCE/s/Yjxppt74z#%E4%BD%BF%E7%94%A8dockerhub%E5%8A%A0%E9%80%9F%E5%99%A8)
+
+https://mirror.baidubce.com
+
+- [阿里云-需登录](https://www.aliyun.com/product/acr)
+
+需要登录后，去管理控制台查看自己的id，以获取加速器地址：https://`${your_id}`.mirror.aliyuncs.com
+
+### 使用方法
+
+修改`daemon.json`，添加以下内容
+```json
+{
+  "registry-mirrors": ["https://<my-docker-mirror-host>"]
+}
+```
+
+然后重启dockerd以生效。
+
+具体到linux上，daemon.json的位置在`/etc/docker/daemon.json`，可使用`systemctl restart dockerd`重启dockerd。
+
+而windows上，daemon.json的位置在`%USERPROFILE%\.docker\daemon.json`，可使用Docker Desktop的GUI界面来重启dockerd。
