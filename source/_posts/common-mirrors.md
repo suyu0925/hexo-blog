@@ -57,6 +57,11 @@ https://mirror.baidubce.com
 
 然后重启dockerd以生效。
 
-具体到linux上，daemon.json的位置在`/etc/docker/daemon.json`，可使用`systemctl restart dockerd`重启dockerd。
+具体到linux上，daemon.json的位置在`/etc/docker/daemon.json`，可使用
+```bash
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+```
+来应用修改并重启docker。
 
 而windows上，daemon.json的位置在`%USERPROFILE%\.docker\daemon.json`，可使用Docker Desktop的GUI界面来重启dockerd。
