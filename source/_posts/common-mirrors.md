@@ -54,14 +54,8 @@ https://mirror.baidubce.com
   "registry-mirrors": ["https://<my-docker-mirror-host>"]
 }
 ```
+然后重启docker daemon以生效。可参见[官方文档](https://docs.docker.com/registry/recipes/mirror/#configure-the-docker-daemon)。
 
-然后重启dockerd以生效。
+具体到[linux上](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-daemonjson)，daemon.json的位置在`/etc/docker/daemon.json`，可使用`sudo systemctl restart docker`重启docker.service。
 
-具体到linux上，daemon.json的位置在`/etc/docker/daemon.json`，可使用
-```bash
-$ sudo systemctl daemon-reload
-$ sudo systemctl restart docker
-```
-来应用修改并重启docker。
-
-而windows上，daemon.json的位置在`%USERPROFILE%\.docker\daemon.json`，可使用Docker Desktop的GUI界面来重启dockerd。
+而[windows上](https://docs.docker.com/desktop/settings/windows/#docker-engine)，daemon.json的位置在`%USERPROFILE%\.docker\daemon.json`，可使用Docker Desktop的GUI界面来重启docker daemon。
