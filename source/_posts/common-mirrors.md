@@ -34,9 +34,9 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 
 ### 国内源
 
-- [网易数帆](https://sf.163.com/help/documents/56918246390157312)
+- [~~网易数帆~~](https://sf.163.com/help/documents/56918246390157312)
 
-https://hub-mirror.c.163.com
+~~https://hub-mirror.c.163.com~~
 
 - [百度云](https://cloud.baidu.com/doc/CCE/s/Yjxppt74z#%E4%BD%BF%E7%94%A8dockerhub%E5%8A%A0%E9%80%9F%E5%99%A8)
 
@@ -44,7 +44,7 @@ https://mirror.baidubce.com
 
 - [阿里云-需登录](https://www.aliyun.com/product/acr)
 
-需要登录后，去管理控制台查看自己的id，以获取加速器地址：https://`${your_id}`.mirror.aliyuncs.com
+需要登录后，去管理控制台中的镜像加速器查看自己的id，以获取加速器地址：https://`${your_id}`.mirror.aliyuncs.com
 
 ### 使用方法
 
@@ -56,6 +56,29 @@ https://mirror.baidubce.com
 ```
 然后重启docker daemon以生效。可参见[官方文档](https://docs.docker.com/registry/recipes/mirror/#configure-the-docker-daemon)。
 
-具体到[linux上](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-daemonjson)，daemon.json的位置在`/etc/docker/daemon.json`，可使用`sudo systemctl restart docker`重启docker.service。
+可用`docker info`来查看Registry Mirrors有没有应用成功。
 
-而[windows上](https://docs.docker.com/desktop/settings/windows/#docker-engine)，daemon.json的位置在`%USERPROFILE%\.docker\daemon.json`，可使用Docker Desktop的GUI界面来重启docker daemon。
+#### linux
+
+具体到[linux上](https://docs.docker.com/engine/install/linux-postinstall/#configuring-remote-access-with-daemonjson)
+
+1. docker是使用apt安装的
+
+此时daemon.json的位置在`/etc/docker/daemon.json`，修改完后可使用
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+来重启docker.service。
+
+2. docker是使用snap安装的
+
+此时daemon.json的位置在`/var/snap/docker/current/config/daemon.json`，修改完后使用
+```bash
+snap restart docker
+```
+来重启docker服务。
+
+#### windows
+
+而[windows上](https://docs.docker.com/desktop/settings/windows/#docker-engine)，daemon.json的位置在`%USERPROFILE%\.docker\daemon.json`，一般直接用Docker Desktop的GUI界面来重启docker daemon。
