@@ -107,3 +107,27 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 不同的客户端对post返回的状态码处理方法有不同，会生产不同的效果。
 
 比如.Net的HttpClient对307的第二次请求就会去除Authentication信息，而nodejs的axios和postman会带上。
+
+## 日志
+
+通常服务器的系统盘容量都不会特别大，如果不做限制，IIS的日志将会成为很大的负担。
+
+### 更改日志文件目录
+
+我们可以从这里进入日志配置。
+
+{% asset_img "logging_configure.jpg" "日志配置" %}
+
+默认日志文件存储在`%SystemDrive%\inetpub\logs\LogFiles`下，我们可以把它更改至有更大剩余容量的硬盘上。
+
+{% asset_img "logging_file_directory.jpg" "日志文件目录" %}
+
+但这样并不能完全解决问题，不论多大的硬盘，以IIS日志每天几百兆的速度还是很快会有满的一天，真正的解决方案还是类似只保留最近30天的日志之类的。
+
+### 使用IIS Log Cleaner工具
+
+最简单的办法是使用微软自家的[IIS Log Cleaner Tool](https://learn.microsoft.com/en-us/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#delete-old-log-files-by-the-iis-log-cleaner-tool)。
+
+参见微软文档，下载后直接运行，第一次运行需要先进行设置，之后就会自动清除了。
+
+需要注意的是，`IISLogCleaner.exe`并不会注册服务，也就是说重启后需要手动再次启动。所以我们需要把它的快捷方式扔进`%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`来完成自启。
