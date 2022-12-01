@@ -94,12 +94,17 @@ certmgr.msc会打开**当前用户**的证书。它属于mmc（Microsoft管理�
 
 [certmgr.exe](https://learn.microsoft.com/zh-cn/dotnet/framework/tools/certmgr-exe-certificate-manager-tool)在安装Visual Studio时会被顺带安装。它的路径通常在`C:\Program Files (x86)\Windows Kits\10\bin\{Version}\x64\certmgr.exe`，无运行依赖，可以单独拷贝至其它电脑上运行。
 
-它可以用来将证书添加到受信任的发布者。
+它可以用来将证书[添加到受信任的发布者](https://learn.microsoft.com/en-us/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)。
 **使用管理员权限**运行：
 ```powershell
 certmgr.exe -add ExcelAddin_ProdKey.cer -c -s -r localMachine TrustedPublisher
 ```
 即可将公钥添加到受信任的发布者。
+
+**注意**，如果是自签证书，需要**同时添加根证书**。
+```powershell
+certmgr.exe -add ExcelAddin_ProdKey.cer -c -s -r localMachine Root
+```
 
 `ExcelAddin_ProdKey.cer`可为der格式也可为pem格式，`certmgr.exe`都支持。
 
