@@ -23,16 +23,44 @@ description: 想用webview2来代替winform开发复杂界面，记录一下碰�
     }
 ```
 
-## 将数据文件添加至ClickOnce应用
+## 添加html文件到ClickOnce
 
-一般来说，要想将数据文件放至ClickOnce应用，可以点击[应用程序文件](https://learn.microsoft.com/zh-cn/previous-versions/visualstudio/visual-studio-2015/deployment/how-to-specify-which-files-are-published-by-clickonce)按钮打开应用程序对话框(Application Files Dialog Box)操作。
+### 普通应用
 
-但vsto应用没有这个按钮。
+这里先拿普通桌面应用举例，vsto比较特别，放在后面再看。
 
-微软推荐的解决方案是使用[Mage](#附录mage)，这里有一篇适用于vs2015的过时文档：[How to: Include a Data File in a ClickOnce Application](https://learn.microsoft.com/zh-cn/previous-versions/visualstudio/visual-studio-2015/deployment/how-to-include-a-data-file-in-a-clickonce-application?view=vs-2015&redirectedfrom=MSDN)。
+首先将index.html添加进工程，这里需要修改index.html的两个属性：
+
+- [复制到输出目录](https://social.technet.microsoft.com/wiki/contents/articles/53248.visual-studio-copying-files-to-debug-or-release-folder.aspx)
+
+可选值是不复制，始终复制和如果较新则复制。如果选择不复制，只会影响本地调试，并不会影响ClickOnce发布。
+
+- [生成操作(Build Action)](https://learn.microsoft.com/en-us/visualstudio/ide/build-actions#build-action-values)
+
+当选择为“内容”时，vs会自动将文件放至[应用程序文件](https://learn.microsoft.com/zh-cn/previous-versions/visualstudio/visual-studio-2015/deployment/how-to-specify-which-files-are-published-by-clickonce)。可在工程的发布页点击`应用程序文件`按钮打开应用程序对话框(Application Files Dialog Box)查看。
+
+{% asset_img "publish.png" "发布页" %}
+
+注意，不要把index.html的发布状态设为`数据文件`，设为数据文件后index.html就不在安装路径(Installation Path)，导致webview2访问不到。
+
+{% asset_img "application-files-dialog-box.png" "应用程序对话框" %}
+
+下图是index.html分别为`数据文件`和`包括`在客户端安装后的文件树对比，ClickOnce应用的安装路径在`%LocalAppData%/Apps/2.0/`下。
+
+{% asset_img "compare-include-and-data-file.png" "客户端的文件树对比" %}
+
+### vsto应用
+
+vsto应用虽然在发布页没有这个`应用程序文件`按钮，
+
+{% asset_img "publish-vsto.png" "vsto应用的发布页" %}
+
+但可以手动修改app manifest，再使用[Mage](#附录mage)签名。
+
+使用方法可参考[How to: Include a Data File in a ClickOnce Application](https://learn.microsoft.com/en-us/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)，顺便一提，似乎微软的最新文档[在github上有一份](https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/deployment/how-to-include-a-data-file-in-a-clickonce-application.md)，这样更方便查找。
 
 长求总就是：
-1. 给app manifest中的file标签添加writeableType="applicationData"属性
+1. 修改app manifest（给[file标签](https://learn.microsoft.com/en-us/visualstudio/deployment/file-element-clickonce-application#elements-and-attributes)添加writeableType="applicationData"属性即为更改文件的发布状态为`数据文件`）
 2. 重新签名app manifest
 3. 更新deployment manifest并重新签名
 
@@ -50,15 +78,15 @@ dotnet mage `
   -pwd yourpassword
 ```
 
-## 将数据文件添加至vsto应用
+## 依旧无法访问
+
+在普通应用中，`SetVirtualHostNameToFolderMapping`的起始目录就是工程的输出目录。
+
+但在vsto应用中，这个起始目录不知道在哪。虽然`Directory.GetCurrentDirectory()`得到的是`%UserProfile%\Documents`，但把Assets放到Documents下后，webview2仍然无法访问。只能使用绝对路径的`file:///`。
 
 在[Office解决方案中的数据](https://learn.microsoft.com/en-us/visualstudio/vsto/data-in-office-solutions)这篇文章中，微软有介绍vsto应用中可用的数据类型，貌似只有xml和数据库文件。
 
-想把html添加至vsto应用供webview2本地使用的计划似乎破产，先放一放，回头有空再来看。
-
-## 使用ClickOnce部署一个vsto应用
-
-[这里](https://learn.microsoft.com/en-us/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce?view=vs-2022&tabs=csharp#Put)有一篇如何部署vsto应用的文档。
+想把html添加至vsto应用供webview2本地使用的计划似乎破产，只能先放下了，等待机缘。
 
 ## 附录：Mage
 
@@ -103,3 +131,7 @@ powershell.exe -NoExit -Command "&{Import-Module """C:\Program Files\Microsoft V
 dotnet tool install --global microsoft.dotnet.mage
 dotnet mage -help verbose
 ```
+
+## 附录：在安装vsto时拷贝文件
+
+[这里](https://learn.microsoft.com/en-us/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce?view=vs-2022&tabs=csharp#Put)有一篇如何部署vsto应用的文档，里面有介绍如何在安装和更新vsto时做文件拷贝的操作。
