@@ -9,7 +9,8 @@
     "new": "hexo new",
     "start": "npm run serve",
     "build": "hexo clean && hexo generate",
-    "serve": "hexo serve"
+    "serve": "hexo serve",
+    "dist": "yarn build && ./dist.bat"
   },
   "dependencies": {
     "hexo": "^6.3.0",
