@@ -63,6 +63,7 @@ vsto应用虽然在发布页没有这个`应用程序文件`按钮，
 1. 修改app manifest（给[file标签](https://learn.microsoft.com/en-us/visualstudio/deployment/file-element-clickonce-application#elements-and-attributes)添加writeableType="applicationData"属性即为更改文件的发布状态为`数据文件`）
 2. 重新签名app manifest
 3. 更新deployment manifest并重新签名
+4. 将deployment manifest拷贝至app manifest目录下
 
 在vsto中，app manifest为`Application Files\ExcelAddin_1_0_0_0\ExcelAddin.dll.manifest`，deployment manifest为`ExcelAddin.vsto`。
 
@@ -76,6 +77,9 @@ dotnet mage `
   -appmanifest "Application Files\ExcelAddin_1_0_0_0\ExcelAddin.dll.manifest" `
   -certfile "ExcelAddin_ProdKey.pfx" `
   -pwd yourpassword
+
+# 拷贝vsto
+copy "ExcelAddin.vsto" "Application Files\ExcelAddin_1_0_0_0\ExcelAddin.vsto"
 ```
 
 ## 依旧无法访问
@@ -134,10 +138,16 @@ dotnet mage -help verbose
 
 ## 附录：在安装vsto时拷贝文件
 
-[这里](https://learn.microsoft.com/en-us/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce?view=vs-2022&tabs=csharp#Put)有一篇如何部署vsto应用的文档，里面有介绍如何在安装和更新vsto时做文件拷贝的操作。
+[这里](https://learn.microsoft.com/en-us/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce?view=vs-2022&tabs=csharp#Put)有一篇如何部署vsto应用的文档，里面有介绍如何在安装和更新vsto时使用[Post-deployment action](https://learn.microsoft.com/en-us/visualstudio/vsto/postactions-element-office-development-in-visual-studio#post-deployment-action-example)做文件拷贝的操作。
 
 我们可以在安装和更新vsto时把静态网页文件拷贝到用户目录里，再使用webview2绝对路径来访问。
 
-补充：试了一下，确实可以。但加上`postActions`后，`application`就无了，似乎只能二选一。
+**注意**
 
-在文档的章节标题上也有(document-level customizations only)的说明，看来还是没戏。
+1. 在webview2的使用场景里，需要把微软官方示例中的这两行代码删掉，因为我们不是`document-level customizations`。
+```csharp
+    ServerDocument.RemoveCustomization(destFile);
+    ServerDocument.AddCustomization(destFile, deploymentManifestUri);
+```
+
+2. 如果`postAction`抛出异常，vsto会将安装出错的插件卸载，但并不会清除`%LocalAppData%/Apps/2.0/`下的文件。此时有可能需要手动清除才能恢复正常。
