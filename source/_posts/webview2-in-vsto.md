@@ -135,3 +135,9 @@ dotnet mage -help verbose
 ## 附录：在安装vsto时拷贝文件
 
 [这里](https://learn.microsoft.com/en-us/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce?view=vs-2022&tabs=csharp#Put)有一篇如何部署vsto应用的文档，里面有介绍如何在安装和更新vsto时做文件拷贝的操作。
+
+我们可以在安装和更新vsto时把静态网页文件拷贝到用户目录里，再使用webview2绝对路径来访问。
+
+补充：试了一下，确实可以。但加上`postActions`后，`application`就无了，似乎只能二选一。
+
+在文档的章节标题上也有(document-level customizations only)的说明，看来还是没戏。
