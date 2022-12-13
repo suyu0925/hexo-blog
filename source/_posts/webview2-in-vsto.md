@@ -151,3 +151,12 @@ dotnet mage -help verbose
 ```
 
 2. 如果`postAction`抛出异常，vsto会将安装出错的插件卸载，但并不会清除`%LocalAppData%/Apps/2.0/`下的文件。此时有可能需要手动清除才能恢复正常。
+
+## 附录：客户机安装webview2运行时
+
+Webview2运行时的[安装方式](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution#understanding-the-options-at-the-runtime-download-page)有3种，分别是在线安装，离线安装和指定版本安装。
+
+通常使用[离线安装包](https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/7e516d67-e834-4e72-ae7b-fe18b0ea75bb/MicrosoftEdgeWebView2RuntimeInstallerX64.exe)（安装文件存放在自己服务器上防止外网被墙），可使用命令行参数实现[静默安装](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution#offline-deployment)：
+```bash
+MicrosoftEdgeWebView2RuntimeInstallerX64.exe /silent /install
+```
