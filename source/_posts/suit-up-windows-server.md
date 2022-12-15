@@ -140,8 +140,16 @@ Restart-Computer -Force
 
 ### 安装docker
 
+如果是全新的环境，需要先导入NuGet
+```powershell
+Install-PackageProvider -Name NuGet -Force
+```
+然后添加DockerMsftProvider
 ```powershell
 Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+```
+最后安装docker
+```powershell
 Install-Package -Name docker -ProviderName DockerMsftProvider -Force
 ```
 
