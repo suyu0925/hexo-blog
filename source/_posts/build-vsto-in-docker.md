@@ -19,6 +19,8 @@ description: excel插件写完了，现在想把它的编译放到docker里去�
 - [使用Windows Server 2019](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility)
 - 添加[vsto的开发套件](https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools#officesharepoint-build-tools)
 
+注意：如果宿主是Windows Server 2022，那就改回[mcr.microsoft.com/windows/servercore:ltsc2022](https://hub.docker.com/_/microsoft-windows-servercore)。除此之外与2019别无二致。
+
 完整的Dockerfile
 ```Dockerfile
 # escape=`
@@ -90,6 +92,15 @@ $xml.Save($xmlFileName)
 使用msbuild[发布](https://learn.microsoft.com/en-us/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 ```powershell
 PS C:\app> msbuild -m -t:publish /p:PublishDir="${pwd}.\publish"
+```
+
+bump版本号
+```powershell
+$xmlFileName = "${pwd}\ExcelAddIn\ExcelAddIn.csproj"
+[xml]$xml = Get-Content $xmlFileName
+$appVersion = Select-Xml -Xml $xml //ns:ApplicationVersion -Namespace @{ ns='http://schemas.microsoft.com/developer/msbuild/2003' }
+$appVersion.Node.'#text' = '1.0.1.0'
+$xml.Save($xmlFileName)
 ```
 
 验证成功。

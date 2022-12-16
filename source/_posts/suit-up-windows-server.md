@@ -134,20 +134,20 @@ Install-WindowsFeature -Name Containers
 Restart-Computer -Force
 ```
 
-不同版本的Windows Server对Windows Container的适配性可以在[这里](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility?tabs=windows-server-2022%2Cwindows-11#windows-server-host-os-compatibility)查看，简单来说，在阿里云上最佳系统是Windows Server2019。
+不同版本的Windows Server对Windows Container的适配性可以在[这里](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility?tabs=windows-server-2022%2Cwindows-11#windows-server-host-os-compatibility)查看，简单来说，在阿里云上最佳系统是Windows Server2019。因为阿里云没有Hyper-V，在没有Hyper-V的情况下，宿主只适配本版本的容器。而当前docker hub上镜像文件比较充足的是2019。
 
-因为阿里云没有Hyper-V，在没有Hyper-V的情况下，宿主只适配本版本的容器。而当前docker hub上镜像文件比较充足的是2019。
+但如果没有第三方镜像文件要求就还是建议2022，可以在服务器上直接用Edge和安装Windows Terminal，体验要好很多。
 
 ### 安装docker
 
-如果是全新的环境，需要先导入NuGet
-```powershell
-Install-PackageProvider -Name NuGet -Force
-```
-然后添加DockerMsftProvider
+添加DockerMsftProvider
 ```powershell
 Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
 ```
+
+如果是新环境，会提示安装Nuget，输入`Y`同意：
+{% asset_img "install-nuget-prompt.png" "Install Nuget Prompt" %}
+
 最后安装docker
 ```powershell
 Install-Package -Name docker -ProviderName DockerMsftProvider -Force
