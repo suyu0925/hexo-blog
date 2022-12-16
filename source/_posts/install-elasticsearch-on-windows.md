@@ -8,9 +8,9 @@ description: 虽然有了docker这个神器，但有时还是不得不安装软�
 
 官方在windows下提供了两种安装方式：
 - [zip](https://www.elastic.co/guide/en/elasticsearch/reference/current/zip-windows.html)
-- [msi](https://www.elastic.co/guide/en/elasticsearch/reference/current/windows.html)
+- [msi](https://www.elastic.co/cn/downloads/past-releases/elasticsearch-7-16-3)
 
-msi版本已经废弃，`7.16.2`是最后一个支持的版本。但截止至写这篇文章的时候，最新版还是`7.16.2`，来个最后的倔强（。
+msi版本已经废弃，`7.16.3`是最后一个支持的版本。从[7.17.0](https://www.elastic.co/cn/downloads/past-releases/elasticsearch-7-17-0)开始就没有msi安装文件。
 
 一路下一步即可，只介绍几个需要注意的地方。
 
