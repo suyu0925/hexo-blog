@@ -155,6 +155,14 @@ Install-Package -Name docker -ProviderName DockerMsftProvider -Force
 
 这一步会比较慢，主要是因为服务器在海外，需要多给点耐心，也许要重试几次。
 
+安装完成后，`C:\Program Files\Docker`会被添加进系统Path变量，需要重启后才生效。
+如果不想重启，我们可以把它[添加到用户Path变量](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables#saving-environment-variables-with-setenvironmentvariable)
+```powershell
+$dockerPath = Split-Path (Get-Command docker).Source
+$userPath = [Environment]::GetEnvironmentVariable("PATH", "User") + [IO.Path]::PathSeparator + $dockerPath
+[Environment]::SetEnvironmentVariable("Path", $userPath, "User")
+```
+
 ### 启动docker服务
 
 如果`Docker Engine`服务没有自动启动，手动启动它。
