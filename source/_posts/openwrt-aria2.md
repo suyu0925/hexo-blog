@@ -41,3 +41,24 @@ chmod -R 777 /root/aria2
 使用[trackers_best_ip.txt](https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt)，注意要将2个换行符替换成`,`来适配语法。
 
 {% asset_img "openwrt-aria2-bt-trackers" "BitTorrent Trackers" %}
+
+## 内网穿透
+
+如果想用内网穿透访问AriaNg页面，默认是无法访问的。
+
+原因是默认的Aria2 RPC地址是`http://luci.domain.com:6800/jsonrpc`，注意里面的`:6800`。
+
+内网穿透一般不支持80或443之外的端口，需要修改两个地方：
+
+1. frpc
+在frpc添加
+```ini
+[ariang]
+type = http
+local_ip = 192.168.8.1
+local_port = 6800
+custom_domains = aria2.domain.com
+```
+
+2. AriaNg
+在AriaNg的`AriaNg设置`中，修改RPC的地址为`http://aria2.domain.com:80/jsonrpc`。
