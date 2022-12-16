@@ -112,29 +112,32 @@ local_ip = 192.168.8.1
 local_port = 22
 remote_port = 6000
 
-[web]
+[jellyfin]
 type = http
 local_ip = 192.168.8.1
 local_port = 8096
 custom_domains = jellyfin.frp.yourdomain.com
 
-[web2]
+[luci]
 type = http
 local_ip = 192.168.8.1
 local_port = 80
 custom_domains = luci.frp.yourdomain.com
 
-[web3]
+[aria2]
 type = http
 local_ip = 192.168.8.1
 local_port = 6800
 custom_domains = aria2.frp.yourdomain.com
 ```
 
+注意像`[jellyfin]`这样的名字不要有重复，会被当作ID使用。
+
 ### ssh服务
 
 ```bash
-ssh -oPort=6000 x.x.x.x
+ssh 内网用户名@x.x.x.x -p 6000
+输入内网用户密码: 
 ```
 
 frps在接收到客户端的`remote_port = 6000`后就会代理6000端口，于是可以使用ssh直接登录内网机器。
