@@ -19,6 +19,10 @@ description: 此方法可以解决远程桌面下启动MATLAB时的License Manag
 
 {% asset_img "lic.jpg" "lic" %}
 
+可使用vs code正则表达式来快速添加：
+查找内容：`SIGN=\w{12}`
+替换内容：`$0 TS_OK`
+
 方法思路来源：
 
 1. [远程登录时安装MATLAB的License Manager Error -103错误](https://blog.csdn.net/yanerhao/article/details/52203394) ：Matlab出现这一出错信息，通常为远程登录所致。究其原因，大概是FLEXlm的一个bug，凡是用到FLEXlm的软件，在打开时都必须有一个本地用户登录，否则远程登录就会出错。
