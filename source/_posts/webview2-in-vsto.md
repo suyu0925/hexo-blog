@@ -4,6 +4,64 @@ date: 2022-12-06 14:05:07
 tags: excel-add-in
 description: 想用webview2来代替winform开发复杂界面，记录一下碰到的各种问题。
 ---
+## 用户数据文件夹(UDF)
+Webview2需要使用[user data folder(UDF)](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder)，通常默认的UDF是在.exe同目录。
+
+但vsto比较特殊，UDF的默认目录是`C:\Program Files (x86)\Microsoft Office\Root\Office16\EXCEL.EXE.WebView2`。vsto没有权限访问这个目录。
+
+所以在vsto中使用webview2，必须要设定UDF，比如：
+```C#
+    string homeDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+    string userDataFolder = Path.Combine(homeDir, "ExcelAddin/UDF");
+    var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+    await webView.EnsureCoreWebView2Async(env);
+```
+
+### Administrator账户
+但要注意这里有个特例：Administrator账户。
+
+如果用户是Administrator，Webview2界面会一直白屏。调试发现是`await webView.EnsureCoreWebView2Async(env);`抛出异常：
+```
+System.ArgumentException:
+'WebView2 was already initialized with a different CoreWebView2Environment.
+Check to see if the Source property was already set or EnsureCoreWebView2Async was previously called with different values.'
+```
+
+原因在[WebView2Feedback的这个issue](https://github.com/MicrosoftEdge/WebView2Feedback/issues/2435#issuecomment-1140186931)中被提及：
+在Designer.cs中的InitializeComponent函数里，`this.webView.Source = new System.Uri("about:blank", System.UriKind.Absolute);`会使用默认UDF初始化CoreWebView2Environment。
+
+而由于上面提到的原因，非Administrator账户运行的vsto没有权限访问默认目录，会初始化错误。此时反倒没有任何问题。
+但如果用户是Administrator，此时初始化成功。而在后续的InitWhenLoaded时又再次使用userDataFolder来EnsureCoreWebView2Async，导致两次使用的CoreWebView2Environment不一致而报错。
+
+解决方案：
+- 【需官方解决】可在webview2控件的属性编辑器中设置Source属性为空
+当在编辑器中设置Source属性为空时，不设置webView.Source，也就不会使用默认UDF初始化CoreWebView2Environment
+- 在InitializeComponent中不设置webview.Source
+注释掉`this.webView.Source = new System.Uri("about:blank", System.UriKind.Absolute);`。
+但因为Designer.cs是编辑器生成的，所以每次修改界面后都要记得手动注释，这个方案不行。
+- try/catch EnsureCoreWebView2Async，针对此情况特殊处理
+```csharp
+    try
+    {
+        var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+        await webView.EnsureCoreWebView2Async(env);
+        initWebview();
+    }
+    catch (Exception ex)
+    {
+        if (ex.Message.StartsWith("WebView2 was already initialized with a different CoreWebView2Environment."))
+        {
+            await webView.EnsureCoreWebView2Async();
+            initWebview();
+        }
+        else
+        {
+            MessageBox.Show("EnsureCoreWebView2 error: " + ex.ToString());
+        }
+    }
+```
+这样更通用些，虽然判断Exception.Message也不是很优雅，但在官方给出解决方案之前可以先用着。
+
 ## webview2使用本地html
 为了避免多部署一个web服务器，并且要支持不同版本，将html放在本地最合适不过了。
 
