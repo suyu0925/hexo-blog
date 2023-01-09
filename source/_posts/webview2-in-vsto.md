@@ -62,6 +62,12 @@ Check to see if the Source property was already set or EnsureCoreWebView2Async w
 ```
 这样更通用些，虽然判断Exception.Message也不是很优雅，但在官方给出解决方案之前可以先用着。
 
+**多用户**
+
+Excel插件的安装是针对当前用户而不是本机所有用户的。即使Administrator账户安装过，切换至其他用户登录后，如果想使用仍然需要单独安装。
+
+Webview2 Runtime是安装在本机的，只要随便哪个用户安装过一次，其它用户都能够使用。
+
 ## webview2使用本地html
 为了避免多部署一个web服务器，并且要支持不同版本，将html放在本地最合适不过了。
 
