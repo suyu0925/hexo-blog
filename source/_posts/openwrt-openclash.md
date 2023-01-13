@@ -102,3 +102,20 @@ rm clash-linux-amd64.tar.gz
 {% asset_img "openclash-overview.png" "仪表盘" %}
 
 可以打开`Dashboard控制面板`去仪表盘进行策略配置了。
+
+### Fake IP模式
+OpenClash支持Redir-Host和Fake-IP两种模式，默认为Redir-Host模式。
+
+Fake IP出自[RFC3089](https://www.rfc-editor.org/rfc/rfc3089)，这个RFC定义了一种新的将TCP连接封装成SOCKS协议的方法。[这里](https://blog.skk.moe/post/what-happend-to-dns-in-proxy/#Zai-redir-x2F-tun2socks-Zhong-Shi-Yong-Fake-IP)有篇文章介绍的比较详细。
+
+它与Redir-Host模式的最主要区别是：
+1. 客户端发出的DNS解析请求会被代理端捕获，然后立即从Fake IP池子里取一个IP建立映射返回。
+2. 客户端发起对这个Fake IP的TCP连接，又被代理端截获，再返查出域名。
+3. 代理端使用SOCKS协议封装TCP连接和域名。
+整个过程都无需解析DNS，因此速度会更快。
+
+但它也有几个问题：
+- 无法ping域名，解析得到的会是内网的Fake IP
+- [windows会认为没有连接到互联网](https://github.com/vernesong/OpenClash/issues/6)
+
+如果对性能不是有很强的要求，还是建议使用Redir-Host模式。
