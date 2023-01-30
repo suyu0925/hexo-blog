@@ -25,14 +25,18 @@ opkg install luci-i18n-aria2-zh-cn
 
 {% asset_img "openwrt-aria2.png" "启用服务" %}
 
-假设下载目录为`/root/aria2`，我们需要先
+假设下载目录为`/root/aria2/download`，我们需要先
 
 ```bash
-mkdir /root/aria2
-chmod -R 777 /root/aria2
+mkdir -p /root/aria2/download
+chmod -R 777 /root/aria2/download
 ```
 
 才可以启用aria2，保存并应用，等待并检查aria2服务是否正确启用。
+
+另外，我们需要将配置文件目录从默认的临时目录`/var/etc/aria2`改到一个永久目录，比如`/root/aira2/config`，防止重启后配置丢失。
+
+[openwrt的/var目录是指向/tmp的一个符号链接](https://forum.openwrt.org/t/persistent-var/119427/2)，[不要直接把/var指向永久目录](https://forum.openwrt.org/t/permanent-var-directory-will-i-be-safe/37071/4)。
 
 ## 设置
 
