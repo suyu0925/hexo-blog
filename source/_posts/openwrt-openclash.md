@@ -25,8 +25,13 @@ scp ./luci-app-openclash.ipk root@192.168.56.2:/root/
 
 ```bash
 opkg update
+opkg remove dnsmasq
+opkg install luci-compat
 opkg install ./luci-app-openclash.ipk
 ```
+
+openclash使用了dnsmasq-full，为了避免冲突，需要先卸载dnsmasq。
+同时，openclash也依赖luci的cbi模块，需要先安装luci-compat。
 
 ## 配置
 
@@ -119,3 +124,9 @@ Fake IP出自[RFC3089](https://www.rfc-editor.org/rfc/rfc3089)，这个RFC定义
 - [windows会认为没有连接到互联网](https://github.com/vernesong/OpenClash/issues/6)
 
 如果对性能不是有很强的要求，还是建议使用Redir-Host模式。
+
+### 偶尔有部分网址无法连接
+
+偶尔有百度无法连接的情况，此时可将代理模式切换至Global模式，再切回Rule，通常药到病除。只是重启OpenClash不行。
+
+可参看这个[Issue](https://github.com/vernesong/OpenClash/issues/31)。
