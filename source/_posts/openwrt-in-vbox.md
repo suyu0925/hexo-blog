@@ -27,7 +27,7 @@ OpenWrt推荐的值是128MiB，这有点太少了，后续我们会运行docker�
 
 ### CPU
 默认的单核差不多能将科学上网的网速跑到2MB/s。
-但如果开启了Hyper-V，不要轻易增加核心数，可能会有反效果。
+但如果开启了Hyper-V，不要轻易增加核心数，可能会有反效果。关于Hyper-V与VirutalBox的冲突可查看{% post_link virtualbox-running-slow "VirtualBox在win上特别卡" %}。
 
 ### 网络
 如果想通过VBox里的OpenWrt上网，桥接网卡是必选项，注意要桥接到用来上网的实体网卡上。
