@@ -9,19 +9,23 @@ description: 可以说软路由最重要的作用就是科学上网了，在Open
 
 ## 下载
 
-首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.45.35-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.45.35-beta)。
+首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.45.78-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.45.78-beta)。
 
 ```bash
-wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.45.35-beta/luci-app-openclash_0.45.35-beta_all.ipk
+wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.45.78-beta/luci-app-openclash_0.45.78-beta_all.ipk
 ```
 
 如果在OpenWrt中无法下载，那么可在宿主机通过代理下载后再拷贝上去。
 
 ```bash
-scp ./luci-app-openclash.ipk root@192.168.56.2:/root/
+scp ./luci-app-openclash.ipk root@192.168.88.1:/root/
 ```
 
 ## 安装
+
+注意要先[安装依赖](https://github.com/vernesong/OpenClash/wiki/%E5%AE%89%E8%A3%85)。
+
+这里为了简洁只写了一部分，不代表未来还能正常安装。
 
 ```bash
 opkg update
@@ -56,7 +60,7 @@ openclash使用了dnsmasq-full，为了避免冲突，需要先卸载dnsmasq。
 
 ```bash
 wget -O clash-linux-amd64.tar.gz https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-amd64.tar.gz
-scp clash-linux-amd64.tar.gz root@192.168.56.2:/etc/openclash/core
+scp clash-linux-amd64.tar.gz root@192.168.88.1:/etc/openclash/core
 ```
 
 内核下载地址
