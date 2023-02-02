@@ -10,12 +10,50 @@ description: 之前有介绍过在VirtualBox中玩耍OpenWrt，但发现打开Hy
 
 ## 开启Hyper-V
 
-在`启用或关闭 Windows 功能`中找到Hyper-V的选项，将其打开。
+开启Hyper-V有3种方式，参见微软文档[在 Windows 10 上安装 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)。
 
-或者也可以以管理员身份运行
+1. 在`启用或关闭 Windows 功能`中找到Hyper-V的选项，将其打开。
+
+2. 以管理员身份运行PowerShell
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
+
+3. 又或者以管理员身份运行DISM
+```powershell
+DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+```
+
+但如果是家庭版Windows，会提示：
+```
+PS> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All   
+Enable-WindowsOptionalFeature : 功能名称 Microsoft-Hyper-V 未知。
+所在位置 行:1 字符: 1
++ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Enable-WindowsOptionalFeature], COMException
+    + FullyQualifiedErrorId : Microsoft.Dism.Commands.EnableWindowsOptionalFeatureCommand
+
+PS> DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+错误: 0x800f080c
+
+功能名称 Microsoft-Hyper-V 未知。
+未识别出 Windows 功能名称。
+请使用 /Get-Features 选项在映像中查找功能名称，然后重试该命令。
+
+可以在 C:\WINDOWS\Logs\DISM\dism.log 上找到 DISM 日志文件
+```
+
+找不到功能`Microsoft-Hyper-V`，但其实系统里是有的，在`%SystemRoot%\servicing\Packages\`下，只是没有添加。
+
+以管理员身份运行Command Pormpt，输入下面的命令：
+```bat
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
+for /f %i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%i"
+del hyper-v.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V -All /LimitAccess /ALL
+```
+会提示`Microsoft-Hyper-V`已安装，但没有完全打开。先不用管，重启一下就行了。
 
 ## 准备
 
