@@ -106,7 +106,7 @@ OpenWrt默认将第一个网卡`eth0`视为lan，第二个网卡`eth1`视作wan�
 
 {% asset_img adapter-order.png 网卡添加顺序 %}
 
-## 启动OpenWrt
+## 启动OpenWrt并连接
 
 启动后，输入`uci show network`查看openwrt的默认网络设置。
 ```ini
@@ -176,3 +176,11 @@ root@OpenWrt:~# ip addr
        valid_lft forever preferred_lft forever
 root@OpenWrt:~#
 ```
+
+## 扩容
+
+OpenWrt官方映像默认只有几十M的空间，我们之前创建虚拟硬盘时可是指定了200G，需要扩容使用。
+
+扩容要放在安装软件之前，避免扩容失败反复做无用功。
+
+参见这篇文章{% post_link openwrt-resize-root OpenWrt扩容 %}
