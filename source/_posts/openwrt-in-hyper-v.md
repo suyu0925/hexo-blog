@@ -122,6 +122,8 @@ DiskPart successfully detached the virtual disk file.
 
 {% asset_img external-network.png 外部网络 %}
 
+在后续最后全部搞定后，再勾上这个，把以太网的适配器关掉，来让windows使用`内部网络`这张网卡上网。
+
 #### 内部网络
 
 创建好内部网络的虚拟交换机后，需要去设置一下适配器的`Internet 协议版本 4 (TCP/IPv4) 属性`。
