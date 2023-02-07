@@ -1,5 +1,5 @@
 ---
-title: 在VirtualBox虚拟机中玩耍OpenWrt
+title: "[Openwrt]在VirtualBox虚拟机中玩耍OpenWrt"
 date: 2022-07-22 09:21:30
 tags:
 - openwrt

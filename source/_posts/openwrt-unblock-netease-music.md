@@ -17,16 +17,16 @@ description: 网易云音乐的智能推荐很好用，但因为版权问题而�
 
 ## 下载安装包
 
-首先下载[最新的`ipk`文件](https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v2.13-1/luci-app-unblockneteasemusic_2.13-1_all.ipk)，截止到本文编写时间，最新版本为`v2.13-1`。
+首先下载[最新的`ipk`文件](https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v3.1-4/luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk)，截止到本文编写时间，最新版本为`v3.1-4`，使用node.js。
 
 可直接在OpenWrt中使用命令行下载：
 ```bash
-wget https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v2.13-1/luci-app-unblockneteasemusic_2.13-1_all.ipk
+wget https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v3.1-4/luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk
 ```
 
 但如果github被墙，那么就需要在本地先通过代理下载好，再拷贝至OpenWrt。
 ```bash
-scp ./luci-app-unblockneteasemusic_2.13-1_all.ipk root@192.168.56.2:/root/
+scp ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk root@192.168.56.2:/root/
 ```
 
 ## 安装
@@ -34,7 +34,7 @@ scp ./luci-app-unblockneteasemusic_2.13-1_all.ipk root@192.168.56.2:/root/
 直接使用opkg安装：
 ```bash
 opkg update
-opkg install ./luci-app-unblockneteasemusic_2.13-1_all.ipk
+opkg install ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk
 ```
 
 **dnsmasq**
@@ -155,3 +155,28 @@ Current core version: 7cbc0acff167f78748f69709894dd6a0747ccdbc.
 安装低版本客户端后，请关闭自动更新，避免又自动恢复到高版本。
 
 {% asset_img "turn-off-auto-update.png" "关闭自动更新" %}
+
+## 问题
+
+不确定是OpenClash的版本问题，还是UnblockNeteaseMusic的版本问题，当前最新版无法与OpenClash一起使用。
+
+两个单独使用都正常，但一起开DNS就会出问题，无法解析所有域名。
+
+先开OpenClash，一切正常。再开网易云，此时UnblockNeteaseMusic不会出现日志
+```
+INFO: (app) HTTP Server running @ http://0.0.0.0:5200
+INFO: (app) HTTPS Server running @ http://0.0.0.0:5201
+```
+同时DNS坏掉。关掉网易云后正常。
+
+先开网易云，一切正常。再开OpenClash，此时DNS坏掉。关掉OpenClash后仍不正常，需要再关掉网易云才正常。
+
+工作正常的环境：
+OpenWrt 21.02.3
+unblockneteasemusic v2.13-1
+OpenClash v0.45.78-beta, [Dev] v1.12.0-8, [TUN] 2022.11.25-8, [Meta] alpha-g7a6432, Fake-IP 混合, 使用api.dler.io转换订阅模板
+
+工作不正常的环境：
+OpenWrt 22.03.2/22.03.3
+unblockneteasemusic v2.13-1/v3.1-4
+OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25f5e7, Redir-Host/Fake-IP 兼容/混合, 使用api.dler.io转换订阅模板

@@ -1,5 +1,5 @@
 ---
-title: OpenWrt扩容
+title: "[Openwrt]扩容"
 date: 2023-02-02 16:58:23
 tags:
 - openwrt
@@ -30,9 +30,13 @@ OpenWrt官方的固件只留了几十M的用户空间，正式使用完全不够
 
 #### 同盘扩展
 
+**注意**：同盘扩展需要在开机后第一时间做，做完立即重启，不要安装完软件再来做，会有机率搞坏系统无限重启。
+
 1. 使用[parted](http://man.cx/parted)扩展分区
 
 ```sh
+sed -i 's_downloads.openwrt.org_mirror.sjtu.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+
 opkg update
 opkg install parted
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
@@ -44,7 +48,6 @@ parted -s ${DISK%p} resizepart $((PART+1)) 100%
 
 如果是efi镜像，还需要更新grub
 ```sh
-opkg update
 opkg install lsblk
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
 PART="${BOOT##*[^0-9]}"
@@ -58,7 +61,6 @@ sed -i -r -e "s|(PARTUUID=)\S+|\1${UUID}|g" /boot/grub/grub.cfg
 
 针对`ext4-combined`
 ```sh
-opkg update
 opkg install losetup resize2fs
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
 PART="${BOOT##*[^0-9]}"
@@ -72,7 +74,6 @@ reboot
 
 针对`squashfs-combined`
 ```sh
-opkg update
 opkg install losetup resize2fs
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
 PART="${BOOT##*[^0-9]}"
