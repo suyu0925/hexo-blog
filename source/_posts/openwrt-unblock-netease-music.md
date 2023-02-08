@@ -74,7 +74,7 @@ Collected errors:
 
 ```bash
 opkg remove dnsmasq
-opkg install ./luci-app-unblockneteasemusic_2.13-1_all.ipk
+opkg install ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk
 ```
 
 即可安装成功。
@@ -117,7 +117,6 @@ stack traceback:
 这是因为缺少库`luci-compat`，补上后再刷新网页即可工作正常。
 
 ```bash
-opkg update
 opkg install luci-compat
 ```
 
@@ -175,8 +174,18 @@ INFO: (app) HTTPS Server running @ http://0.0.0.0:5201
 OpenWrt 21.02.3
 unblockneteasemusic v2.13-1
 OpenClash v0.45.78-beta, [Dev] v1.12.0-8, [TUN] 2022.11.25-8, [Meta] alpha-g7a6432, Fake-IP 混合, 使用api.dler.io转换订阅模板
+一切正常。包括`curl https://google.com`。
 
-工作不正常的环境：
+工作正常的环境：
+OpenWrt 21.03.5
+unblockneteasemusic v3.1-4
+OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25f5e7, Redir-Host 兼容/混合, 使用api.dler.io转换订阅模板
+使用Fake-IP工作正常。
+而且不管是Redir-Host还是Fake-IP，在openwrt上`curl https://google.com`都无法连接。
+
+工作**不正常**的环境：
 OpenWrt 22.03.2/22.03.3
 unblockneteasemusic v2.13-1/v3.1-4
 OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25f5e7, Redir-Host/Fake-IP 兼容/混合, 使用api.dler.io转换订阅模板
+
+通过测试基本可以判定，原因出在系统OpenWrt 22.03，还是使用OpenWrt 21.03版本吧。
