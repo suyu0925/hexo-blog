@@ -134,3 +134,20 @@ Fake IP出自[RFC3089](https://www.rfc-editor.org/rfc/rfc3089)，这个RFC定义
 偶尔有百度无法连接的情况，此时可将代理模式切换至Global模式，再切回Rule，通常药到病除。只是重启OpenClash不行。
 
 可参看这个[Issue](https://github.com/vernesong/OpenClash/issues/31)。
+
+### 自定义规则集
+
+规则集英文是[Rule Provider](https://lancellc.gitbook.io/clash/clash-config-file/rule-provider)，它可以在`config.yml`之外补充一些规则。
+
+比如最近大陆把微软OneDrive墙了，那么我们可以在`配置文件管理`中，新增一个类型为classic的本地规则：
+```
+payload:
+  # > OneDrive
+  - DOMAIN-SUFFIX,onedrive.live.com
+```
+
+然后在`规则集与策略组管理`中的`自定义规则集与策略组管理`中使用它：
+
+{% asset_img "use-rule-provider.png" "使用自定义规则集" %}
+
+这样当访问后缀为`onedrive.live.com`的网站时，就会使用代理了。
