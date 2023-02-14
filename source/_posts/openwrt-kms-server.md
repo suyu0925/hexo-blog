@@ -17,7 +17,7 @@ vlmcsd很久没有更新了，但不要看着最近更新时间是2018年就害�
 
 如果不想敲命令行，下一步可以安装[luci-app-vlmcsd](https://github.com/cokebar/luci-app-vlmcsd)。
 
-它预编译的最新发布版是[1.0.2-1](https://objects.githubusercontent.com/github-production-release-asset-2e65be/76548882/76ce360c-18da-11e8-97a5-6d24fb689ac4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221125T081911Z&X-Amz-Expires=300&X-Amz-Signature=a4f220b0ef1af5d882ad614c1e588f28c70bd216070f4cdefec8213dde644db7&X-Amz-SignedHeaders=host&actor_id=7429906&key_id=0&repo_id=76548882&response-content-disposition=attachment%3B%20filename%3Dluci-app-vlmcsd_1.0.2-1_all.ipk&response-content-type=application%2Foctet-stream)。
+它预编译的[最新发布版](https://github.com/cokebar/luci-app-vlmcsd/releases)是[1.0.2-1](https://github.com/cokebar/luci-app-vlmcsd/releases/download/v1.0.2-1/luci-app-vlmcsd_1.0.2-1_all.ipk)。
 
 ## 启动
 
