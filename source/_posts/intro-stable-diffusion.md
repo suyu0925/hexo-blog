@@ -26,9 +26,17 @@ Stability AI提供了在线体验：[dreamstudio](https://beta.dreamstudio.ai)�
 
 脚本加强版[sd-scripts](https://github.com/kohya-ss/sd-scripts)也有[带ui版本](https://github.com/bmaltais/kohya_ss)。
 
-使用stable-diffusion-webui，[按照教程](https://github.com/AUTOMATIC1111/stable-diffusion-webui#installation-and-running)一步步来，很轻易的可以运行起来。全默认设置渲染一张在GTX 1080上需要耗时10秒出头。
+使用stable-diffusion-webui，[按照教程](https://github.com/AUTOMATIC1111/stable-diffusion-webui#installation-and-running)一步步来，把程序当作黑箱，也可以很轻易的运行起来。
+全默认设置渲染一张在GTX 1080上需要耗时10秒出头。
 
 {% asset_img self-host.png 本机示例 %}
+
+## 提示语
+
+怎么写提示语还是有点讲究的。
+
+[Openart](https://openart.ai/)上有大量网友上传的文本生成图像作品可以参考。
+而且有整理出一本[PromptBook](https://cdn.openart.ai/assets/Stable%20Diffusion%20Prompt%20Book%20From%20OpenArt%2011-13.pdf)，值得一阅。
 
 ## 附录
 
