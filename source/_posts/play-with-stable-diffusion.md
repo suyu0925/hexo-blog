@@ -32,14 +32,14 @@ Size: 384x512, Seed: 0, Model: dreamshaper_332BakedVaeClipFix, Steps: 30, Sample
 
 [LoRA](https://arxiv.org/abs/2106.09685)的全写是Low-Rank Adaptation of Large Language Models，是微软为微调(fine-tuning)大型语言模型引入的一项技术，也可以[用来微调Stable Diffusion](https://huggingface.co/blog/lora)。
 
-这里需要引入一个新网站：[civiai](https://civitai.com/)。**注意：NSFW**。相比更贴近开发者的Hugging Face，它更贴近普通用户。LoRA模型可以在这里下载。
+这里需要引入一个新网站：[civitai](https://civitai.com/)。**注意：NSFW**。相比更贴近开发者的Hugging Face，它更贴近普通用户。LoRA模型可以在这里下载。
 
 比如经常搭配chilloutmix使用的亚州女性LoRA模型：
 - [Korean Doll](https://civitai.com/models/7448/korean-doll-likeness)
 - [Taiwan Doll](https://civitai.com/models/7716/taiwan-doll-likeness)
 - [Japanese Doll](https://civitai.com/models/10135/japanese-doll-likeness)
 
-Lora模型的使用方法与检查点类似，下载后拷至`./models/Lora`目录，然后在提示语中使用即可。
+Lora模型的使用方法与检查点类似，下载后拷至`./models/Lora`目录，然后在提示语中使用即可。用法可以参见[civitai的wiki](https://github.com/civitai/civitai/wiki/How-to-use-models#lora)。
 
 比如
 ```
