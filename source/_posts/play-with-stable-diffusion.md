@@ -55,7 +55,7 @@ Size: 512x768, Seed: 3943162627, Model: chilloutmix_cilloutmixNi, Steps: 28, Sam
 
 img2img有很多种用法，比如：
 1. 当觉得生成的图片方向对了时，可以保持提示语不变，使用img2img将text2img的图片当作新的起点；
-2. 对整体满意，但需要微调时，可使用inpaint；
+2. 对整体满意，但需要微调时，可使用inpaint局部重绘；
 3. 对风格满意，想尝试其它主体时，可使用新的提示语；
 
 `CFG Scale`越大，越贴近描述语。

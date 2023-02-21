@@ -38,6 +38,8 @@ Stability AI提供了在线体验：[dreamstudio](https://beta.dreamstudio.ai)�
 [Openart](https://openart.ai/)上有大量网友上传的文本生成图像作品可以参考。
 而且有整理出一本[PromptBook](https://cdn.openart.ai/assets/Stable%20Diffusion%20Prompt%20Book%20From%20OpenArt%2011-13.pdf)，值得一阅。
 
+[stable diffusion art](https://stable-diffusion-art.com/)也有一篇[提示语指南](https://stable-diffusion-art.com/prompt-guide/)。
+
 ## 附录
 
 ### stable-diffusion-webui教程
