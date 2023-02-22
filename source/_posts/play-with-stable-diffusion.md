@@ -10,7 +10,8 @@ description: 上一篇简单介绍了下stable diffusion，这一篇简单玩玩
 
 在{% post_link intro-stable-diffusion 上一篇 %}我们使用了CompVis和Stability AI官方的检查点，但其实还有很多第三方的检查点，比如动漫模型[DreamShaper](https://huggingface.co/Lykon/DreamShaper)和真人模型[Chilloutmix](https://huggingface.co/TASUKU2023/Chilloutmix)，同样可以在HuggingFace上找到。
 
-在文件和版本页面，我们可以看到这些检查点文件的扩展名是`.safetensors`，[safetensors](https://huggingface.co/docs/safetensors/index)是HuggingFace发明的一种文件格式，用以安全且快速的存储张量。检查点除了`.ckpt`也支持`.safetensors`格式。
+在文件和版本页面，我们可以看到这些检查点文件的扩展名是`.safetensors`，[safetensors](https://huggingface.co/docs/safetensors/index)是HuggingFace发明的一种文件格式，用以安全且快速的存储张量。
+检查点除了`.ckpt`还支持`.safetensors`，以及[PyTorch用来保存和加载模型](https://pytorch.org/tutorials/beginner/saving_loading_models.html#saving-loading-model-for-inference)的`.pt`和`.pth`。
 
 ## 配置字符串
 
