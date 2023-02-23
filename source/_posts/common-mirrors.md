@@ -30,6 +30,16 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 
 较推荐几个大学的镜像站，比如中科大mirros。
 
+## github
+
+国内有一个[ghproxy](https://ghproxy.com/)提供了github的镜像源，在git clone时，只要使用`git clone https://ghproxy.com/https://github.com/stilleshan/ServerStatus`，即在正常的github链接前面加上`https://ghproxy.com/`即可实现镜像。
+
+如果想润物细无声，可以修改git设置：
+```bash
+git config --global url."https://ghproxy.com/https://github.com".insteadOf "https://github.com"
+```
+这样对使用来说就比较无感了，但会影响`git push`，不建议使用。
+
 ## dockerhub
 
 ### 国内源
