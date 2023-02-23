@@ -57,6 +57,12 @@ mlsd的全写是Maximum-Likelihood Sequence Detector，即极大似然估计。
 
 每种预处理的效果可以在项目主页的[examples](https://github.com/Mikubill/sd-webui-controlnet#examples)查看。
 
+### openpose编辑器
+
+除了从图片中提取姿势，我们也可以使用[Openpose Editor](https://github.com/fkunn1326/openpose-editor)扩展来直接编辑一个openpose。
+
+这个扩展不带骨骼约束，想要带骨骼约束可以使用[openose的vrm](https://github.com/suyu0925/raw/blob/master/stable-diffusion/openpose/openpose.vrm)去[vrmwebpose](https://www.vrmwebpose.app/)网站编辑。
+
 ## Guess Mode（实验性）
 如果不知道怎么写提示语，可以使用[Guess Mode](https://github.com/Mikubill/sd-webui-controlnet#guess-mode-non-prompt-mode-experimental)。
 也可用以对比不同的预处理产生的效果，在没有提示语的指导下，差异会更明显。
