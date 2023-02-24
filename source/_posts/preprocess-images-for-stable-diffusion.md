@@ -16,7 +16,7 @@ description: 在开始训练之前，先要准备数据集。
 
 如果需要训练的数据集是人脸照片，那么可以直接使用stable-diffusion-webui中的`自动焦点裁剪（Auto focal point crop）`功能。
 
-{% asset_img 自动焦点裁剪 %}
+{% asset_img auto-focal-point-crop.png 自动焦点裁剪 %}
 
 一键生成，只需检查一下就好。
 

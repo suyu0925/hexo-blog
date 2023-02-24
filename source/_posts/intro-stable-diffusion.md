@@ -25,8 +25,6 @@ Stability AI提供了在线体验：[dreamstudio](https://beta.dreamstudio.ai)�
 ### ui
 虽然sd(stable diffusion)官方有指导文档，但对新手还是不够友好，可以使用带ui的[stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)。
 
-脚本加强版[sd-scripts](https://github.com/kohya-ss/sd-scripts)也有[带ui版本](https://github.com/bmaltais/kohya_ss)。
-
 使用stable-diffusion-webui，[按照教程](https://github.com/AUTOMATIC1111/stable-diffusion-webui#installation-and-running)一步步来，把程序当作黑箱，也可以很轻易的运行起来。
 全默认设置渲染一张在GTX 1080上需要耗时10秒出头。
 
@@ -68,3 +66,36 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 4. 运行`webui-user.bat`
 
 这一步要很久，需要下载安装很多依赖。耐心多等一会。
+
+5. [可选]安装[xformers](https://github.com/facebookresearch/xformers)以[加速图片生成](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Xformers)
+
+```bash
+pip install -U xformers
+```
+
+在启动webui时，需要添加`--xformers`才能会检查xformers，否则还是会提示：
+```
+Checking Dreambooth requirements...
+[+] bitsandbytes version 0.35.0 installed.
+[+] diffusers version 0.10.2 installed.
+[+] transformers version 4.25.1 installed.
+[ ] xformers version N/A installed.
+[+] torch version 1.13.1+cu117 installed.
+[+] torchvision version 0.14.1+cu117 installed.
+```
+
+可以修改`webui-user.bat`：
+```bat
+set COMMANDLINE_ARGS=--xformers
+```
+
+再次启动就正常了：
+```
+Checking Dreambooth requirements...
+[+] bitsandbytes version 0.35.0 installed.
+[+] diffusers version 0.10.2 installed.
+[+] transformers version 4.25.1 installed.
+[+] xformers version 0.0.16rc425 installed.
+[+] torch version 1.13.1+cu117 installed.
+[+] torchvision version 0.14.1+cu117 installed.
+```
