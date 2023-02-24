@@ -2,6 +2,7 @@
 title: stable diffusion中的提示语
 date: 2023-02-21 22:03:50
 tags:
+- stable diffusion
 description: 总结一些提示语的技巧。
 ---
 ## 语法

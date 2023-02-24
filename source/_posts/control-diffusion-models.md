@@ -2,6 +2,7 @@
 title: 控制diffusion模型
 date: 2023-02-22 12:51:53
 tags:
+- stable diffusion
 description: 每次生成diffusion都是撞大运，有什么办法可以控制生成呢？
 ---
 [Lvmin Zhang](https://github.com/lllyasviel)发布的[ControlNet](https://github.com/lllyasviel/ControlNet)给了我们一个答案。

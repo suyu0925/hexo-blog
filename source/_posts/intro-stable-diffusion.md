@@ -2,6 +2,7 @@
 title: 简单介绍一下stable diffusion
 date: 2023-02-17 11:08:24
 tags:
+- stable diffusion
 description: stable diffusion这么火，不了解一下？
 ---
 [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion)是一个在2022年由[LMU](https://ommer-lab.com/)、[IWR, Heidelberg University](https://www.iwr.uni-heidelberg.de/)、[Runway](https://runwayml.com/)[联合提出](https://ommer-lab.com/research/latent-diffusion-models/)的文本生成图片的机器学习模型。具体实现由[CompVis](https://github.com/CompVis)小组[开源](https://github.com/CompVis/stable-diffusion)，[Stability AI](https://stability.ai/)提供商业支持。Version 2由Stability AI[开源](https://github.com/Stability-AI/stablediffusion)。

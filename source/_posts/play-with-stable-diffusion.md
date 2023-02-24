@@ -2,6 +2,7 @@
 title: 玩玩stable diffusion
 date: 2023-02-20 11:04:13
 tags:
+- stable diffusion
 description: 上一篇简单介绍了下stable diffusion，这一篇简单玩玩。
 ---
 上一篇文章介绍了如何使用stable-diffusion-webui自建服务，这一篇我们来简单玩玩。
