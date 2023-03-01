@@ -6,19 +6,23 @@ tags:
 description: 随着年龄和体型的变化，原来常买的品牌有点不适合了，记录一下。
 ---
 
+## 潮牌
+
+NASA男装
+
+## 工装休闲
+
+simwood简木
+马登工装
+
 ## 运动休闲
 
 优衣库
 优衣库 GU
-NASA男装
 nothomme
 重新加载
 唐狮
 INXX
-
-## 休闲
-
-simwood简木
 
 ## 商务休闲
 
@@ -32,3 +36,5 @@ Luka Dilong路卡迪龙
 
 棉先生
 ChillBoyCrew
+丹宁哲学
+jssd homme
