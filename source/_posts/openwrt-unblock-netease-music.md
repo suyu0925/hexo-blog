@@ -177,7 +177,7 @@ OpenClash v0.45.78-beta, [Dev] v1.12.0-8, [TUN] 2022.11.25-8, [Meta] alpha-g7a64
 一切正常。包括`curl https://google.com`。
 
 工作正常的环境：
-OpenWrt 21.03.5
+OpenWrt 21.02.5
 unblockneteasemusic v3.1-4
 OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25f5e7, Redir-Host 兼容/混合, 使用api.dler.io转换订阅模板
 使用Fake-IP工作正常。
@@ -188,4 +188,4 @@ OpenWrt 22.03.2/22.03.3
 unblockneteasemusic v2.13-1/v3.1-4
 OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25f5e7, Redir-Host/Fake-IP 兼容/混合, 使用api.dler.io转换订阅模板
 
-通过测试基本可以判定，原因出在系统OpenWrt 22.03，还是使用OpenWrt 21.03版本吧。
+通过测试基本可以判定，原因出在系统OpenWrt 22.03，还是使用OpenWrt 21.02版本吧。

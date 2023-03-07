@@ -9,10 +9,10 @@ description: 可以说软路由最重要的作用就是科学上网了，在Open
 
 ## 下载
 
-首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.45.78-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.45.78-beta)。
+首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.45.100-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.45.100-beta)。
 
 ```bash
-wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.45.78-beta/luci-app-openclash_0.45.78-beta_all.ipk
+wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.45.100-beta/luci-app-openclash_0.45.100-beta_all.ipk
 ```
 
 如果在OpenWrt中无法下载，那么可在宿主机通过代理下载后再拷贝上去。
@@ -151,3 +151,14 @@ payload:
 {% asset_img "use-rule-provider.png" "使用自定义规则集" %}
 
 这样当访问后缀为`onedrive.live.com`的网站时，就会使用代理了。
+
+### geo数据库订阅
+如果在更新geo数据库时出错，可能会导致geo文件缺乏，openclash无法启动。此时需要手动下载并上传geo数据库的文件。
+
+geo数据库的文件有好几个，`Country.mmdb`，`GeoSite.dat`，`GeoIP.dat`都在`/etc/openclash/`下。
+
+我们可以在`/usr/share/openclash/`目录下找到对应的更新脚本：`openclash_ipdb.sh`，`openclash_geosite.sh`，`openclash_geoip.sh`，
+
+再在更新脚本中找到下载地址：`https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb`，`https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat`，`https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat`。
+
+在本地下载后，再上传至openwrt的`/etc/openclash/`。
