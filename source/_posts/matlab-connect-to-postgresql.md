@@ -1,7 +1,8 @@
 ---
 title: matlab连接postgresql
 date: 2020-11-30 09:30:09
-tags: matlab
+tags: 
+- sql
 description: matlab用的不多，记录备忘。
 categories: 
 - computer science

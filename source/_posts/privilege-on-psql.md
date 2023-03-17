@@ -1,8 +1,9 @@
 ---
 title: PostgreSQL中的用户权限
 date: 2020-10-29 09:57:55
-description: PostgreSQL的用户权限与其它SQL数据库不尽相同，它增加了一个SCHEMA。
 tags:
+- sql
+description: PostgreSQL的用户权限与其它SQL数据库不尽相同，它增加了一个SCHEMA。
 ---
 
 # PostgreSQL中的用户权限
