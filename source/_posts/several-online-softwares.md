@@ -18,6 +18,8 @@ description: 随着浏览器功能越来越强，服务器也越来越便宜，�
 
 它们的使用与Photoshop很接近，基本可以无缝切换，非常适合偶尔才P次图的普通人。
 
+而[photokit](https://photokit.com/)更是使用了AI算法，像一键抠图、智能笔刷、画质增强统统都支持，强大无匹。
+
 ## 人像画质增强
 人像画质增强在AI的图像应用中是个非常热门的领域了，特别是用在老照片的画质修复上，可以试试腾讯ARC的[人像修复](https://arc.tencent.com/zh/ai-demos/faceRestoration)。
 
