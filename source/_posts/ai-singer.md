@@ -9,6 +9,6 @@ description: 之前有写过一篇人力V的文章，里面的音源配布现在
 
 [-LKs-](https://space.bilibili.com/125526)发布的[赛博女友，完美变声，如今AI语音有多超乎想象?](https://www.bilibili.com/video/BV1uM411t7ZJ)这个视频提到了[DiffSinger](https://github.com/openvpi/DiffSinger)可以做到个人训练音源。
 
-[孙飒](https://www.qfssr.cn/)写了个[DiffSinger基础教程](https://www.yuque.com/sunsa-i3ayc/sivu7h)，相当详细，从入门到入土。
+[孙飒](https://www.qfssr.cn/)写了个[DiffSinger基础教程](https://www.yuque.com/openvpi/tutorial)，相当详细，从入门到入土。
 
 不想自己训练想直接先体验下AI歌手可以试试[小冰](https://singer.xiaoice.com/)，[虚拟歌手](http://www.aisingers.com/)。
