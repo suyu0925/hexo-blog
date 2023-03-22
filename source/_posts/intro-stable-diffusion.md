@@ -15,9 +15,11 @@ Stability AI提供了在线体验：[dreamstudio](https://beta.dreamstudio.ai)�
 
 生成图片需要消耗积分，新账号有大概100积分，可以稍微玩一会。
 
+[NovelAI.Dev](https://novelai.dev/)也提供了[魔法小镇](https://www.kamiya.dev/)可以在线体验，需要翻墙获取[注册码](https://www.kamiya.dev/openid.html)。
+
 ## 本机自建
 
-如果自己的显卡还行的话，可以尝试在本地运行。
+如果自己的显卡还行的话，可以尝试在本地运行。NovelAI.Dev提供了一份[安装指南](https://guide.novelai.dev/guide/install/sd-webui)。
 
 ### 预训练
 不需要完全从头训练，CompVis有将自己训练后的参数以[检查点（checkpoint）](https://github.com/CompVis/stable-diffusion#weights)的形式共享出来，放在了[Hugging Face](https://huggingface.co/CompVis)。Stability AI也同样放出了[v2的参数](https://huggingface.co/stabilityai)。

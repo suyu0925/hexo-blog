@@ -5,6 +5,10 @@ tags:
 - stable diffusion
 description: 总结一些提示语的技巧。
 ---
+NovelAI.Dev有提供一份指南：[提示词工程学](https://guide.novelai.dev/guide/prompt-engineering/)，可以参考。
+
+针对不同的底模，会有不同的标签。比如[Danbooru的标签超市](https://tags.novelai.dev/)。
+
 ## 语法
 
 ### 强调
