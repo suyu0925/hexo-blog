@@ -129,6 +129,12 @@ type = http
 local_ip = 192.168.8.1
 local_port = 6800
 custom_domains = aria2.frp.yourdomain.com
+
+[clash]
+type = http
+local_ip = 192.168.8.1
+local_port = 9090
+custom_domains = clash.frp.yourdomain.com
 ```
 
 注意像`[jellyfin]`这样的名字不要有重复，会被当作ID使用。
@@ -158,4 +164,20 @@ docker run -d --name=frpc --restart=always -v f:/frp/frpc.ini:/frp/frpc.ini stil
 修改配置则需要重启docker：
 ```bash
 docker restart frpc
+```
+
+### openclash
+
+需要修改openclash控制台的连接设置，默认是：
+```ini
+Host: 192.168.8.1
+端口: 9090
+密钥：123456
+```
+
+需要修改为：
+```ini
+Host: clash.frp.yourdomain.com
+端口: 80
+密钥：123456
 ```
