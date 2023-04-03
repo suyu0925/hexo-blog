@@ -62,3 +62,7 @@ networks:
 - [秀儿](https://github.com/XIU2/Yuedu)
 
 网友`xiu2`整理的书源。
+
+## 小说下载
+
+如果不想在线阅读想全本下载，可以上[知轩藏书](http://zxcs.me/)下载txt文件。
