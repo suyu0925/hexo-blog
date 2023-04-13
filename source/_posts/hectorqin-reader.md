@@ -66,3 +66,7 @@ networks:
 ## 小说下载
 
 如果不想在线阅读想全本下载，可以上[知轩藏书](http://zxcs.me/)下载txt文件。
+
+## 出版物下载
+
+出版物可以去[Z-Library](https://singlelogin.me/)下载，然后上传到[微信读书](https://weread.qq.com/web/upload)阅读。
