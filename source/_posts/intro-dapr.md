@@ -3,6 +3,7 @@ title: 介绍一下dapr
 date: 2023-04-14 11:17:59
 tags:
 description: 最近在拆分微服务，介绍一下dapr。
+hidden: true
 ---
 Distributed application runtime[(Dapr)](https://dapr.io/)的是一种面向微服务的开发框架，由微软[开源](https://github.com/dapr/dapr)。
 
