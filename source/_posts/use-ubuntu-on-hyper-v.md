@@ -17,7 +17,7 @@ description: VirtualBox在开启Hyper-V后性能很差，需要切换到Hyper-V�
 
 微软之前使用了一个脚本来自动化这些操作，项目在[linux-vm-tool](https://github.com/microsoft/linux-vm-tools)，目前已经归档。只支持了Ubuntu 16.04和18.04。
 
-热心网友[Hinara](https://github.com/Hinara)分叉了这个项目，支持了Ubuntu 20.04和22.04。上面那篇gist里就是使用这个项目的脚本来安装增强模式的。
+热心网友[Hinara](https://github.com/Hinara)分叉了这个项目，[支持了](https://github.com/Hinara/linux-vm-tools/tree/ubuntu20-04/ubuntu)Ubuntu 20.04和22.04。上面那篇gist里就是使用这个项目的脚本来安装增强模式的。
 
 如无特别需求，建议使用微软优化过的镜像。除了更方便外，体感上微软优化的镜像运行起来要更快一些。
 
@@ -46,10 +46,58 @@ sudo reboot
 
 {% asset_img resolution-on-connecting.png 选择分辨率 %}
 
-## 磁盘大小
+## 硬盘扩容
 
-先将虚拟机关机，然后再编辑硬盘驱动器的虚拟硬盘。
-
-默认会放在`C:\ProgramData\Microsoft\Windows\Virtual Hard Disks\`，如果C盘空间不够可以挪到其它盘。在`Hyper-V 设置`中可以修改虚拟硬盘的默认文件夹。
+虚拟硬盘文件默认会放在`C:\ProgramData\Microsoft\Windows\Virtual Hard Disks\`，如果C盘空间不够可以挪到其它盘。在`Hyper-V 设置`中可以修改虚拟硬盘的默认文件夹。
 
 有需求一定记得先扩容，否则创建完检查点就不允许编辑了。
+
+1. 先将虚拟机关机。
+
+2. 编辑硬盘驱动器的虚拟硬盘，官方内建Ubuntu镜像默认硬盘大小是12G，完全不够用。扩展至你想要的大小，这里是动态大小，大点没关系，比如200G。
+
+3. 只扩展虚拟硬盘文件并不会直接应用到Ubuntu系统，启动并连接虚拟机可以看到：
+
+```bash
+user@ubuntu:~$ sudo fdisk -l
+GPT PMBR size mismatch (25165823 != 419430399) will be corrected by write.
+The backup GPT table is not on the end of the device.
+
+Disk /dev/sda: 200 GiB, 214748364800 bytes, 419430400 sectors
+Disk model: Virtual Disk    
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: F86D133B-CDB4-4EAF-A9AA-0F4B0A8ADC00
+
+Device      Start      End  Sectors  Size Type
+/dev/sda1  227328 25165790 24938463 11.9G Linux filesystem
+/dev/sda14   2048    10239     8192    4M BIOS boot
+/dev/sda15  10240   227327   217088  106M EFI System
+
+Partition table entries are not in disk order.
+```
+
+还需要扩展分区。
+
+```bash
+sudo apt install cloud-guest-utils
+sudo growpart /dev/sda 1
+sudo resize2fs /dev/sda1
+```
+
+注意`/dev/sda 1`中的1前面有个空格，这是分区号，不是分区名。
+
+4. 扩容完成
+```bash
+user@ubuntu:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           192M  1.6M  190M   1% /run
+/dev/sda1       194G  6.5G  188G   4% /
+tmpfs           956M     0  956M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda15      105M  5.3M  100M   5% /boot/efi
+tmpfs           192M   84K  192M   1% /run/user/127
+tmpfs           192M  172K  191M   1% /run/user/1000
+```
