@@ -35,26 +35,4 @@ docker虽然方便，但不够完整，更适合用来运行应用。
 
 ## 使用Hyper-V
 
-### Ubuntu镜像
-
-推荐使用自行下载Ubuntu镜像作为`本地安装源`而不是使用`快速创建`里面的Ubuntu镜像，毕竟可自行灵活下载的网速相比抽风的微软下载站可控得多。
-
-### hyper-v下的ubuntu分辨率为全屏
-
-使用`sudo nano /etc/default/grub`将`grub`中的`GRUB_CMDLINE_LINUX_DEFAULT`改为
-```
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
-```
-然后
-```bash
-sudo update-grub
-sudo reboot
-```
-
-### hyper-v下修改磁盘大小
-
-先将虚拟机关机，然后再编辑硬盘驱动器的虚拟硬盘。
-
-默认虚拟硬盘会放在`C:\ProgramData\Microsoft\Windows\Virtual Hard Disks\`，如果C盘空间不够可以挪到其它盘。
-
-如果有需求一定记得先扩容，否则创建完检查点就不允许编辑了。
+参见这篇文章：{% post_link use-ubuntu-on-hyper-v 在Hyper-V上使用Ubuntu %}。
