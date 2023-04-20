@@ -16,11 +16,15 @@ hidden: true
 
 舟车劳顿，在[李公提](https://www.mafengwo.cn/poi/8813.html)休息休息，看看风景。可以在[苏城家宴](https://www.dianping.com/shop/H6viV7xzF1foXafR)吃过中饭后打车进限行区。
 
+李公堤附近有一家[飞度精酿啤酒餐吧](https://www.dianping.com/shop/G1q2UO7dOEt5Tby6)，路过的可以尝点他们的自酿，这里有[视频介绍](https://www.bilibili.com/video/BV1VD4y1M7nJ/)。
+
 {% asset_img traffic_restriction.png 苏州限行区域 %}
 
 [拙政园](https://www.mafengwo.cn/poi/638.html)、[苏州博物馆](https://www.mafengwo.cn/poi/5674.html)、[狮子林](https://www.mafengwo.cn/poi/639.html)在一起，[平江路](https://www.mafengwo.cn/poi/5752.html)、[观前街](https://www.mafengwo.cn/poi/8556.html)也[离的不远](https://map.baidu.com/dir/%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%8D%97%E5%85%A5%E5%8F%A3/%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E6%96%87%E5%8C%96%E5%90%8D%E8%A1%97%E8%8B%8F%E5%B7%9E%E5%B9%B3%E6%B1%9F%E8%B7%AF/@13429143,3652583.5,17z?querytype=walk&c=224&sn=1$$8dcbfa1824c32cd230169bae$$13429469,3653177$$%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%8D%97%E5%85%A5%E5%8F%A3$$0$$$$&en=2$$$$$$%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E6%96%87%E5%8C%96%E5%90%8D%E8%A1%97%E8%8B%8F%E5%B7%9E%E5%B9%B3%E6%B1%9F%E8%B7%AF$$1$$%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%A7%91%E8%8B%8F%E5%8C%BA$$&sc=224&ec=224&pn=0&rn=5&version=6&run=0&spath_type=1&da_src=shareurl)，就在这一直玩到晚上。
 
 “妈妈烧的鱼”这家店已经没了，晚饭和宵夜怎么吃临时再决定吧，在这边不可能饿着。
+
+平江路附近有一家卖旧书的[知止书店](https://www.dianping.com/shop/k5J5FiBrT4lVs515)，在[未见制片所](https://space.bilibili.com/611957438)的[《一爿店》——知止书店｜如果所有知识都有归处](https://www.bilibili.com/video/BV1D84y1G7rh/)中有介绍。路过可以去看看。
 
 晚上打车回停车场，然后开车去[酒店](https://bestwehotel.com/HotelDetail/?hotelId=9348)，路程大概需要[45分钟](https://map.baidu.com/dir/%E8%8B%8F%E5%B7%9E%E5%B9%B3%E6%B1%9F%E5%8E%86%E5%8F%B2%E6%96%87%E5%8C%96%E8%A1%97%E5%8C%BA/%E4%B8%BD%E6%9E%AB%E9%85%92%E5%BA%97(%E8%8B%8F%E5%B7%9E%E5%B7%A5%E4%B8%9A%E5%9B%AD%E5%8C%BA%E8%87%AA%E8%B4%B8%E5%8C%BA%E7%94%AA%E7%9B%B4%E5%8F%A4%E9%95%87%E5%BA%97)/@13437815.785,3650973.13,14z?querytype=nav&c=224&sn=1$$f05b6971de5c72156140a9b7$$13429877.94,3651401.58$$%E8%8B%8F%E5%B7%9E%E5%B9%B3%E6%B1%9F%E5%8E%86%E5%8F%B2%E6%96%87%E5%8C%96%E8%A1%97%E5%8C%BA$$0$$$$&en=2$$$$$$%E4%B8%BD%E6%9E%AB%E9%85%92%E5%BA%97(%E8%8B%8F%E5%B7%9E%E5%B7%A5%E4%B8%9A%E5%9B%AD%E5%8C%BA%E8%87%AA%E8%B4%B8%E5%8C%BA%E7%94%AA%E7%9B%B4%E5%8F%A4%E9%95%87%E5%BA%97)$$1$$%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%90%B4%E4%B8%AD%E5%8C%BA$$&sc=224&ec=224&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)。
 
