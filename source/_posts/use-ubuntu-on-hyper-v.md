@@ -101,3 +101,14 @@ tmpfs           5.0M  4.0K  5.0M   1% /run/lock
 tmpfs           192M   84K  192M   1% /run/user/127
 tmpfs           192M  172K  191M   1% /run/user/1000
 ```
+
+## 远程登录
+
+Ubuntu桌面版默认是不支持远程登录的，为了可以从宿主机使用`ssh`命令登录虚拟机，需要安装`openssh-server`。
+```bash
+sudo apt install openssh-server
+ip addr
+```
+
+使用`ip addr`查看虚拟机的IP地址，然后在宿主机使用`ssh`命令登录。
+也可直接使用`ssh user@ubuntu`这种形式，`user`为用户名，`ubuntu`为虚拟机中ubuntu的电脑名。
