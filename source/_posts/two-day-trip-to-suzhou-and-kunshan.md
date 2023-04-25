@@ -14,11 +14,13 @@ hidden: true
 
 注意：苏州也是限行城市。开车到金鸡湖就已经是极限了，把车停这，找个能包日的地方一直停到晚上。
 
+{% asset_img traffic_restriction.png 苏州限行区域 %}
+
 舟车劳顿，在[李公提](https://www.mafengwo.cn/poi/8813.html)休息休息，看看风景。可以在[苏城家宴](https://www.dianping.com/shop/H6viV7xzF1foXafR)吃过中饭后打车进限行区。
 
 李公堤附近有一家[飞度精酿啤酒餐吧](https://www.dianping.com/shop/G1q2UO7dOEt5Tby6)，路过的可以尝点他们的自酿，这里有[视频介绍](https://www.bilibili.com/video/BV1VD4y1M7nJ/)。
 
-{% asset_img traffic_restriction.png 苏州限行区域 %}
+也可以选择把车停在[苏州中心商场](https://www.mafengwo.cn/poi/31808546.html)，在[东方之门](https://www.mafengwo.cn/poi/3886740.html)下拍拍照，然后[坐地铁去](https://map.baidu.com/dir/%E8%8B%8F%E5%B7%9E%E4%B8%AD%E5%BF%83%E5%95%86%E5%9C%BA/%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%94%AE%E7%A5%A8%E5%A4%84/@13430509.13671275,3652046,15.62z?querytype=bt&bttp=0&c=224&sy=0&en=1$$fb232a32e05fa693a6da39bf$$13429288.75,3653131.67$$%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%94%AE%E7%A5%A8%E5%A4%84$$$$$$&sn=1$$502c53064170304bf603b839$$13434901.63,3651978.47$$%E8%8B%8F%E5%B7%9E%E4%B8%AD%E5%BF%83%E5%95%86%E5%9C%BA$$$$$$&sq=%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%94%AE%E7%A5%A8%E5%A4%84&eq=%E8%8B%8F%E5%B7%9E%E4%B8%AD%E5%BF%83%E5%95%86%E5%9C%BA&exptype=dep&exptime=2023-04-25%2013:40&version=5&da_src=shareurl)拙政园。到时看哪边好停车吧。
 
 [拙政园](https://www.mafengwo.cn/poi/638.html)、[苏州博物馆](https://www.mafengwo.cn/poi/5674.html)、[狮子林](https://www.mafengwo.cn/poi/639.html)在一起，[平江路](https://www.mafengwo.cn/poi/5752.html)、[观前街](https://www.mafengwo.cn/poi/8556.html)也[离的不远](https://map.baidu.com/dir/%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%8D%97%E5%85%A5%E5%8F%A3/%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E6%96%87%E5%8C%96%E5%90%8D%E8%A1%97%E8%8B%8F%E5%B7%9E%E5%B9%B3%E6%B1%9F%E8%B7%AF/@13429143,3652583.5,17z?querytype=walk&c=224&sn=1$$8dcbfa1824c32cd230169bae$$13429469,3653177$$%E6%8B%99%E6%94%BF%E5%9B%AD-%E5%8D%97%E5%85%A5%E5%8F%A3$$0$$$$&en=2$$$$$$%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E6%96%87%E5%8C%96%E5%90%8D%E8%A1%97%E8%8B%8F%E5%B7%9E%E5%B9%B3%E6%B1%9F%E8%B7%AF$$1$$%E8%8B%8F%E5%B7%9E%E5%B8%82%E5%A7%91%E8%8B%8F%E5%8C%BA$$&sc=224&ec=224&pn=0&rn=5&version=6&run=0&spath_type=1&da_src=shareurl)，就在这一直玩到晚上。
 
