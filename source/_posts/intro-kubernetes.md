@@ -46,9 +46,9 @@ Docker出现后，容器被越来越多人使用。但到生产环境应用部�
 于是在Docker周边涌现出的数不胜数的扩展、增强产品中，出现了一个叫[Fig](https://orchardup.github.io/fig.sh/index.html)的小项目。Fig为Docker引入了[容器编排](https://www.vmware.com/topics/glossary/content/container-orchestration.html)的概念，使用[YAML](https://yaml.org/)来定义容器的启动参数、先后顺序和依赖关系，让用户不再有Docker冗长命令行的烦恼，并第一次见识到了`声明式`的威力。Docker公司也很快意识到了Fig这个小工具的价值，于是就在2014年7月把它买了下来，集成进Docker内部，改名成了[docker compose](https://docs.docker.com/compose/)。
 
 ### 云原生时代
-容器技术开启了云原生的大潮，面对服务器集群，只能编排单机的docker compose已经力不从心。于是在2014年，Docker公司推出了[Docker "Classic" Swarm](https://github.com/docker-archive/classicswarm)来支持集群。
+容器技术开启了云原生的大潮，面对服务器集群，只能编排单机的docker compose已经力不从心。于是在2014年，Docker公司推出了Docker Swarm（现已更名为[Docker "Classic" Swarm](https://github.com/docker-archive/classicswarm)）来支持集群。
 
-与此同时，谷歌
+然后在2015年，谷歌
 
 ## Kubernetes
 
