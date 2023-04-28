@@ -139,7 +139,7 @@ Dapr使用Redis来存储状态和配置信息，以及发布订阅。
 - Zipkin容器
 Dapr使用Zipkin来收集跟踪数据。
 - Placement容器
-Dapr使用Placement服务来管理应用程序[actors](https://docs.dapr.io/developing-applications/building-blocks/actors/actors-overview/)的状态。
+Dapr使用Placement服务来管理应用程序的状态。
 
 {% asset_img dapr-overview-standalone.png 自托管模式 %}
 
