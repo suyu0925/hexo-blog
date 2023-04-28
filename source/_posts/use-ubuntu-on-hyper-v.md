@@ -112,3 +112,11 @@ ip addr
 
 使用`ip addr`查看虚拟机的IP地址，然后在宿主机使用`ssh`命令登录。
 也可直接使用`ssh user@ubuntu`这种形式，`user`为用户名，`ubuntu`为虚拟机中ubuntu的电脑名。
+
+## 嵌套虚拟化
+
+我们可以[在Hyper-V虚拟机上再运行一个Hyper-V虚拟机](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization)。
+
+```powershell
+Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+```
