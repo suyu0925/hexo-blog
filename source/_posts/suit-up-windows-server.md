@@ -117,13 +117,15 @@ Add-AppxPackage .\Ubuntu2204-220620\Ubuntu_2204.0.10.0_x64.appx
 
 ## docker
 
-docker在云服务器上只能使用windows container，使用场景大幅受限，几近鸡肋。
+为了实现资源最大化利用，云服务器都是使用虚拟化技术来资源池化的。普通的云服务器[不支持二次虚拟化](https://help.aliyun.com/document_detail/25412.html#section-nxc-2zs-2gb)。
 
-### *Docker Desktop，不支持Windows Server
+所以docker在windows server云服务器上只能使用windows container，使用场景大幅受限，几近鸡肋。
 
-**注意**，[Docker Desktop](https://www.docker.com/products/docker-desktop/)在Windows Server上运行不起来，因为默认会使用Hyper-V，只建议在Windows 10/11上使用而不是Server。
+### 不支持Docker Desktop
 
-在Server上我们有Server的打开方式。
+如果想[在虚拟机中安装Docker Desktop](https://docs.docker.com/desktop/vm-vdi/)，需要嵌套虚拟化（nested virtualization）。很可惜，云服务通常都不支持嵌套虚拟化。
+
+不过我们可以抛开[Docker Desktop](https://www.docker.com/products/docker-desktop/)，直接使用[Docker Engine](https://docs.docker.com/engine/)。
 
 ### 打开container功能
 
