@@ -108,6 +108,14 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 
 比如.Net的HttpClient对307的第二次请求就会去除Authentication信息，而nodejs的axios和postman会带上。
 
+## 客户端IP
+
+在`Application Request Routing Cache`-->`Server Proxy Settings`-->`Preserve Client IP in the following header`设置中，可以指定客户端IP的传递方式。
+
+默认是保存在`X-Forwarded-For`中，如果需要保存在其他的header中，可以在这里修改。或者留空，不保存。
+
+可参阅[Application Request Routing Page文档](http://technet.microsoft.com/en-us/library/dd443533(v=ws.10).aspx)。
+
 ## 日志
 
 通常服务器的系统盘容量都不会特别大，如果不做限制，IIS的日志将会成为很大的负担。
@@ -131,3 +139,9 @@ description: 在Windows Server上，IIS比nginx性能强很多，试着配置一
 参见微软文档，下载后直接运行，第一次运行需要先进行设置，之后就会自动清除了。
 
 需要注意的是，`IISLogCleaner.exe`并不会注册服务，也就是说重启后需要手动再次启动。所以我们需要把它的快捷方式扔进`%appdata%\Microsoft\Windows\Start Menu\Programs\Startup`来完成自启。
+
+### 添加客户端IP到日志
+
+在日志页，我们可以添加客户端IP到日志中。
+
+在日志文件栏的选择字段中，添加Request Header的`X-Forward-For`自定义字段。
