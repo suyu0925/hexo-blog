@@ -1,7 +1,6 @@
 ---
 title: 浅谈微服务化
 date: 2023-04-25 15:08:27
-hidden: true
 description: 拿一个项目当作样例，浅谈一下微服务。
 ---
 ## 引子
@@ -143,6 +142,21 @@ Dapr使用Placement服务来管理应用程序的状态。
 
 {% asset_img dapr-overview-standalone.png 自托管模式 %}
 
+**自托管（本地开发）- 无需docker**
+
+dapr运行时也可以[不依赖docker](https://docs.dapr.io/operations/hosting/self-hosted/self-hosted-no-docker/)，使用`dapr init --slim`安装即可。
+
+这样就只会安装：
+- daprd
+- placement
+
+但因为没有安装默认组件（比如redis），所以只有`服务调用`可用。还需要进行更多配置才能正常使用。
+
+- 状态管理和发布订阅
+{% post_link redis-on-windows 安装redis %}后，才能使用状态管理和发布订阅。
+
+- [打开actors的支持](https://docs.dapr.io/operations/hosting/self-hosted/self-hosted-no-docker/#enable-state-management-or-pubsub)
+
 **kubernetes**
 
 而在kubernetes托管方式下，Dapr以一个旁路容器的形式，与微服务应用容器运行在同一个pod中。
@@ -158,3 +172,51 @@ Dapr使用Placement服务来管理应用程序的状态。
 管理证书认证以及服务间的mTLS通信。
 
 {% asset_img dapr-overview-kubernetes.png kubernetes托管方式 %}
+
+## 附录
+
+### 在服务器上安装dapr slim
+
+dapr的默认安装方式为在线安装，需要访问放在github上的文件，对网络环境无法完全控制的服务器不友好。我们试试看能不能脱机安装。
+
+#### 安装dapr cli
+
+官方推荐的安装方式为
+```powershell
+powershell -Command "iwr -useb https://raw.githubusercontent.com/dapr/cli/master/install/install.ps1 | iex"
+```
+
+`install.ps1`干了这么几件事：
+- 拉取[dapr cli的最新发布版本信息](https://github.com/dapr/cli/releases)
+- 下载[dapr cli的zip包](https://github.com/dapr/cli/releases/download/v1.10.0/dapr_windows_amd64.zip)
+- 解压`dapr.exe`到`$Env:SystemDrive\dapr`
+- 添加`$Env:SystemDrive\dapr`到`%PATH%`环境变量
+
+#### dapr init --slim
+
+官方推荐的安装方式为
+```powershell
+dapr init --slim
+```
+
+它会在`%USERPROFILE%/.dapr`下创建文件树：
+- bin
+  - web
+  - dashboard.exe
+  - daprd.exe
+  - placement.exe
+- components
+  - statestore.yaml
+  - pubsub.yaml
+- config.yaml
+同时将`%USERPROFILE%/.dapr/bin`加入`%PATH%`环境变量。
+
+daprd.exe是dapr运行时。
+placement.exe是为actors服务的。
+这两个文件可以在[dapr的release](https://github.com/dapr/dapr/releases/tag/v1.10.5)中下载。
+
+[dashboard.exe](https://github.com/dapr/dashboard/releases/tag/v0.12.0)是dapr的[dashboard](https://github.com/dapr/dashboard)，可以通过`dapr dashboard`启动。
+
+components下是默认的组件配置，包括statestore和pubsub。
+config.yaml是dapr的默认配置。
+这三个文件都是由[代码生成](https://github.com/dapr/cli/blob/master/pkg/standalone/standalone.go#L676)。

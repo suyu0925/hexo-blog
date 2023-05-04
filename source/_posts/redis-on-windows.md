@@ -64,7 +64,7 @@ docker update --restart unless-stopped redis
 
 但redis镜像只支持Linux containers，所以…… 等阿里云更新解决方案吧。
 
-## redis-cli
+### redis-cli
 
 如果想使用redis-cli，可以直接用容器里的：
 ```bash
