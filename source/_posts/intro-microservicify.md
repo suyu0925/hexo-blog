@@ -2,6 +2,7 @@
 title: 浅谈微服务化
 date: 2023-04-25 15:08:27
 description: 拿一个项目当作样例，浅谈一下微服务。
+hidden: true
 ---
 ## 引子
 
