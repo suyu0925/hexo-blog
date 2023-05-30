@@ -126,6 +126,7 @@ Fake IP出自[RFC3089](https://www.rfc-editor.org/rfc/rfc3089)，这个RFC定义
 但它也有几个问题：
 - 无法ping域名，解析得到的会是内网的Fake IP
 - [windows会认为没有连接到互联网](https://github.com/vernesong/OpenClash/issues/6)，需要将`\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet`下的[几个域名](https://www.zhihu.com/question/48856675)添加至覆写设置->DNS设置->Fake-IP-Filter。
+- windows时间同步的NTP（Network Time Protocol）域名：time.windows.com
 
 如果对性能不是有很强的要求，还是建议使用Redir-Host模式。
 
