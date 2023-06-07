@@ -69,4 +69,6 @@ networks:
 
 ## 出版物下载
 
-出版物可以去[Z-Library](https://singlelogin.me/)下载，然后上传到[微信读书](https://weread.qq.com/web/upload)阅读。
+出版物可以去[Z-Library](https://singlelogin.site/)下载，然后上传到[微信读书](https://weread.qq.com/web/upload)阅读。
+
+注意，Z-Library经常被美国搞，所以网址会变，可以去[维基](https://zh.wikipedia.org/zh-tw/Z-Library)找最新网址。
