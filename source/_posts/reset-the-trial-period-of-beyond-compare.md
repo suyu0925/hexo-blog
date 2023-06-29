@@ -21,7 +21,7 @@ rm ~/Library/Application\ Support/Beyond\ Compare/registry.dat
 
 ### windows
 
-在注册表中删除`HKEY_USERS/{USER_SID}/SOFTWARE/Scooter Software/Beyond Compare 4/CacheID`。
+在注册表中删除`计算机\HKEY_USERS\{USER_SID}\SOFTWARE\Scooter Software\Beyond Compare 4\CacheID`。
 
 其中`USER_SID`是用户的[Security Identifier](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/security-identifiers)，可以在`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`中找到。
 
