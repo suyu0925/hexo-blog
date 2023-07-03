@@ -2,6 +2,7 @@
 title: windows回收站的工作原理
 date: 2023-06-29 14:26:13
 tags:
+- windows
 description: windows回收站我们都用过，本文揭秘它的工作原理。
 ---
 windows上的回收站功能我们应该都用过，只要不是使用`Shift+Delete`直接删除，删除的文件或文件夹都会先进入回收站，给我们一次反悔的机会。
