@@ -1,7 +1,7 @@
 ---
 title: vsto插件被自动禁用
 date: 2023-07-24 10:24:24
-tags:
+tags: excel-add-in
 description: 有时excel插件会被自动禁用，查一下原因。
 ---
 
