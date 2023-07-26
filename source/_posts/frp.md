@@ -23,7 +23,13 @@ frp由客户端和服务端构成，每个端分别有一个可执行文件，�
 
 ## 服务端
 
-### 下载
+### fprs
+
+frps有两种方式运行，一种是使用可执行文件并配置为systemd服务，另一种是使用docker。
+
+#### 使用可执行文件
+
+- 下载
 
 下载[对应的可执行文件包](https://github.com/fatedier/frp/releases)，linux可使用`uname -m`查看。
 
@@ -32,17 +38,28 @@ wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_
 tar -zxvf ./frp_0.44.0_linux_amd64.tar.gz
 ```
 
-### 配置
+- 配置
 
 修改frp下的`fps.ini`，一般只需要两个端口就完事。
 
 ```ini
 [common]
+# 监听端口
 bind_port = 7000 
-vhost_bind_port = 8080
+# 面板端口
+dashboard_port = 7500
+# 登录面板账号设置
+dashboard_user = admin
+dashboard_pwd = frps1234
+# 设置http及https协议下代理端口
+vhost_bind_port = 7080
+vhost_https_port = 7081
+
+# 身份验证
+token = 12345678
 ```
 
-### 在linux下[使用systemd配置服务](https://gofrp.org/docs/setup/systemd/)
+- 在linux下[使用systemd配置服务](https://gofrp.org/docs/setup/systemd/)
 
 在/etc/systemd/system/下添加frp.service：
 ```ini
@@ -61,22 +78,31 @@ ExecStart = /root/frp_0.44.0_linux_amd64/frps -c  /root/frp_0.44.0_linux_amd64/f
 WantedBy = multi-user.target
 ```
 
-开启服务
+- 开启服务
 ```bash
 systemctl start frps
 systemctl enable frps
 ```
 
-查看服务状态和日志
+- 查看服务状态和日志
 ```bash
 systemctl status frps
 
 journalctl -u frps -b
 ```
 
+#### 使用docker
+
+使用docker则简单多了，只需要修改`frps.ini`，然后运行docker即可。
+
+这里默认`frps.ini`创建在了`/etc/frp/`下。
+```bash
+docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps
+```
+
 ### nginx
 
-穿透web服务搭配nginx反向代理食用最佳。注意`http://127.0.0.1:8080`中的8080就是上面的vhost_bind_port。
+穿透web服务搭配nginx反向代理食用最佳。注意`http://127.0.0.1:7080`中的7080就是上面的vhost_bind_port。
 
 ```conf
 server {
@@ -87,7 +113,7 @@ server {
         proxy_set_header  Host $host;
         proxy_set_header  X-Real-IP $remote_addr;
         proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;        
-        proxy_pass        http://127.0.0.1:8080;
+        proxy_pass        http://127.0.0.1:7080;
 
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";        
