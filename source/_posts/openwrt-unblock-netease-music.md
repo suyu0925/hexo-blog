@@ -17,16 +17,16 @@ description: 网易云音乐的智能推荐很好用，但因为版权问题而�
 
 ## 下载安装包
 
-首先下载[最新的`ipk`文件](https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v3.1-4/luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk)，截止到本文编写时间，最新版本为`v3.1-4`，使用node.js。
+首先下载[最新的`ipk`文件](https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v3.2-3/luci-app-unblockneteasemusic_3.2-3_javascript_all.ipk)，截止到本文编写时间，最新版本为`v3.2-3`，使用node.js。
 
 可直接在OpenWrt中使用命令行下载：
 ```bash
-wget https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v3.1-4/luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk
+wget https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/releases/download/v3.2-3/luci-app-unblockneteasemusic_3.2-3_javascript_all.ipk
 ```
 
 但如果github被墙，那么就需要在本地先通过代理下载好，再拷贝至OpenWrt。
 ```bash
-scp ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk root@192.168.56.2:/root/
+scp ./luci-app-unblockneteasemusic_3.2-3_javascript_all.ipk root@192.168.88.1:/root/
 ```
 
 ## 安装
@@ -34,7 +34,7 @@ scp ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk root@192.168.56.2:/r
 直接使用opkg安装：
 ```bash
 opkg update
-opkg install ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk
+opkg install ./luci-app-unblockneteasemusic_3.2-3_javascript_all.ipk
 ```
 
 **dnsmasq**
@@ -74,7 +74,7 @@ Collected errors:
 
 ```bash
 opkg remove dnsmasq
-opkg install ./luci-app-unblockneteasemusic_3.1-4_javascript_all.ipk
+opkg install ./luci-app-unblockneteasemusic_3.2-3_javascript_all.ipk
 ```
 
 即可安装成功。
@@ -184,8 +184,8 @@ OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25
 而且不管是Redir-Host还是Fake-IP，在openwrt上`curl https://google.com`都无法连接。
 
 工作**不正常**的环境：
-OpenWrt 22.03.2/22.03.3
-unblockneteasemusic v2.13-1/v3.1-4
+OpenWrt 22.03.2/22.03.3/22.03.5
+unblockneteasemusic v2.13-1/v3.1-4/v3.2-3
 OpenClash v0.45.87-beta, [Dev] v1.13.0-3, [TUN] 2023.01.29-3, [Meta] alpha-g4c25f5e7, Redir-Host/Fake-IP 兼容/混合, 使用api.dler.io转换订阅模板
 
 通过测试基本可以判定，原因出在系统OpenWrt 22.03，还是使用OpenWrt 21.02版本吧。
