@@ -25,7 +25,7 @@ scp ./luci-app-openclash.ipk root@192.168.88.1:/root/
 
 注意要先[安装依赖](https://github.com/vernesong/OpenClash/wiki/%E5%AE%89%E8%A3%85)。
 
-这里为了简洁只写了一部分，不代表未来还能正常安装。
+`luci-app-openclash.ipk`中并没有包含全部依赖，如果缺少依赖会导致各种问题，比如OpenClash自身无法使用代理上网。
 
 ```bash
 opkg update
@@ -41,7 +41,13 @@ openclash使用了dnsmasq-full，为了避免冲突，需要先卸载dnsmasq。
 
 ### 内核
 
-内核是没有放在`ipk`包中的，所以初次使用时需要下载内核。
+OpenClash使用的是[Clash项目](https://github.com/Dreamacro/clash)，会自动定期编译。
+```bash
+GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/Dreamacro/clash/constant.Version=v1.17.0-5-ge1ec0d2" -X "github.com/Dreamacro/clash/constant.BuildTime=Sat Jul 29 19:08:17 UTC 2023" -w -s -buildid=' -o bin/clash
+```
+
+编译好的内核文件没有放在`ipk`包中，初次使用时需要根据Openwrt系统自助下载内核。
+如果是arm路由器比如使用aarch64_cortex-a53的[EasyPi ARS2](https://doc.linkease.com/zh/guide/easepi/)，则需要编译对应的版本，比如AUK9527做的[iStore扩展插件包](https://github.com/AUK9527/Are-u-ok/tree/main/apps)。
 
 {% asset_img "openclash-core-config.png" "内核" %}
 
@@ -64,16 +70,29 @@ scp clash-linux-amd64.tar.gz root@192.168.88.1:/etc/openclash/core
 ```
 
 内核下载地址
-- [Dev 内核](https://github.com/vernesong/OpenClash/releases/tag/Clash)
-- [Tun 内核](https://github.com/vernesong/OpenClash/releases/tag/TUN-Premium)
-- [Tun 游戏内核](https://github.com/vernesong/OpenClash/releases/tag/TUN)
+- 老的Release页面
+  - [Dev 内核](https://github.com/vernesong/OpenClash/releases/tag/Clash)
+  - [Tun 内核](https://github.com/vernesong/OpenClash/releases/tag/TUN-Premium)
+  - [Tun 游戏内核](https://github.com/vernesong/OpenClash/releases/tag/TUN)
+- 当前发布的最新内核
+  - [Dev 内核](https://github.com/vernesong/OpenClash/tree/core/master/dev)
+  - [Tun 内核](https://github.com/vernesong/OpenClash/tree/core/master/premium)
+  - [Meta 内核](https://github.com/vernesong/OpenClash/tree/core/master/meta)
 
-上传完后，在OpenWrt中解压。
+上传到OpenWrt`/etc/openclash/core`下的对应位置。
+- Dev 内核: clash
+- Tun 内核: clash_tun
+- Meta 内核: clash_meta
 
 ```bash
 cd /etc/openclash/core
 tar -zxvf clash-linux-amd64.tar.gz
 rm clash-linux-amd64.tar.gz
+```
+
+`clash`内核的权限应该为`nobody:nogroup`，可以手动修改权限，也可以让openclash自行修改。
+```bash
+chown nobody:nogroup /etc/openclash/core/* 2>/dev/null
 ```
 
 下载Dev内核并应用后，就可以配置好代理，之后使用控制台来更新内核了。
@@ -163,3 +182,41 @@ geo数据库的文件有好几个，`Country.mmdb`，`GeoSite.dat`，`GeoIP.dat`
 再在更新脚本中找到下载地址：`https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb`，`https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat`，`https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat`。
 
 在本地下载后，再上传至openwrt的`/etc/openclash/`。
+
+### 路由器自身使用代理
+
+如果路由器自身不能翻墙，很多更新都会失败。
+
+如果出现路由器自身不能翻墙的问题，多半是依赖没有安装。可去到`插件设置`->`调试日志`中生成日志。查看是否有依赖未安装。
+安装完依赖后，重启OpenClash应该就能正常使用了。
+
+比如下面这个日志，就缺少iptables相关依赖导致openwrt自身无法使用代理。
+```ini
+#===================== 依赖检查 =====================#
+
+dnsmasq-full: 已安装
+coreutils: 已安装
+coreutils-nohup: 已安装
+bash: 已安装
+curl: 已安装
+ca-certificates: 已安装
+ipset: 已安装
+ip-full: 已安装
+libcap: 已安装
+libcap-bin: 已安装
+ruby: 已安装
+ruby-yaml: 已安装
+ruby-psych: 已安装
+ruby-pstore: 已安装
+kmod-tun(TUN模式): 已安装
+luci-compat(Luci >= 19.07): 已安装
+kmod-inet-diag(PROCESS-NAME): 未安装
+unzip: 已安装
+iptables-mod-tproxy: 未安装
+kmod-ipt-tproxy: 未安装
+iptables-mod-extra: 未安装
+kmod-ipt-extra: 未安装
+kmod-ipt-nat: 已安装
+```
+
+关于Clash作为透明代理，在[clash项目](https://github.com/Dreamacro/clash)中有过[讨论](https://github.com/Dreamacro/clash/issues/158)。
