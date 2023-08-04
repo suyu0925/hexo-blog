@@ -79,6 +79,10 @@ scp clash-linux-amd64.tar.gz root@192.168.88.1:/etc/openclash/core
   - [Tun 内核](https://github.com/vernesong/OpenClash/tree/core/master/premium)
   - [Meta 内核](https://github.com/vernesong/OpenClash/tree/core/master/meta)
 
+注意：
+> 新的内核只支持fake-ip，如果使用了**在线订阅模板**，最好使用老的内核。
+> 否则会出现`invalid mode： redir-host`的错误，可参见这个[issue](https://github.com/Dreamacro/clash/issues/2559)。
+
 上传到OpenWrt`/etc/openclash/core`下的对应位置。
 - Dev 内核: clash
 - Tun 内核: clash_tun
