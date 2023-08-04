@@ -32,12 +32,16 @@ OpenWrt官方的固件只留了几十M的用户空间，正式使用完全不够
 
 **注意**：同盘扩展需要在开机后第一时间做，做完立即重启，不要安装完软件再来做，会有机率搞坏系统无限重启。
 
+同盘扩展分为两步，第一步把分区扩展到整个硬盘，第二步才是扩展文件系统。
+
 1. 使用[parted](http://man.cx/parted)扩展分区
 
 ```sh
 sed -i 's_downloads.openwrt.org_mirror.sjtu.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
 
 opkg update
+opkg install luci-i18n-base-zh-cn
+
 opkg install parted
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
 PART="${BOOT##*[^0-9]}"
@@ -55,6 +59,11 @@ DISK="${BOOT%${PART}}"
 ROOT="${DISK}$((PART+1))"
 UUID="$(lsblk -n -o PARTUUID ${ROOT})"
 sed -i -r -e "s|(PARTUUID=)\S+|\1${UUID}|g" /boot/grub/grub.cfg
+```
+
+扩展完后重启一下
+```sh
+reboot
 ```
 
 2. 使用losetup挂载，然后使用resize2fs扩展

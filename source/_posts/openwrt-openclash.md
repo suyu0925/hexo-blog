@@ -127,6 +127,29 @@ chown nobody:nogroup /etc/openclash/core/* 2>/dev/null
 
   https://sub.tsutsu.one/
 
+如果使用的是[飞鸟机场](https://aff01.fyb-aff01.com/)，也必须使用订阅转换服务，否则在redir-host模式下无法解析域名，只能使用Fake-IP模式。
+可能是因为没有dns段：
+```yaml
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:7874
+  enhanced-mode: fake-ip
+  default-nameserver:
+  - 119.29.29.29
+  - 119.28.28.28
+  - 1.0.0.1
+  - 208.67.222.222
+  - 1.2.4.8
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://1.1.1.1/dns-query
+  - tls://dns.adguard.com:853
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+```
+
 ### 仪表盘
 
 如果订阅链接没有问题，此时应该一切正常。
