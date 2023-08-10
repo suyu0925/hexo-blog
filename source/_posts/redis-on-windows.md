@@ -47,7 +47,7 @@ docker pull redis
 
 然后使用redis的镜像运行起一个容器。
 ```bash
-docker run --name redis -d -p 127.0.0.1:6379:6379/tcp redis 
+docker run --name redis -d -p 6379:6379/tcp redis 
 ```
 
 **安装完成**
@@ -56,6 +56,11 @@ docker run --name redis -d -p 127.0.0.1:6379:6379/tcp redis
 
 ```bash
 docker update --restart unless-stopped redis
+```
+
+这三步可以合成一个命令：
+```bash
+docker run --name redis --restart unless-stopped -d -p 6379:6379/tcp redis 
 ```
 
 **阿里云ECS Windows Server版请注意**
