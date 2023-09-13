@@ -19,6 +19,8 @@ hidden: true
 
 美国的[Yelp](https://www.yelp.com/)似乎不支持普吉岛，还是咱们的大众点评牛，比如网红spa按摩店[Phu Montra](https://www.dianping.com/shop/l8KTrJErhU85Jdxr)。
 
+> 晚餐吃了网红店[Doo Dee泰餐](https://www.dianping.com/shop/H37CCOb0X27I5VpF)，味道挺不错，特别是炒空菜和辣炒鱿鱼，价格也便宜。
+
 ## Day 2: PP岛 - 小PP岛环游+浮潜 - 帝王岛
 
 午餐：岛上简餐，晚餐：海鲜烧烤BBQ
@@ -33,7 +35,15 @@ hidden: true
 
 [皇帝岛](https://www.mafengwo.cn/poi/15054.html)是潜水圣地，可以考虑在这里考一个[PADI](https://www.padi.com/zh-hans/diving-in/phuket/)（Professional Association of Diving Instructors）的开放水域（OW）潜水证书。
 
+> 因为刮风下雨无法出海，将出海行程挪到第3天，当天去玩了纯室内景点，普吉老街，Kingpower免税店，泰式按摩，神仙半岛，拉崴海鲜市场。
+>
+> 注意泰国不是购物的地方，免税店完全不用去，机场就有。很多特产直接去超市买比免税店里的便宜。
+
 ## Day 3: 四面佛 - Kingpower免税店 - 悬崖餐厅 - 普吉老街 - 神仙半岛 - 拉崴海鲜市场
+
+> 被导游劝说加了600人民币的自费项目，包括Maya Bay拍照，小PP岛的浮潜，和一次SPA。体验下来觉得不值，不如自己在当地旅行社购买。
+>
+> 普吉岛的海水确实好，下次可以在11-5月去斯米兰岛看看。如果只是去PP岛也可以从甲米府出发。
 
 ## Day 4: 自由活动
 
@@ -45,6 +55,10 @@ hidden: true
 
 还可以骑去网红店[Phu Montra](https://www.google.com/maps/place/Phu+Montra/@7.8989246,98.3281732,13.75z/data=!4m6!3m5!1s0x3050318a6604e55f:0x5875247ac7b32914!8m2!3d7.8969183!4d98.3493695!16s%2Fg%2F11jlwkqhx4?entry=ttu)去按个摩。
 
+> 第一次骑摩托，租了个小排量的，骑去卡伦沙滩逛了个来回。在从芭东到卡伦的出口碰到警察临查，去警察局花1000B买了张罚单。
+>
+> 晚上自费400去看了成人秀，纯猎奇，不会再去第二次。成人秀出来去[邦古拉酒吧街](https://www.dianping.com/shop/k7pBIPUp58XfFdR3)逛了一圈，在[纽约酒吧](https://www.dianping.com/shop/H8nLvYTfJlXiXVdM)坐下听了会歌。
+
 ## Day 5: 自由活动
 
 去[黄金射手俱乐部(Gold shooter club)](https://www.google.com/maps/place/Gold+Shooter+Club/@7.7640701,98.307167,17z/data=!3m1!4b1!4m6!3m5!1s0x30502f5445200141:0x692352f6763abad8!8m2!3d7.7640701!4d98.3097419!16s%2Fg%2F11h55mpf9_?entry=ttu)打抢，在普吉岛最南端，距芭东大概有20公里路程。
@@ -55,11 +69,20 @@ hidden: true
 1. 从卡塔海难走，走4030路。路虽然近，但看上去弯比较多。
 2. 从Patak路走，转Wiset路。路直一些。
 
+> 热身完毕，骑行去打枪。路线是芭东 - 卡伦 - 卡塔 - 小卡塔 - 4028公路 - 4024公路 - 拉威 - Phrom Thep Monastery - 黄金射手俱乐部 - 神仙半岛 - Yanui沙滩 - Nai Han沙滩 - Nai Harn沙滩 - 卡伦观景台 - 卡塔 - 卡伦 - 芭东。
+>
+> 从神仙半岛到Yanui有个陡下坡，从卡伦观景台到卡塔有一个巨陡的下坡，运气不错走的顺时针环路，否则这段路走上坡会非常难骑。
+> 
+> 晚上去卡伦的[let's relax](https://goo.gl/maps/m6bHMf6ypKAL284t9)做了个2小时的泰式按摩，比团费里含的那个舒服。注意有可能人满，一般提前几小时预约就可以。
+
 ## Day 6（9月9号周六）: 普吉 - 杭州
 
 暂定CA718航班，普吉国际机场 直飞 杭州萧山机场。16:15 - 22:05。
 
 上午自由活动，中午集合去机场。
+
+> 回程飞机上开始肚子痛，拉了两天肚子才好，应该是急性肠炎。
+> 吃东西要小心，不要去没人流量的餐厅，可能会碰上店家使用过期变质的食材。
 
 ## 注意事项
 
