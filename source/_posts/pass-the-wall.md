@@ -62,6 +62,16 @@ vps是一台虚拟服务器，除了搭配机场还可以用作其它用途，�
 
 更多机场可以去[爱机场](https://aijichang.com/)查看。
 
+### 社区免费
+
+如果只是极其偶尔使用，可以考虑社区免费的代理。
+
+网上会有一些搜集来的免费代理，非常不稳定，无法长期使用，但对一般人来说也够用。
+
+比如[get_subscribe](https://github.com/ermaozi/get_subscribe)、[v2rayNvpn](https://github.com/githubvpn007/v2rayNvpn)。
+
+在github搜索“免费机场”，会有[很多](https://github.com/search?q=%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA&type=repositories&s=stars&o=desc)。
+
 ## 客户端
 
 客户端就百花齐放了，鉴于日常使用对性能要求不高，选择标准应该是易用优先。下面是我自已在用的，[这里](https://www.v2ray.com/awesome/tools.html)可以看到更多推荐。
