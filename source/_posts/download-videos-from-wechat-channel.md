@@ -9,11 +9,15 @@ description: 有时候我们看到微信视频号里的内容觉得很好，想�
 
 目前主流的工具就两个：[fiddler](https://www.telerik.com/fiddler)和[Wireshark](https://www.wireshark.org/)。
 
-其中，fiddler是付费软件，但使用简单。Wireshark是开源软件，使用稍微复杂一些。注意Wireshark依赖[Npcap](https://npcap.com/#download)，如果打开Wireshark后发现不能搜索本地连接，需要先安装Npcap。
+fiddler有两个版本：[Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic)和[Fiddler Everywhere](https://www.telerik.com/fiddler/fiddler-everywhere)。
+- Fiddler Classic为基础免费版，只支持windows。
+- Fiddler Everywhere是跨平台版本，同时提供更多高级功能，但需要付费使用。
 
-以fiddler为例，打开fiddler并设置为全局代理后，打开微信，进入视频号，随便点开一个视频，然后在fiddler中搜索`mp4`，就能找到视频源网址了。
+Wireshark是开源软件，相比fiddler使用稍微复杂一些。注意Wireshark依赖[Npcap](https://npcap.com/#download)，如果安装的是便携版且打开Wireshark后发现不能搜索本地连接，需要先安装Npcap。
 
-{% asset_img fiddler.png "fiddler" %}
+以Fiddler Classic为例，打开fiddler并设置为全局代理后，打开微信，进入视频号，随便点开一个视频，然后在fiddler中搜索`mp4`，就能找到视频源网址了。
+
+{% asset_img fiddler-classic.png "fiddler-classic" %}
 
 拷贝视频源网址后，还不能直接使用。我们需要做一个变换。
 使用node运行：
