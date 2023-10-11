@@ -32,3 +32,13 @@ description: 推荐几款API测试工具。
 - 要求登录才能使用
 
 算是无赖之选吧。
+
+## 开源继任者
+
+[bruno](https://www.usebruno.com/)是postman的[开源](https://github.com/usebruno/bruno)继任者。
+
+postman等已经变得臃肿、难以操作，而且为了盈利，纷纷将请求配置搬上云，不再是纯粹的本地应用。
+
+bruno拒绝上云，使用本地存储，支持git版本管理，更适合开发者使用。
+
+虽然目前还在[开发阶段](https://github.com/usebruno/bruno/discussions/384)，但从[里程碑](https://github.com/usebruno/bruno/milestones)的时间设置来看，开发速度挺快的，值得期待。
