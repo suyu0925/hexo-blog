@@ -24,6 +24,19 @@ description: 多年积攒下的海量照片和视频，如何管理？
 
 现在很多人的方案都是这个，买一个Pixel手机，使用[syncthing](https://syncthing.net/)从服务器上同步照片到手机，再使用Google Photos同步到谷歌服务器。
 
+**导出**
+
+Google Photos支持[导出](https://takeout.google.com/settings/takeout/custom/photos)，可以选择导出方式，包括：
+- 通过电子邮件发送下载链接
+- 添加到云端硬盘
+- 添加到Dropbox
+- 添加到OneDrive
+- 添加至Box
+
+一般就选下载链接吧，其它的选择泄漏风险更大一些。注意不要选50G的分卷，毕竟下载是要翻墙的，网络可能没那么稳定，4G或10G就差不多了。
+
+选择导出到下载链接的话，谷歌照片需要先将照片打包，这个过程不是实时的，需要在后台完成。根据数据量不同可能从几小时到几天，等邮件通知就好。按照经验，300G的照片需要打包半天。
+
 ## Photoprism
 [Photoprism](https://photoprism.org/)是一个开源的照片管理系统，使用Go开发，使用Tensorflow实现AI识别。
 
