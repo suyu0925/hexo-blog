@@ -80,3 +80,5 @@ rule = [
 ```
 
 重启subconverter后，就可以实现使用美国节点来访问ChatGPT了。
+
+配置项示例可以参考[suyu0925/docker-subconverter](https://github.com/suyu0925/docker-subconverter)项目。
