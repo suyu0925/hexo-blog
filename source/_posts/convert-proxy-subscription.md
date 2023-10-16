@@ -33,6 +33,8 @@ docker run -d --name subconverter --restart=always -p 25500:25500 tindy2013/subc
 http://localhost:25500/sub?target=clash&url=%YOUR_SUBSCRIBE_URL%
 ```
 
+注意，`%YOUR_SUBSCRIBE_URL%`需要使用`encodeURIComponent`进行转码。
+
 ## 配置
 
 参见官方的[配置文件文档](https://github.com/tindy2013/subconverter/blob/master/README-cn.md#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)。
