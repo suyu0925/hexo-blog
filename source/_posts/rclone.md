@@ -31,6 +31,17 @@ pass = tScRc3AI1CV-5QUCAb2Ed2gos-ZB-7mT
 alist:
 ```
 
+## 使用docker
+
+在当前目录创建一个`config`目录，将`rclone.conf`放到这个目录下。
+
+再创建一个`test`目录用来测试。
+
+最后运行：
+```bash
+docker run --network host --rm -v "$(pwd)/config:/config/rclone" -v "$(pwd)/test:/test" rclone/rclone copy alist:/test /test -v
+```
+
 ## 同步
 
 最主要的命令就是`copy`和`sync`，它们的作用都是将源目录同步到目标目录，区别在于`copy`不会删除目标目录中的文件，而`sync`会删除目标目录中的文件。
@@ -51,7 +62,7 @@ rclone不支持监控远程文件存储的变化，所以无法实现实时同�
 
 长求总：
 ```bash
-rclone copy alist:/test ./test --timeout 60m --transfers 4 --buffer-size 256M --use-mmap -v
+rclone copy alist:/test ./test --timeout 60m --transfers 2 --buffer-size 256M --use-mmap -v
 ```
 
 ### [timeout 超时](https://rclone.org/docs/#timeout-time)
@@ -63,12 +74,13 @@ rclone copy alist:/test ./test --timeout 60m
 
 ### [transfers 并行传输文件数](https://rclone.org/docs/#transfers-n)
 
-rclone默认是4个文件并行传输。如果使用的远程目录响应较快，可以把这个值设置得大一些，比如自建的WebDAV。
+rclone默认是4个文件并行传输。并行数越多，速度会越快，但对带宽和远程存储服务的响应速度也要求越高。通常错误率也会随之提高。
 
-如果使用的远程存储是国内的抠门网盘，像115、百度、阿里等，如果是文件较少的增量更新，为了保证稳定性，可以设置为1。
+如果使用的远程存储服务响应较快，可以把这个值设置得大一些，比如自建的WebDAV。
+如果使用的远程存储服务是国内的抠门网盘，像115、百度、阿里等，可以设得小一点，比如2。如果使用高并行数，文件传输错误率会非常高。
 
 ```bash
-rclone copy alist:/test ./test --transfers 1
+rclone copy alist:/test ./test --transfers 2
 ```
 
 ### [buffer-size 缓存大小](https://rclone.org/docs/#buffer-size-size)
