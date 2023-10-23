@@ -31,6 +31,8 @@ pass = tScRc3AI1CV-5QUCAb2Ed2gos-ZB-7mT
 alist:
 ```
 
+也可以使用命令行参数[--config](https://rclone.org/docs/#config-config-file)来指定配置文件：`rclone listremotes --config ./config/rclone.conf`。
+
 ## 使用docker
 
 在当前目录创建一个`config`目录，将`rclone.conf`放到这个目录下。
@@ -54,9 +56,51 @@ docker run --network host --rm -v "$(pwd)/config:/config/rclone" -v "$(pwd)/test
 
 ## 实时同步
 
-rclone不支持监控远程文件存储的变化，所以无法实现实时同步。
+rclone mount虽然可以用来双向同步，但[相比sync/copy](https://rclone.org/commands/rclone_mount/#read-only-mounts)它远远更不可靠。原因是sync/copy会有失败后重试机制，而mount是没有的。
 
-如果有持续同步的需求，只能自己使用crontab来定时运行，crontab的用法可以参考这篇博文：{% post_link cron-in-docker "在docker里使用cron" %}。
+所以如果对可靠性有要求，最好还是自己使用crontab来定时运行sync/copy，crontab的用法可以参考这篇博文：{% post_link cron-in-docker "在docker里使用cron" %}。
+
+## 挂载
+
+在使用Jellyfin时，需要将远程源挂载为本地文件夹，Jellyfin才能使用。需要用到[rclone mount](https://rclone.org/commands/rclone_mount)命令。
+
+挂载后，对文件的修改是会双向同步的，但会有很大的延迟（可能与缓存有关）。可使用[--read-only](https://rclone.org/commands/rclone_mount/#read-only-mounts)进行只读挂载，在只读挂载模式下，对文件的修改会**静默失败**。
+
+### [VFS 虚拟文件系统](https://rclone.org/commands/rclone_mount/#vfs-virtual-file-system)
+
+在使用[rclone mount](https://rclone.org/commands/rclone_mount)命令时，会使用VFS层。
+
+**缓存**
+
+默认是[关闭缓存](https://rclone.org/commands/rclone_mount/#vfs-file-caching)的，这样访问远程会极慢，所以在使用mount时要开启缓存。
+
+比较关键的参数就两个：
+```
+--vfs-cache-mode CacheMode             Cache mode off|minimal|writes|full (default off)
+--vfs-cache-max-size SizeSuffix        Max total size of objects in the cache (default off)
+```
+
+通常会设置为`--vfs-cache-mode full --vfs-cache-max-size 1G`。
+
+### [windows](https://rclone.org/commands/rclone_mount/#mounting-modes-on-windows)
+
+**安装**
+
+在windows下要使用挂载功能，需要安装[WinFsp](http://www.secfs.net/winfsp/)。它创建了一个模拟FUSE层，rclone通过[cgofuse](https://github.com/winfsp/cgofuse)使用这个层。
+
+在windows下，可以使用`--network-mode`参数来挂载成网络位置。
+```bash
+rclone mount alist:/test X: --network-mode --vfs-cache-mode full --vfs-cache-max-size 1G
+```
+
+**出错**
+
+使用docker进行mount，需要加上`--device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined`参数。
+但不知道为何，容器对`/test`的修改没有同步给宿主。
+留个坑吧。
+```bash
+docker run --network host --rm -v "$(pwd)/config:/config/rclone" -v "$(pwd)/test:/test:shared" --privileged --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined rclone/rclone mount alist:/test /test/mount --vfs-cache-mode full --vfs-cache-max-size 1G -vv
+```
 
 ## 常用高级选项
 
@@ -98,3 +142,12 @@ rclone copy alist:/test ./test --buffer-size 256M --use-mmap
 ### [输出详细日志](https://rclone.org/docs/#v-vv-verbose)
 
 使用`-v`来输出详细日志，`-vv`变身唠叨狂魔。
+
+### [HTTP头](https://rclone.org/docs/#header)
+
+有些远程源需要设置HTTP头。
+
+比如阿里云盘，它会根据Referer头来判断是否跨域，如果从阿里云盘上拉取文件，需要加上`--header "Referer:"`参数：
+```bash
+rclone mount alist:/aliyun/resource ./resource --cache-dir ./cache --vfs-cache-mode full --vfs-cache-max-size 1G --header "Referer:"
+```
