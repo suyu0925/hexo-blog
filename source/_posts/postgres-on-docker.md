@@ -110,9 +110,9 @@ docker exec -u 0 -it pgadmin4 bash
 
 如果使用的是wsl2 (Ubuntu)，
 
-docker的卷可在host上的`\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\${volume_id}\_data`找到，
+docker的卷可在host上的`\\wsl.localhost\docker-desktop-data\data\docker\volumes\${volume_id}\_data`(在docker的老版本中，路径是`\\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes\${volume_id}\_data`)找到，
 
-因为docker中的`/var/lib/docker/`被映射到了`\\wsl$\docker-desktop-data\version-pack-data\community\docker\`。
+因为docker中的`/var/lib/docker/`被映射到了`\\wsl.localhost\docker-desktop-data\data\docker\`。
 
 但如果使用的不是wsl2而是Hyper-V后端，那么`/var/lib/docker`会被映射到`C:\Users\Public\Documents\Hyper-V\Virtual hard disks`。
 
@@ -130,7 +130,7 @@ net use w: \\wsl$\docker-desktop-data
 sudo mkdir /mnt/docker
 sudo mount -t drvfs w: /mnt/docker
 ```
-这样在wsl中就能通过`/mnt/docker/version-pack-data/community/docker/volumes/${volume_id}/_data`来访问到volume内容了。
+这样在wsl中就能通过`/mnt/docker/data/docker/volumes/${volume_id}/_data`来访问到volume内容了。
 
 ### 环境变量
 一些设置我们使用`.env`来实现。
