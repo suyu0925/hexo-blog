@@ -37,7 +37,18 @@ Google Photos支持[导出](https://takeout.google.com/settings/takeout/custom/p
 
 选择导出到下载链接的话，谷歌照片需要先将照片打包，这个过程不是实时的，需要在后台完成。根据数据量不同可能从几小时到几天，等邮件通知就好。按照经验，300G的照片需要打包半天。
 
-## Photoprism
+## Synology Photos
+[Synology Photos](https://www.synology.com/zh-tw/dsm/feature/photos)是群晖系统使用的NAS照片管理工具。
+
+据说使用体验很接近Google Photos。
+
+但因为是群晖系统，所以需要购买群晖的NAS设备才能使用。
+
+## 免费开源的自建服务
+
+现在市面上也有很多免费开源的自建服务可供选择，[这里](https://github.com/meichthys/foss_photo_libraries)有比较常见的，更全面的自建服务看[这里](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries)。
+
+### Photoprism
 [Photoprism](https://photoprism.org/)是一个开源的照片管理系统，使用Go开发，使用Tensorflow实现AI识别。
 
 优点挺多的，开源、免费、功能强大。
@@ -46,17 +57,19 @@ Google Photos支持[导出](https://takeout.google.com/settings/takeout/custom/p
 - 浏览端[只有PWA](https://docs.photoprism.app/user-guide/pwa/)，没有APP，体验不够好
 - 没有同步app。推荐的第三方同步app [PhotoSync](https://www.photosync-app.com/home)收费不说，还不提供一次性购买，只能包年。
 
-## MT Photos
+### Immich
+[Immich](https://immich.app/)有同步APP，强大的AI识别，但是个新项目，还处在[活跃开发阶段](https://immich.app/blog)。[当前版本](https://immich.app/milestones)是v1.82.0，功能已经基本成形，可以尝试一下。
+
+### LibrePhotos
+[LibrePhotos](https://github.com/LibrePhotos/librephotos)在配置上比较麻烦，UI也比较“技术”，总的来说更适合程序员。
+
+### NextCloud Memories
+[NextCloud Memories](https://github.com/pulsejet/memories)是[NextCloud](https://nextcloud.com/)的一个插件，相比[NextCloud Photos](https://github.com/nextcloud/photos/)，功能更全面，设计更现代。但NextCloud实在是太厚了，提不起兴趣来。
+
+### MT Photos
 [MT Photos](https://mtmt.tech/)是Photoprism的替代，它有手机用的同步APP，也有手机用的浏览APP，体验比Photoprism好很多。
 
 它是[收费的](https://auth.mtmt.tech/buy)，一次购买99，包年25。
-
-## Synology Photos
-[Synology Photos](https://www.synology.com/zh-tw/dsm/feature/photos)是群晖系统使用的NAS照片管理工具。
-
-据说使用体验很接近Google Photos。
-
-但因为是群晖系统，所以需要购买群晖的NAS设备才能使用。
 
 ## 参考文章
 
