@@ -42,6 +42,8 @@ tar -zxvf ./frp_0.44.0_linux_amd64.tar.gz
 
 修改frp下的`fps.ini`，一般只需要两个端口就完事。
 
+为了安全，要添加[权限验证](https://gofrp.org/zh-cn/docs/reference/server-configures/#%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81)。
+
 ```ini
 [common]
 # 监听端口
@@ -55,8 +57,10 @@ dashboard_pwd = frps1234
 vhost_bind_port = 7080
 vhost_https_port = 7081
 
-# 身份验证
-token = 12345678
+# 权限验证
+authentication_method = token ## 默认为token，可选为：token、oidc
+authenticate_new_work_conns = true ## 默认为false，为true时开启建立工作连接的鉴权
+token = your-unguessable-token ## 鉴权使用的token值，客户端需要设置一样的值才能鉴权通过
 ```
 
 - 在linux下[使用systemd配置服务](https://gofrp.org/docs/setup/systemd/)
@@ -131,6 +135,11 @@ server {
 [common]
 server_addr = x.x.x.x
 server_port = 7000
+
+# 权限验证
+authentication_method = token ## 鉴权方式，需要和服务端一致
+authenticate_new_work_conns = true ## 开启建立工作连接的鉴权，需要和服务端一致
+token = your-unguessable-token ## 鉴权使用的token值，需要和服务端设置一样的值才能鉴权通过
 
 [ssh]
 type = tcp
