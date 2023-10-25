@@ -24,6 +24,10 @@ description: 多年积攒下的海量照片和视频，如何管理？
 
 现在很多人的方案都是这个，买一个Pixel手机，使用[syncthing](https://syncthing.net/)从服务器上同步照片到手机，再使用Google Photos同步到谷歌服务器。
 
+> 2023-10-25 补充：
+>
+> 在试过了自建方案后，还是买了一个Google Pixel 1代手机，尝试Google相册的{% post_link unlimited-google-photos-storage Google相册无限存储空间 %}方案。
+
 **导出**
 
 Google Photos支持[导出](https://takeout.google.com/settings/takeout/custom/photos)，可以选择导出方式，包括：
@@ -58,7 +62,10 @@ Google Photos支持[导出](https://takeout.google.com/settings/takeout/custom/p
 - 没有同步app。推荐的第三方同步app [PhotoSync](https://www.photosync-app.com/home)收费不说，还不提供一次性购买，只能包年。
 
 ### Immich
-[Immich](https://immich.app/)有同步APP，强大的AI识别，但是个新项目，还处在[活跃开发阶段](https://immich.app/blog)。[当前版本](https://immich.app/milestones)是v1.82.0，功能已经基本成形，可以尝试一下。
+[Immich](https://immich.app/)有同步APP，强大的AI识别，但是个新项目，还处在[活跃开发阶段](https://immich.app/blog)。[当前版本](https://immich.app/milestones)是v1.82.0，功能已经基本成形，但还存在一些严重影响使用的问题：
+- 在iOS App中备份多个文件时，会在最后一个文件卡住无法备份
+- 只能使用英文搜索
+- 无法搜索自定义的描述信息/标签
 
 ### LibrePhotos
 [LibrePhotos](https://github.com/LibrePhotos/librephotos)在配置上比较麻烦，UI也比较“技术”，总的来说更适合程序员。
