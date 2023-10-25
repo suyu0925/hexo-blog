@@ -63,7 +63,8 @@ Google Photos支持[导出](https://takeout.google.com/settings/takeout/custom/p
 
 ### Immich
 [Immich](https://immich.app/)有同步APP，强大的AI识别，但是个新项目，还处在[活跃开发阶段](https://immich.app/blog)。[当前版本](https://immich.app/milestones)是v1.82.0，功能已经基本成形，但还存在一些严重影响使用的问题：
-- 在iOS App中备份多个文件时，会在最后一个文件卡住无法备份
+- 在iOS App中备份多个文件时，会在最后一个文件卡住[无法备份](https://github.com/immich-app/immich/issues?q=is%3Aissue+is%3Aopen++in%3Atitle%3A+ios%2Bbackup+)
+- [AI模型无法自动下载](https://github.com/immich-app/immich/issues/4117#issuecomment-1772790612)
 - 只能使用英文搜索
 - 无法搜索自定义的描述信息/标签
 
