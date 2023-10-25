@@ -20,6 +20,8 @@ description: 在试过了自建方案后，还是买了一个Google Pixel 1代�
 
 可以使用[docker-icloudpd](https://github.com/boredazfcuk/docker-icloudpd)将iCloud的内容同步至服务器。
 
+教程可以看这篇文章：{% post_link download-icloud-photos 下载iCloud相册 %}。
+
 ### 使用App
 
 使用[Pho](https://github.com/fregie/pho) + [AList](https://alist.nn.ci/zh/) + [Rclone](https://rclone.org/)。
