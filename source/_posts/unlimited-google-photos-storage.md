@@ -24,6 +24,12 @@ description: 在试过了自建方案后，还是买了一个Google Pixel 1代�
 
 使用[Pho](https://github.com/fregie/pho) + [AList](https://alist.nn.ci/zh/) + [Rclone](https://rclone.org/)。
 
+### Live Photo
+
+Live Photo会被拆成普通的图片和视频。
+
+可以试一下[MotionPhotoMuxer](https://github.com/mihir-io/MotionPhotoMuxer)转换工具，能不能将Live Photo正确的转换为Google Motion Photos。
+
 ## 一些Pixel手机上的小问题
 
 ### 防止手机休眠
@@ -38,7 +44,7 @@ description: 在试过了自建方案后，还是买了一个Google Pixel 1代�
 
 ### 电池过耗
 
-我们可以设置电池最大充电限制为80%，这样可以延长电池寿命。
+我们可以设置电池电量到80%以上停止充电，电量20%以下重启充电，这样可以延长电池寿命。
 
 [面具](https://github.com/topjohnwu/Magisk)模块[Advanced Charging Controller](https://magiskzip.com/acc-magisk-module-download/)可以帮助我们实现这点。
 
