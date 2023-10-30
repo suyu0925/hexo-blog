@@ -22,7 +22,7 @@ description: 多年积攒下的海量照片和视频，如何管理？
 
 翻墙相对容易解决，100G的存储上限就比较无解了。当前只有一个办法：[使用Pixel手机同步](https://support.google.com/photos/answer/6220791?co=GENIE.Platform%3DAndroid&oco=1)。
 
-现在很多人的方案都是这个，买一个Pixel手机，使用[syncthing](https://syncthing.net/)从服务器上同步照片到手机，再使用Google Photos同步到谷歌服务器。
+现在很多人的方案都是这个，买一个{% post_link unlimited-google-photos-storage Pixel手机 %}，使用[syncthing](https://syncthing.net/)从服务器上同步照片到手机，再使用Google Photos同步到谷歌服务器。
 
 > 2023-10-25 补充：
 >
