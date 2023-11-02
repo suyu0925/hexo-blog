@@ -34,36 +34,37 @@ frps有两种方式运行，一种是使用可执行文件并配置为systemd服
 下载[对应的可执行文件包](https://github.com/fatedier/frp/releases)，linux可使用`uname -m`查看。
 
 ```bash
-wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz
-tar -zxvf ./frp_0.44.0_linux_amd64.tar.gz
+wget https://github.com/fatedier/frp/releases/download/v0.52.3/frp_0.52.3_linux_amd64.tar.gz
+tar -zxvf ./frp_0.52.3_linux_amd64.tar.gz
 ```
 
 - 配置
 
-修改frp下的`fps.ini`，一般只需要两个端口就完事。
+修改frp下的`fps.toml`，一般只需要两个端口就完事。
 
 为了安全，要添加[权限验证](https://gofrp.org/zh-cn/docs/reference/server-configures/#%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81)。
 
-```ini
-[common]
+```toml
 # 监听端口
-bind_port = 7000 
+bindPort = 7000 
+
 # 面板端口
-dashboard_port = 7500
+webserver.port = 7500
 # 登录面板账号设置
-dashboard_user = admin
-dashboard_pwd = frps1234
+webserver.user = "admin"
+webserver.apssword = "frps1234"
+
 # 设置http及https协议下代理端口
-vhost_bind_port = 7080
-vhost_https_port = 7081
+vhostHTTPPort = 7080
+vhostHTTPSPort = 7081
 
 # 权限验证
-authentication_method = token ## 默认为token，可选为：token、oidc
-authenticate_new_work_conns = true ## 默认为false，为true时开启建立工作连接的鉴权
-token = your-unguessable-token ## 鉴权使用的token值，客户端需要设置一样的值才能鉴权通过
+auth.method = "token" ## 默认为token，可选为：token、oidc
+auth.additionalScopes = ["HeartBeats", "NewWorkConns"]
+auth.token = "your-unguessable-token" ## 鉴权使用的token值，客户端需要设置一样的值才能鉴权通过
 ```
 
-- 在linux下[使用systemd配置服务](https://gofrp.org/docs/setup/systemd/)
+- 在linux下[使用systemd配置服务](https://gofrp.org/zh-cn/docs/setup/systemd/)
 
 在/etc/systemd/system/下添加frp.service：
 ```ini
@@ -76,7 +77,7 @@ Wants = network.target
 [Service]
 Type = simple
 # 启动frps的命令，需修改为您的frps的安装路径
-ExecStart = /root/frp_0.44.0_linux_amd64/frps -c  /root/frp_0.44.0_linux_amd64/frps.ini
+ExecStart = /root/frp_0.52.3_linux_amd64/frps -c /root/frp_0.52.3_linux_amd64/frps.toml
 
 [Install]
 WantedBy = multi-user.target
@@ -97,16 +98,16 @@ journalctl -u frps -b
 
 #### 使用docker
 
-使用docker则简单多了，只需要修改`frps.ini`，然后运行docker即可。
+使用docker则简单多了，只需要修改`frps.toml`，然后运行docker即可。
 
-这里默认`frps.ini`创建在了`/etc/frp/`下。
+这里默认`frps.toml`创建在了`/root/frp/`下。
 ```bash
-docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps
+docker run --restart=always --network host -d -v /root/frp/frps.toml:/etc/frp/frps.toml --name frps snowdreamtech/frps
 ```
 
 ### nginx
 
-穿透web服务搭配nginx反向代理食用最佳。注意`http://127.0.0.1:7080`中的7080就是上面的vhost_bind_port。
+穿透web服务搭配nginx反向代理食用最佳。注意`http://127.0.0.1:7080`中的`7080`就是上面的`vhostHTTPPort`。
 
 ```conf
 server {
@@ -129,50 +130,54 @@ server {
 
 ### 配置
 
-修改frpc.ini
+修改frpc.toml
 
-```ini
-[common]
-server_addr = x.x.x.x
-server_port = 7000
+```toml
+# common
+serverAddr = "x.x.x.x" # your server's ip or domain
+serverPort = 7000
 
 # 权限验证
-authentication_method = token ## 鉴权方式，需要和服务端一致
-authenticate_new_work_conns = true ## 开启建立工作连接的鉴权，需要和服务端一致
-token = your-unguessable-token ## 鉴权使用的token值，需要和服务端设置一样的值才能鉴权通过
+auth.method = "token"## 鉴权方式，需要和服务端一致
+auth.additionalScopes = ["NewWorkConns"] ## 开启建立工作连接的鉴权，需要和服务端一致
+auth.token = "your-unguessable-token" ## 鉴权使用的token值，需要和服务端设置一样的值才能鉴权通过
 
-[ssh]
-type = tcp
-local_ip = 192.168.8.1
-local_port = 22
-remote_port = 6000
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "192.168.8.1"
+localPort = 22
+remotePort = 6000
 
-[jellyfin]
-type = http
-local_ip = 192.168.8.1
-local_port = 8096
-custom_domains = jellyfin.frp.yourdomain.com
+[[proxies]]
+name = "jellyfin"
+type = "http"
+localIP = "192.168.8.1"
+localPort = 8096
+customDomains = ["jellyfin.frp.yourdomain.com"]
 
-[luci]
-type = http
-local_ip = 192.168.8.1
-local_port = 80
-custom_domains = luci.frp.yourdomain.com
+[[proxies]]
+name = "luci"
+type = "http"
+localIP = "192.168.8.1"
+localPort = 80
+customDomains = ["luci.frp.yourdomain.com"]
 
-[aria2]
-type = http
-local_ip = 192.168.8.1
-local_port = 6800
-custom_domains = aria2.frp.yourdomain.com
+[[proxies]]
+name = "aria2"
+type = "http"
+localIP = "192.168.8.1"
+localPort = 6800
+customDomains = ["aria2.frp.yourdomain.com"]
 
-[clash]
-type = http
-local_ip = 192.168.8.1
-local_port = 9090
-custom_domains = clash.frp.yourdomain.com
-```
+[[proxies]]
+name = "clash"
+type = "http"
+localIP = "192.168.8.1"
+localPort = 9090
+customDomains = ["clash.frp.yourdomain.com"]
 
-注意像`[jellyfin]`这样的名字不要有重复，会被当作ID使用。
+注意`name`不要有重复。
 
 ### ssh服务
 
@@ -189,11 +194,11 @@ frps在接收到客户端的`remote_port = 6000`后就会代理6000端口，于�
 
 ### 使用docker
 
-在本地创建`frpc.ini`，比如`f:/frp/frpc.ini`。
+在本地创建`frpc.toml`，比如`/root/frpc/frpc.toml`。
 
-然后使用[第三方docker image](https://github.com/stilleshan/frpc)：
+然后使用[第三方docker image](https://github.com/snowdreamtech/frp)：
 ```bash
-docker run -d --name=frpc --restart=always -v f:/frp/frpc.ini:/frp/frpc.ini stilleshan/frpc
+docker run -d --name=frpc --restart=always -v /root/frpc/frpc.toml:/etc/frp/frpc.toml snowdreamtech/frpc
 ```
 
 修改配置则需要重启docker：
@@ -204,14 +209,14 @@ docker restart frpc
 ### openclash
 
 需要修改openclash控制台的连接设置，默认是：
-```ini
+```
 Host: 192.168.8.1
 端口: 9090
 密钥：123456
 ```
 
 需要修改为：
-```ini
+```
 Host: clash.frp.yourdomain.com
 端口: 80
 密钥：123456
