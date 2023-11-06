@@ -13,13 +13,72 @@ description: VirtualBox在开启Hyper-V后性能很差，需要切换到Hyper-V�
 
 微软优化过的Ubuntu镜像与在Ubuntu官网下载的标准镜像有所区别，Ubuntu的[这篇文章](https://ubuntu.com/blog/optimised-ubuntu-desktop-images-available-in-microsoft-hyper-v-gallery)和微软的[这篇文章](https://blogs.windows.com/windowsdeveloper/2018/09/17/run-ubuntu-virtual-machines-made-even-easier-with-hyper-v-quick-create/)简单的介绍了下。
 
+如无特别需求，建议使用微软优化过的镜像。除了更方便外，体感上微软优化的镜像运行起来要更快一些。
+
+## 增强模式
+
 如果使用标准镜像，要打开[增强模式](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/use-local-resources-on-hyper-v-virtual-machine-with-vmconnect)的话需要做很多额外操作，可参见[这篇gist](https://gist.github.com/milnak/54e662f88fa47a5d3a317edb712f957e)。
 
 微软之前使用了一个脚本来自动化这些操作，项目在[linux-vm-tool](https://github.com/microsoft/linux-vm-tools)，目前已经归档。只支持了Ubuntu 16.04和18.04。
 
 热心网友[Hinara](https://github.com/Hinara)分叉了这个项目，[支持了](https://github.com/Hinara/linux-vm-tools/tree/ubuntu20-04/ubuntu)Ubuntu 20.04和22.04。上面那篇gist里就是使用这个项目的脚本来安装增强模式的。
 
-如无特别需求，建议使用微软优化过的镜像。除了更方便外，体感上微软优化的镜像运行起来要更快一些。
+总结一下，使用ubuntu的标准镜像打开增强模式的步骤如下：
+
+0. 关闭自动登录
+必须**关闭**自动登录，增强模式需要使用xrdp(x Remote Desktop Protocol)登录，而xrdp登录时需要输入密码。
+
+1. 下载并运行脚本
+```bash
+cd ~/Downloads
+wget https://raw.githubusercontent.com/Hinara/linux-vm-tools/ubuntu20-04/ubuntu/22.04/install.sh
+sudo chmod +x install.sh
+sudo ./install.sh
+```
+
+也可以直接clone整个项目，然后运行脚本
+```bash
+cd ~/Downloads
+git clone https://github.com/Hinara/linux-vm-tools.git
+cd linux-vm-tools/ubuntu/22.04
+sudo chmod +x install.sh
+sudo ./install.sh
+```
+
+2. 重启后，再次运行此脚本
+很多攻略都漏掉了这一步，但这一步很重要，已经在脚本中有输出提示：
+> A reboot is required in order to proceed with the install.
+> Please reboot and re-run this script to finish the install.
+
+```bash
+sudo shutdown -r now
+```
+
+重启后连接虚拟机，再次运行脚本
+```bash
+cd ~/Downloads
+sudo ./install.sh
+```
+
+3. 将虚拟机关机，在宿主机中设置Hyper-V传输类型
+
+```bash
+sudo shutdown -h now
+```
+
+使用Get-VM命令查看虚拟机名称
+```powershlel
+> Get-VM
+Name                                  State   CPUUsage(%) MemoryAssigned(M) Uptime           Status   Version
+----                                  -----   ----------- ----------------- ------           ------   -------
+Ubuntu 22.04 LTS                      Off     0           0                 00:00:00         正常运行 9.0
+
+> Set-VM -VMName 'Ubuntu 22.04 LTS' -EnhancedSessionTransportType HvSocket
+```
+
+再次连接到虚拟机，使用xrdp登录后即可使用增强模式。在控制条上可以切换`基本会话`和`增强会话`。
+
+但似乎声音还是没有呢。
 
 ## 显示分辨率
 
@@ -27,8 +86,8 @@ description: VirtualBox在开启Hyper-V后性能很差，需要切换到Hyper-V�
 
 {% asset_img default-display_resolution.png 默认分辨率 %}
 
-### 标准镜像
-如果是使用的标准镜像，可以修改grub来设置分辨率。
+### 基本会话
+如果是使用的基本会话，可以修改grub来设置分辨率。
 
 使用`sudo nano /etc/default/grub`将`grub`中的`GRUB_CMDLINE_LINUX_DEFAULT`改为
 ```ini
@@ -40,11 +99,40 @@ sudo update-grub
 sudo reboot
 ```
 
-### 微软镜像
+### 增强会话
 
-如果使用的是微软优化过的镜像，在连接时选择全屏就行。
+如果使用的xrdp，在连接时选择全屏就行。
 
 {% asset_img resolution-on-connecting.png 选择分辨率 %}
+
+## 声音
+
+默认安装完后，无法将声音输出到宿主机。需要安装`pulseaudio`。可以参与ubuntu社区中的[这篇帖子](https://ubuntuforums.org/showthread.php?t=2481545)。
+
+```bash
+sudo apt install build-essential dpkg-dev libpulse-dev git autoconf libtool
+
+cd ~/Downloads
+git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+cd pulseaudio-module-xrdp
+
+./scripts/install_pulseaudio_sources_apt_wrapper.sh
+./bootstrap && ./configure PULSE_DIR=~/pulseaudio.src
+
+make
+sudo make install
+
+ls $(pkg-config --variable=modlibexecdir libpulse) | grep 'xrdp'
+
+sudo reboot
+```
+
+在`./scripts/install_pulseaudio_sources_apt_wrapper.sh`这一步会花较长时间下载包，可以在日志文件中查看进度：
+```bash
+tail -f /var/tmp/pa-build-suyu-debootstrap.log
+```
+
+{% asset_img xrdp-sound.png "xrdp sound" %}
 
 ## 硬盘扩容
 
