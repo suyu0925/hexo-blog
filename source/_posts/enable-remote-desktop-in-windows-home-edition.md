@@ -31,7 +31,27 @@ rdpwrap使用Delphi开发，给被阉割的远程桌面服务模块（[termsrv.d
 
 麻烦一点的方法是将它们加入排除项，这样可以持续使用。
 
-## 专业版打开多用户远程登录
+## 使用
+
+### 账号
+
+在使用远程连接之前，最好专门为远程连接创建一个账号，不要直接使用`MicrosftAccount\your-account@microsoft.com`。
+
+Win10：
+1. 进入设置中的帐户，选择家庭和其他用户
+2. 将其他人添加到这台电脑
+3. 等待Microsoft帐户窗口加载完成，选择`我没有这个人的登录信息`
+4. 需要同意一份个人数据导出许可
+5. 选择`添加一个没有 Microsoft 帐户的用户`
+6. 正常的创建本地用户
+
+### 内网穿透
+
+Windows的RDP使用的是TCP 3389端口，内网穿透的设置与ssh的TCP 22端口完全一致。
+
+在RDP客户端，连接的计算机地址那栏是可以带端口号的。
+
+### 专业版打开多用户远程登录
 
 在win10/11专业版上，远程桌面连接默认只允许一个用户登录，多用户同时登录是Windows Server版的特性。
 
@@ -39,6 +59,6 @@ rdpwrap使用Delphi开发，给被阉割的远程桌面服务模块（[termsrv.d
 
 补丁很简单，使用PowerShell都可以完成这个修改，叁见[TermsrvPatcher](https://github.com/fabianosrc/TermsrvPatcher)。
 
-## 进入设置页的快捷方式
+### 进入设置页的快捷方式
 
 顺便一提，使用[ms-settings URI](https://learn.microsoft.com/en-us/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)可以[直接进入远程连接设置页](ms-settings:remotedesktop?activationSource=SMC-IA-4028379)。
