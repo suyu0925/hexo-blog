@@ -11,7 +11,7 @@ description: win11只有家庭版没有专业版，但强需求远程桌面连�
 
 好在有这个需求的人大有人在，于是有了[rdpwrap](https://github.com/stascorp/rdpwrap)项目。
 
-rdpwrap使用Delphi开发，给被阉割的远程桌面服务模块（termsrv.dll）打个补丁，让它恢复专业版拥有的功能。
+rdpwrap使用Delphi开发，给被阉割的远程桌面服务模块（[termsrv.dll](https://www.file.net/process/termsrv.dll.html)）打个补丁，让它恢复专业版拥有的功能。
 
 但rdpwrap年久失修，最近一次更新还是在5年前，只支持到win10。
 
@@ -30,6 +30,14 @@ rdpwrap使用Delphi开发，给被阉割的远程桌面服务模块（termsrv.dl
 避开误报最简单的做法是：在运行前关闭病毒和威胁防护，在成功开启桌面连接后，将exe删除，再重新打开防护。
 
 麻烦一点的方法是将它们加入排除项，这样可以持续使用。
+
+## 专业版打开多用户远程登录
+
+在win10/11专业版上，远程桌面连接默认只允许一个用户登录，多用户同时登录是Windows Server版的特性。
+
+但其实专业版也是被阉割的，只需要修改termsrv.dll就可以开放多用户登录功能。
+
+补丁很简单，使用PowerShell都可以完成这个修改，叁见[TermsrvPatcher](https://github.com/fabianosrc/TermsrvPatcher)。
 
 ## 进入设置页的快捷方式
 
