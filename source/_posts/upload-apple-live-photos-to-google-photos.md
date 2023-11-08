@@ -14,7 +14,7 @@ description: 从iCloud上下载下来的实况照片是.heic和.mov的格式，�
 
 如果在iOS设备上使用谷歌相册[iOS端](https://apps.apple.com/us/app/google-photos/id962194608)上传，会是一个动态照片。打开后默认是照片，点击后可以播放。
 
-但如果经过中转，从iOS设备导出变成.heic和.mov两个文件（icloudpd导出的格式是`IMG_7434.HEIC`和`IMG_7434_HEVC.MOV`），再通过谷歌相册应用[网页端](https://photo.google.com/)或者[安卓端](https://play.google.com/store/apps/details?id=com.google.android.apps.photos)上传，就会变成两个独立的文件。
+但如果经过中转，从iOS设备导出变成.heic和.mov两个文件（[icloudpd](https://github.com/boredazfcuk/docker-icloudpd)导出的格式是`IMG_7434.HEIC`和`IMG_7434_HEVC.MOV`），再通过谷歌相册应用[网页端](https://photo.google.com/)或者[安卓端](https://play.google.com/store/apps/details?id=com.google.android.apps.photos)上传，就会变成两个独立的文件。
 
 ## 试验：转换为谷歌动态照片上传
 
@@ -28,6 +28,6 @@ description: 从iCloud上下载下来的实况照片是.heic和.mov的格式，�
 
 v2ex上[有个帖子](https://www.v2ex.com/t/895593)讨论了live photo，里面有人提到，需要将文件名改成完全一致。
 
-icloudpd导出的格式是`IMG_7434.HEIC`和`IMG_7434_HEVC.MOV`，文件名不一致。
+[icloudpd](https://github.com/boredazfcuk/docker-icloudpd)导出的格式是`IMG_7434.HEIC`和`IMG_7434_HEVC.MOV`，文件名不一致。
 
 改成`IMG_7434.HEIC`和`IMG_7434.MOV`试试。
