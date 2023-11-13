@@ -19,10 +19,18 @@ description: 从iCloud上下载下来的实况照片是.heic和.mov的格式，�
 ## 试验：转换为谷歌动态照片上传
 
 首先.heic文件可以使用[magick](https://imagemagick.org/)轻松转为兼容性更好的.jpg。
+```bash
+magick ./IMG_7434.HEIC ./IMG_7434.jpg
+```
 
 然后根据[Working with Motion Photos](https://medium.com/android-news/working-with-motion-photos-da0aa49b50c)这篇文章的分析，借助[MotionPhotoMuxer](https://github.com/mihir-io/MotionPhotoMuxer)工具，将其合并为一张动态照片。
 
 得到的动态照片在[Motion-Photo-Viewer](https://github.com/dj0001/Motion-Photo-Viewer)上可以正常播放，但却无法使用谷歌相册应用网页端上传，会提示格式错误。
+
+猜测是因为不支持HEVC格式，需要将视频转换为H.264格式。回头试试。
+```bash
+ffmpeg ./IMG_7434_HEVC.MOV -c:v libx264 ./IMG_7434.MOV
+```
 
 ## 试验：将文件名改成完全一致
 
@@ -30,4 +38,4 @@ v2ex上[有个帖子](https://www.v2ex.com/t/895593)讨论了live photo，里面
 
 [icloudpd](https://github.com/boredazfcuk/docker-icloudpd)导出的格式是`IMG_7434.HEIC`和`IMG_7434_HEVC.MOV`，文件名不一致。
 
-改成`IMG_7434.HEIC`和`IMG_7434.MOV`试试。
+改成`IMG_7434.HEIC`和`IMG_7434.MOV`上传后，还是不行。
