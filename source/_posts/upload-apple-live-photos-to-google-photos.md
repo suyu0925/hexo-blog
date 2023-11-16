@@ -29,8 +29,12 @@ magick ./IMG_7434.HEIC ./IMG_7434.jpg
 
 猜测是因为不支持HEVC格式，需要将视频转换为H.264格式。回头试试。
 ```bash
-ffmpeg ./IMG_7434_HEVC.MOV -c:v libx264 ./IMG_7434.MOV
+ffmpeg -i ./IMG_7434_HEVC.MOV -c:v libx264 ./IMG_7434.MOV
 ```
+
+最新结果：转换为H.264格式后，谷歌相册应用网页端上传，一切正常。
+
+写了一个docker来自动完成转换：[docker-live-photos-converter](https://github.com/suyu0925/docker-live-photos-converter)。
 
 ## 试验：将文件名改成完全一致
 
