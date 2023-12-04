@@ -5,7 +5,7 @@ tags:
 description: 大部分开发软件生态都是起源于国外，在安装包时经常会遇上墙，虽然能翻墙，但还是直连国内比较爽对么
 ---
 商业巨头们
-- ~~[阿里](https://developer.aliyun.com/mirror/)~~
+- [阿里](https://developer.aliyun.com/mirror/)
 - [腾讯](https://mirrors.cloud.tencent.com/)
 - [华为](https://mirrors.huaweicloud.com/)
 - [网易](https://mirrors.163.com/)
@@ -16,9 +16,11 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 - [北交大](https://mirror.bjtu.edu.cn/)
 - [浙大](http://mirrors.zju.edu.cn/)
 - [中科大](https://mirrors.ustc.edu.cn/)
+- [哈工大](http://mirrors.hit.edu.cn/)
+- [兰大](http://mirror.lzu.edu.cn/)
 
 这些镜像站通常在提供镜像的同时还会提供用法，比如：
-- [pypi](https://mirrors.cloud.tencent.com/help/pypi.html)
+- [pypi](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 - [npm](http://www.npmmirror.com/)
 - [debian](https://mirrors.ustc.edu.cn/help/debian.html)
 - [maven](https://mirrors.163.com/.help/maven.html)
@@ -26,9 +28,9 @@ description: 大部分开发软件生态都是起源于国外，在安装包时�
 - [crates.io-index.git](https://mirrors.tuna.tsinghua.edu.cn/help/crates.io-index.git/)
 - [docker hub](https://help.aliyun.com/document_detail/60750.html)
 
-阿里的镜像已经被列入黑名单，竟然限速至200KB/s，本来就是为了加速，现在变成龟速。
+阿里的镜像已经被列入黑名单，竟然限速至200KB/s，本来是为了加速，使用镜像后反倒变龟速。
 
-较推荐几个大学的镜像站，比如中科大mirros。
+更推荐几个头部大学的镜像站，比如清华、浙大、中科大。速度快，同步频率也比商业巨头高。
 
 ## github
 
