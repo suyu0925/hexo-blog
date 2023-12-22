@@ -137,20 +137,14 @@ function Page() {
 ```jsx
 function inputTextModal(title) {
   let text = "";
-  return (
-    (new Promise() < string) |
-    (null >
-      ((resolve) => {
-        modals.openConfirmModal({
-          title,
-          content: (
-            <TextInput onChange={(e) => (text = e.currentTarget.value)} />
-          ),
-          onCancel: () => resolve(null),
-          onConfirm: () => resolve(value),
-        });
-      }))
-  );
+  return new Promise((resolve) => {
+    modals.openConfirmModal({
+      title,
+      content: <TextInput onChange={(e) => (text = e.currentTarget.value)} />,
+      onCancel: () => resolve(null),
+      onConfirm: () => resolve(value),
+    });
+  });
 }
 ```
 
@@ -177,11 +171,15 @@ function openCaptchaModal() {
           modals.closeAll()
         }
         onCancel={modals.closeAll}/>,
-      onClose: () => resolve(isOk),
+      onClose: () => isOk && resolve(),
     })
   })
 }
 ```
+
+注意，在这个例子中，如果用户跳过或者没有通过验证，我们并不会 resolve Promise，而是关闭 Modal 后直接将 Promise 挂起。
+
+如果对于用户未成功完成的情况我们无需任何操作，可以使用这个技巧来让使用者用起来更简单，无需对结果进行判断。但这是一把双刃剑，使用时需小心。
 
 ## 总结
 
