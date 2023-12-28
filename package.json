@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "7.0.0"
+    "version": "6.3.0"
   },
   "scripts": {
     "new": "hexo new",
@@ -13,7 +13,7 @@
     "dist": "yarn build && ./dist.bat"
   },
   "dependencies": {
-    "hexo": "^7.0.0",
+    "hexo": "^6.3.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
