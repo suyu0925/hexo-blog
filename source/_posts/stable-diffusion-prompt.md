@@ -1,5 +1,5 @@
 ---
-title: stable diffusion中的提示语
+title: "[Stable Diffusion]提示语"
 date: 2023-02-21 22:03:50
 tags:
 - stable diffusion
@@ -81,9 +81,14 @@ school shirt, jeans, tight crop top, wrap skirt,
 monochrome
 
 ### 艺术家风格
-可以指定使用某个艺术字的风格，比如`a portrait of a character in a scenic environment by [artist]`
+可以指定使用某个艺术字的风格，比如：
+- "a portrait of a character in a scenic environment by [artist]"
+- "a building in a stunning landscape by [artist]"
 
-艺术家`[artist]`可以在[这里](https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=ab624266c6a44413b42a6c57a41d828c)查看。
+SD v1模型中的艺术家列表可以在[这里](https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=ab624266c6a44413b42a6c57a41d828c)查看。
+SD 1.4模型中的艺术家列表可以在[这里](https://www.urania.ai/top-sd-artists)查看。
+SD 1.5模型中的艺术家列表可以在[这里](https://supagruen.github.io/StableDiffusion-CheatSheet/)查看。
+SD XL模型中的艺术家列表可以在[这里](https://sdxl.parrotzone.art/)查看。
 
 ### NSFW
 {% spoiler NSFW %}
