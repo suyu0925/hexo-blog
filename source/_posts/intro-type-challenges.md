@@ -34,4 +34,4 @@ type Last<T extends unknown[]> = T extends [...infer _, infer L] ? L : never
 type Last<T extends unknown[]> = [any, ...T][T["length"]]
 ```
 
-它提供了简单、中等、困难、地狱4个难度的题目，涉及array、object、number、infer、template等方面。开心的去玩耍吧。
+它受到市面上的类型工具库（比如[type-fest](https://github.com/sindresorhus/type-fest)、[ts-toolbelt](https://github.com/millsp/ts-toolbelt)、[utility-types](https://github.com/piotrwitek/utility-types)等）启发，提供了简单、中等、困难、地狱4个难度的题目，涉及array、object、number、infer、template等方面。开心的去玩耍吧。
