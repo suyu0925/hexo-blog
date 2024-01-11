@@ -16,7 +16,7 @@ description: 尝试探讨商业应用的可能性。
 
 智能扩写提示语供用户选择。
 
-{% asset_img expand_prompt.gif 扩写提示语 %}
+{% asset_img prompt-expanding.gif 扩写提示语 %}
 
 - 灵感库
 
