@@ -15,11 +15,20 @@ description: 从B站下载视频有很多种方法，但随着时间推移，很
 
 ## 客户端
 
-客户端只推荐一个，开源的[哔哩下载姬downkyi](https://github.com/leiurayer/downkyi)。工程文件写的很好，可以很方便的在本地编译运行。
+### downkyi
+[哔哩下载姬downkyi](https://github.com/leiurayer/downkyi)。工程文件写的很好，可以很方便的在本地编译运行。
 
 但不知道是不是因为B站修改了登录api，[目前无法登录](https://github.com/leiurayer/downkyi/issues/895)，也就无法使用。
 
 [作者在找工作，暂时没时间维护](https://github.com/leiurayer/downkyi/issues/893)，过段时间再来看吧。
+
+### BBDown
+[BBDown](https://github.com/nilaoda/BBDown)是一款命令行式的哔哩哔哩下载器，功能强大。实在不习惯命令行的话也有其他人基于它做的[GUI版本](https://github.com/1299172402/BBDown_GUI)。
+
+### Hitomi Downloader
+[Hitomi Downloader](https://github.com/KurtBestor/Hitomi-Downloader)并不是专门的B站视频下载器，它支持众多知名的视频网站。
+
+它是韩国人开发的，有很多文档和回答用的韩文，比如[如何使用B站的cookie登录](https://github.com/KurtBestor/Hitomi-Downloader/issues/5383)，需要自己翻译。
 
 ## 浏览器插件
 
