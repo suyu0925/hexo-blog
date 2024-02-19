@@ -82,7 +82,8 @@ vps是一台虚拟服务器，除了搭配机场还可以用作其它用途，�
 
 其中clash的易用性要好一些，推荐clash，如果clash不支持订阅服务器的格式，则用v2ray。
 
-- [clash](https://github.com/Fndroid/clash_for_windows_pkg)
+- ~~[clash-for-windows](https://github.com/Fndroid/clash_for_windows_pkg)~~ clash-for-windows作者已经删库跑路
+- [clash-verge](https://github.com/clash-verge-rev/clash-verge-rev)
 - [v2rayN](https://github.com/2dust/v2rayN)。
 
 ### mac
