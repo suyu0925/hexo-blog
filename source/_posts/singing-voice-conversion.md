@@ -18,6 +18,16 @@ description: 之前写过一篇AI歌手，现在有另一种实现方式。
 
 开源的有[mozilla的](https://github.com/mozilla/TTS)，[coqui-ai的](https://github.com/coqui-ai/TTS)。
 
+**自己训练音色** 
+
+自己训练音色来做tts，有[GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)和[MockingBird](https://github.com/babysor/MockingBird)，都支持5秒语音即可学到音色。
+
+### 变声器
+
+一旦基于VITS（Variational Inference Transformer for Speech）的转换速度够快，就能实现实时变声。
+
+[GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)的作者[花儿不哭](https://space.bilibili.com/5760446)还有另外一个项目：[RVC变声器](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)。
+
 ### SVS
 
 SVS，即Singing Voice Synthesis，是用于基于包括例如歌词、节奏、音高等信息的乐谱来生成虚拟歌声的技术。
