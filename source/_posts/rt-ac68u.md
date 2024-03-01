@@ -1,5 +1,5 @@
 ---
-title: 华硕RT-AC68U路由器烧机
+title: 华硕RT-AC68U路由器刷机
 date: 2024-03-01 14:19:14
 tags:
 description: 工作电脑有公网IP，用windows管理端口很难受，想起家里还有个吃灰的ac68u，拿来废物利用一下。
@@ -76,3 +76,9 @@ sed -i 's/\tdetect_package/\t# detect_package/g' /koolshare/scripts/ks_tar_insta
 在[fancyss_arm 的下载页](https://github.com/hq450/fancyss_history_package/tree/master/fancyss_arm)下载了`fancyss_arm_full_3.3.0.tar.gz`，发现无法离线安装。原因是缺少[/koolshare/bin/httpdb](https://github.com/hq450/fancyss/blob/3.0/fancyss/install.sh#L46)文件。
 
 看来需要更新固件才能安装，但 koolshare 社区已经关闭，很多帖子找不到，包括[384 改版梅林固件发布帖](https://koolshare.cn/thread-164857-1-2.html)，暂且搁置。
+
+## 管理公网访问
+
+使用 asuswrt 管理公网访问很简单，在`外部网络（WAN）`设置中找到`端口转发`，添加一条规则即可。华硕官网有[具体操作教程](https://www.asus.com.cn/support/faq/1037906/)。
+
+注意windows防火墙中也要在入站规则中开放端口，重点看一下连接网络的[网络配置文件类型](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8-windows-%E4%B8%AD%E5%B0%86-wi-fi-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E4%B8%BA%E5%85%AC%E5%85%B1%E6%88%96%E4%B8%93%E7%94%A8%E7%BD%91%E7%BB%9C-0460117d-8d3e-a7ac-f003-7a0da607448d)是否和入站规则的`配置文件`一致。`公用`和`专用`的规则是不同的。
