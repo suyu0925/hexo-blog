@@ -47,6 +47,10 @@ koolshare 不同的固件对应不同的软件中心，具体区别可以看[这
 
 注意 fancyss_arm 仅支持版本号 ≥X7.2 的固件，订阅功能需要版本号 ≥X7.7（最新版本固件为 X7.9.1）。
 
+**[full or lite](https://github.com/hq450/fancyss?tab=readme-ov-file#%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9)**
+
+在干净的条件下，AC68U 的`/tmp`目录有`124M`剩余，[jffs](https://github.com/RMerl/asuswrt-merlin.ng/wiki/JFFS)剩余空间有`52M`，足够安装`36M`的 full 版本。
+
 ## 解除限制
 
 离线安装时会提示
