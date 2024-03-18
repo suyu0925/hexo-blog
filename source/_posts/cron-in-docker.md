@@ -26,7 +26,7 @@ RUN apt-get update && apt-get -y install cron
 RUN touch /root/cron.out
 
 # add the cron job
-RUN crontab -l | { cat; echo "* * * * * echo hello from cron job >> /root/cron.out"; } | crontab -
+RUN echo "* * * * * echo hello from cron job >> /root/cron.out 2>&1" | crontab -
 
 # go
 CMD cron && tail -f /root/cron.out
