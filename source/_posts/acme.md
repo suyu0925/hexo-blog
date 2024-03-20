@@ -171,7 +171,7 @@ server {
 }
 ```
 
-在https配置成功后，可以将http重定向到https。
+在https配置成功后，可以将http重定向到https。注意使用的是308而不是301，这样对post等请求也生效，可以参看这篇[回复](https://stackoverflow.com/questions/13628831/apache-301-redirect-and-preserving-post-data)。
 
 ```nginx
 server {
@@ -180,6 +180,6 @@ server {
   listen 80;
   listen [::]:80;
 
-  return 301 https://$host$request_uri;
+  return 308 https://$host$request_uri;
 }
 ```
