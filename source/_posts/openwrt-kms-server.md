@@ -5,6 +5,10 @@ tags:
 - openwrt
 description: 虽然绑定windows账号后，windows本体点击就送，但Office还是需要购买正版。如果不高兴每年续费Microsft 365，又不信任网上那些激活工具，那么可以折腾一下kms。
 ---
+## 写在最前
+
+已经不再需要使用kms激活windows啦，参见{% post_link microsoft-activation 微软家产品的激活 %}，只要一行命令，即可实现微软家产品的激活。
+
 ## 安装vlmcsd
 
 首先需要安装openwrt上的kms服务端：[openwrt-vlmcsd](https://github.com/cokebar/openwrt-vlmcsd)。
