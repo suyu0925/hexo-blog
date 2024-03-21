@@ -126,7 +126,16 @@ DiskPart successfully detached the virtual disk file.
 
 #### 内部网络
 
-创建好内部网络的虚拟交换机后，需要去设置一下适配器的`Internet 协议版本 4 (TCP/IPv4) 属性`。
+创建一个名为Internal的内部网络，创建完成后，需要去网络连接里设置一下适配器的`Internet 协议版本 4 (TCP/IPv4) 属性`。
+
+比如设为：
+- IP地址：192.168.88.2
+- 子网掩码：255.255.255.0
+- 默认网关：192.168.88.1
+- 首选DNS服务器：8.8.8.8
+- 备用DNS服务器：114.114.114.114
+
+全部配置完后我们将使用OpenWrt当作网关来上网，所以这里的网关就是OpenWrt的IP。
 
 ## 创建虚拟机
 
@@ -188,9 +197,9 @@ uci commit
 reboot
 ```
 
-重启后就一切正常了，即可以通过http://192.168.1.1 访问luci，OpenWrt本身也能够连接网络：
+重启后就一切正常了，即可以通过http://192.168.88.1 访问luci，OpenWrt本身也能够连接网络：
 ```bash
-PS > ssh root@192.168.1.1
+PS > ssh root@192.168.88.1
 root@OpenWrt:~# ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
