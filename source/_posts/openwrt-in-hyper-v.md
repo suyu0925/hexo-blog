@@ -122,7 +122,9 @@ DiskPart successfully detached the virtual disk file.
 
 {% asset_img external-network.png 外部网络 %}
 
-在后续最后全部搞定后，再勾上这个，把以太网的适配器关掉，来让windows使用`内部网络`这张网卡上网。
+创建完外部网卡后，原来的`以太网`适配器会关闭TCP/IPv4等项目，对应的，会打开`Hyper-V可扩展的虚拟交换机`。相当于我们上网的路径变成了从External -> 以太网 -> 因特网。
+
+而在后续操作全部搞定后，再取消勾选`允许管理操作系统共享此网络适配器`，这时External适配器会从网络连接中消失，我们的上网路径就变成了Internal -> 以太网 -> 因特网。
 
 #### 内部网络
 
@@ -233,3 +235,7 @@ OpenWrt官方映像默认只有几十M的空间，我们之前创建虚拟硬盘
 扩容要放在安装软件之前，避免扩容失败反复做无用功。
 
 参见这篇文章{% post_link openwrt-resize-root OpenWrt扩容 %}
+
+## 关闭外部网络
+
+在OpenWrt一切正常后，可以在Hyper-V管理器的虚拟交换机管理器中，将外部网卡External中的设置`允许管理操作系统共享此网络适配器`取消选中，让宿主通过OpenWrt上网。
