@@ -70,6 +70,7 @@ reboot
 
 针对`ext4-combined`
 ```sh
+opkg update
 opkg install losetup resize2fs
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
 PART="${BOOT##*[^0-9]}"
@@ -83,6 +84,7 @@ reboot
 
 针对`squashfs-combined`
 ```sh
+opkg update
 opkg install losetup resize2fs
 BOOT="$(sed -n -e "\|\s/boot\s.*$|{s///p;q}" /etc/mtab)"
 PART="${BOOT##*[^0-9]}"
