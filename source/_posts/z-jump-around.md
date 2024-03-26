@@ -19,7 +19,13 @@ C:\TEMP>
 
 z的原理非常简单，它hack了cd命令，维护记录用户cd的目录列表，以频率和访问时间排序。
 
-原版只支持bash，windows下可使用PowerShell的[移植版](https://github.com/badmotorfinger/z)。
+原版只支持bash或zsh，下载后将z.sh放到用户目录下，然后在.bashrc或.zshrc中添加source命令即可。
+```bash
+echo ". ~/z.sh" >> ~/.bashrc
+source ~/z.sh
+```
+
+windows下可使用PowerShell的[移植版](https://github.com/badmotorfinger/z)。
 ```powershell
 PS C:\>Install-Module z -AllowClobber -Force
 ```
