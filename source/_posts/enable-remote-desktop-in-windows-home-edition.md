@@ -15,7 +15,12 @@ rdpwrap使用Delphi开发，给被阉割的远程桌面服务模块（[termsrv.d
 
 但rdpwrap年久失修，最近一次更新还是在5年前，只支持到win10。
 
-于是有了很多fork，其中的优胜者是[sebaxakerhtc的版本](https://github.com/sebaxakerhtc/rdpwrap)。最主要的工作其实是维护[rdpwrap.ini](https://github.com/sebaxakerhtc/rdpwrap.ini)，因为不同windows版本下的termsrv.dll需要修复的位置和信息有所不同。
+于是有了很多fork，其中的优胜者是[sebaxakerhtc的版本](https://github.com/sebaxakerhtc/rdpwrap)。最主要的工作其实是维护[rdpwrap.ini](https://github.com/sebaxakerhtc/rdpwrap.ini)，因为不同windows版本下的`termsrv.dll`需要修复的位置和信息有所不同，通常都在`%SystemRoot%\System32\`目录下。
+
+> 更新：
+>
+> `sebaxakerhtc`的[rdpwrap.ini](https://github.com/sebaxakerhtc/rdpwrap.ini)项目已于2024年3月[停止维护](https://github.com/sebaxakerhtc/rdpwrap.ini/issues/366)，作者已经很久不使用rdpwrap，也就没有了动力继续维护。
+> 他推荐了[RDPWrapOffsetFinder](https://github.com/llccd/RDPWrapOffsetFinder)项目，大多数情况下，运行`RDPWrapOffsetFinder.exe path\to\termsrv.dll`就会输出对应版本的ini配置，将输出的内容添加到rdpwrap.ini中，便可继续使用rdpwrap。
 
 ## SuperRDP
 
