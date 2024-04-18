@@ -65,6 +65,7 @@ syncthing启动后，默认会生成一个Default Folder。
 假设我们有一台nas服务器和一部pixel手机，在同一个LAN下。我们需要将nas上的相册同步到pixel手机上，使用google相册的无限原始质量存储。
 
 - pixel手机端会默认有一个相册文件夹，但我们不用默认的。重新创建一个`upload-to-gp`的文件夹，文件路径设在相册下的`upload-to-gp`，使用`仅接收`的策略。另外可设置顺序为`Oldest First`，并设置最小磁盘空间为5%，留一些给操作系统。
+- pixel手机端的配置要使用web ui操作，app的操作很有限。
 - 在nas端创建一个`send-to-pixel`的文件夹，文件夹ID填pixel手机端的，保持一致，使用`仅发送`的策略
 - 去pixel手机端`Advanced Configuration`里将`upload-to-gp`文件夹的`Ignore Delete`勾上，避免在上传结束之前在nas端就被清理掉。
 
