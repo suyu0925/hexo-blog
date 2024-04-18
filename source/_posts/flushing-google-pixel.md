@@ -11,6 +11,8 @@ description: 买了个二手皮鞋，拿到手机先刷一个干净的系统。
 
 如果OEM unblocking无法打开，那说明买到的是有锁机，赶紧联系卖家吧。
 
+可以通过adb运行`adb shell getprop ro.boot.cid`来查看机器的CID，如果返回`VZW__001`，说明是V版有锁机，无法解锁bootloader。无运营商锁的正常版本返回的应该是`11111111`。
+
 ## 刷机工具
 安卓的刷机工具就是两个二进制文件：[fastboot](https://android.googlesource.com/platform/system/core/+/master/fastboot/README.md)和[adb](https://source.android.com/docs/setup/build/adb)。可以[自己编译](https://source.android.com/docs/setup/build/running)，也可以直接去安卓官网下载[platform-tools](https://developer.android.com/studio/releases/platform-tools)。
 
