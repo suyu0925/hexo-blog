@@ -48,7 +48,11 @@ Live Photo 会被拆成普通的图片和视频。
 
 这个也好解决，我们定时重启 Google 相册就好了。
 
-可使用 app [MacroDroid](https://www.macrodroid.com/)，设置一个宏，每半小时重新打开一次 Google 相册。
+~~可使用 app [MacroDroid](https://www.macrodroid.com/)，设置一个宏，每半小时重新打开一次 Google 相册。~~
+
+~~MacroDroid[取消了免费版](https://www.macrodroidforum.com/index.php?threads/v5-35-feedback.4864/page-2#:~:text=My%20sales%20of,be%20opt%2Din.)，虽然能理解，但还是选择其它替代品。~~
+
+可以使用 app [Automate](https://llamalab.com/automate/)，设置一个任务，每半小时重新打开一次 Google 相册。
 
 ### 电池过耗
 
