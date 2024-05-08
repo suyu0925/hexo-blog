@@ -5,9 +5,9 @@ tags:
 description: 想看看过去某天的微博热搜是什么，网上搜了下发现一个网站：热搜时光机。
 ---
 
-它应该是有在按分钟爬取[微博实时热搜](https://s.weibo.com/top/summary?cate=realtimehot)，入库后再提供界面给用户查询。
+[热搜时光机](https://www.weibotop.cn/)应该是有在按分钟爬取[微博实时热搜](https://s.weibo.com/top/summary?cate=realtimehot)，入库后再提供界面给用户查询。
 
-但使用网页的方式有点局限，想看看它支不支持 api 访问，于是有了这篇文章。
+虽然能够免费使用，但使用网页的方式还是有点局限，想看看它能不能支持 api 访问，于是有了这篇文章。
 
 ## 初探
 
