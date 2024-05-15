@@ -46,9 +46,11 @@ description: 上一篇文章介绍了微信聊天记录的备份，这篇文章�
 
 语音存放在`/data/data/com.tencent.mm/MicroMsg/{md5('mm'+uin)}/voice2`目录下。
 
-语音也像图片那样，做了索引，存放在两级目录下。扩展名是`.amr`。
+语音也像图片那样，做了索引，存放在两级目录下。扩展名是`.amr`。比如`e4/26/msg_13141905142479bebcac2e0102.amr`。
 
-比如`e4/26/msg_13141905142479bebcac2e0102.amr`。
+虽然扩展名是`.amr`，但实际上却使用了skype同款编码格式[SILK](https://en.wikipedia.org/wiki/SILK)，一般的播放器都不支持，所以需要使用[silk-v3-decoder](https://github.com/kn007/silk-v3-decoder)进行转码。
+
+
 
 **文件**
 
