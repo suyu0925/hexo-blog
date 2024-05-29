@@ -10,10 +10,10 @@ description: 可以说软路由最重要的作用就是科学上网了，在Open
 
 ## 下载
 
-首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.46.003-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.46.003-beta)。
+首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.46.011-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.46.011-beta)。
 
 ```bash
-wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.46.003-beta/luci-app-openclash_0.46.003-beta_all.ipk
+wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.46.011-beta/luci-app-openclash_0.46.011-beta_all.ipk
 ```
 
 如果在 OpenWrt 中无法下载，那么可在宿主机通过代理下载后再拷贝上去。
