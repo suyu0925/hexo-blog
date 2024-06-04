@@ -95,4 +95,10 @@ CPU 核心比想象的要猛，如果访问量不大，基本 2 核就够用。
 
 ~~如果是按固定带宽，且有多台 ECS，那么弹性 IP 成为必选，因为可以[共享带宽](https://help.aliyun.com/zh/internet-shared-bandwidth/product-overview/what-is-internet-shared-bandwidth)。~~
 
-忘记共享带宽当它不存在吧，从 2020 年开始，它的带宽下限改为 1000Mbps，一年 815600 元。
+忘记共享带宽当它不存在吧，从 2020 年开始，[它的带宽下限改为 1000Mbps](https://help.aliyun.com/zh/internet-shared-bandwidth/product-overview/limits)，一年 815600 元。
+
+## 登录凭证
+
+### 登录名
+
+登录名尽量不要用 root，因为 root 是系统管理员，权限太大，容易被黑客利用。建议登录名使用[ecs-user](https://help.aliyun.com/zh/ecs/user-guide/manage-the-username-used-to-log-on-to-an-ecs-instance)，仅在需要 root 权限时再使用 sudo 提权。此时 root 的密码需要[另外设置](https://help.aliyun.com/zh/ecs/user-guide/manage-the-username-used-to-log-on-to-an-ecs-instance#e64800027faj8)。
