@@ -26,6 +26,7 @@ description: 之前在虚拟机里玩了下，现在弄了一台J4105的软路�
 #### 选哪个镜像
 
 OpenWrt的镜像有很多个，大概是下面几个选项的排列组合：
+
 - ext4还是squashfs
 - 单rootfs还是combined
 - efi还是legacy
@@ -50,7 +51,8 @@ WinPE的全称是Windows Preinstallation Environment，是微软官方出的一�
 
 一般用户都会使用第三方WinPE，比如[微PE](https://www.wepe.com.cn/)、[优启通](https://www.upe.net/)等。
 
-但防人之心不可无，既然官方有，为什么要用民间的呢。
+~~但防人之心不可无，既然官方有，为什么要用民间的呢。~~
+官方WinPE不能运行physdiskwrite，暂时使用优启通的ISO搭配ventoy。
 
 #### 安装官方WinPE
 
@@ -58,11 +60,12 @@ WinPE的全称是Windows Preinstallation Environment，是微软官方出的一�
 
 #### 制作WinPE启动U盘
 
-下一步是[创建可启动WinPE介质]（https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive?view=windows-11）。
+下一步是[创建可启动WinPE介质]（<https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive?view=windows-11）。>
 
 1. 首先是创建工作文件。
 
 以管理员身份启动**部署和映像工具环境**（在开始菜单的程序栏Windows Kits下）运行以下脚本
+
 ```powershell
 copype amd64 C:\WinPE_amd64
 ```
@@ -76,11 +79,13 @@ copype amd64 C:\WinPE_amd64
 3. 烧录至U盘
 
 烧录有两种方式，一种是使用**部署和映像工具环境**命令行直接烧录
+
 ```powershell
 MakeWinPEMedia /UFD C:\WinPE_amd64 P:
 ```
 
 另一种是生成iso文件，然后使用通用烧录工具如[rufus](https://rufus.ie/zh/)进行烧录，推荐这种方法，更可控些。
+
 ```powershell
 MakeWinPEMedia /ISO C:\WinPE_amd64 C:\WinPE_amd64\WinPE_amd64.iso
 ```
@@ -96,6 +101,7 @@ MakeWinPEMedia /ISO C:\WinPE_amd64 C:\WinPE_amd64\WinPE_amd64.iso
 首推[physdiskwrite](https://m0n0.ch/wall/physdiskwrite.php)，目前最新版本为[0.5.3](https://m0n0.ch/wall/downloads/physdiskwrite-0.5.3.zip)。
 
 使用方法：
+
 ```bat
 physdiskwrite.exe -u generic-squashfs-combined-efi.img
 ```
@@ -135,6 +141,12 @@ DiskGenius的使用方法就不多说了，扩展rootfs分区使用剩余未分�
 
 **注意**，我在使用DiskGenius扩容rootfs分区时，`generic-squashfs-combined-efi`会出现错误，最后使用了`generic-squashfs-combined`。
 
+#### GParted
+
+如果上面两种方法都不行，那么可以进入Linux系统使用GParted进行分区。
+
+参见这篇文章{% post_link openwrt-resize-root OpenWrt扩容 %}
+
 ## 安装Openwrt
 
 将软路由接上显示器，键盘，鼠标，U盘，然后插电。
@@ -158,6 +170,12 @@ DiskGenius的使用方法就不多说了，扩展rootfs分区使用剩余未分�
 ## 配置Openwrt
 
 重启完成后就会进入Openwrt系统了，等待启动完成按下回车键激活命令行。
+
+### Grub
+
+如果烧录的不是efi版本，那么进入grub引导界面将没有倒计时，需要手动选择`OpenWrt`启动。
+
+可以修改grub配置文件`/boot/grub/grub.cfg`，将`default`改为`0`，这样就不用手动选择了。
 
 ### 密码
 
