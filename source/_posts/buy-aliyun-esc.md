@@ -95,7 +95,9 @@ CPU 核心比想象的要猛，如果访问量不大，基本 2 核就够用。
 
 ~~如果是按固定带宽，且有多台 ECS，那么弹性 IP 成为必选，因为可以[共享带宽](https://help.aliyun.com/zh/internet-shared-bandwidth/product-overview/what-is-internet-shared-bandwidth)。~~
 
-忘记共享带宽当它不存在吧，从 2020 年开始，[它的带宽下限改为 1000Mbps](https://help.aliyun.com/zh/internet-shared-bandwidth/product-overview/limits)，一年 815600 元。
+忘记共享固定带宽，就当它不存在吧。从 2020 年开始，[它的带宽下限改为 1000Mbps](https://help.aliyun.com/zh/internet-shared-bandwidth/product-overview/limits)，一年 815600 元。
+
+按流量计费也可以使用共享带宽，但只是为了方便管理，并不能节省费用。
 
 ## 登录凭证
 
