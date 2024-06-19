@@ -1,11 +1,12 @@
 ---
-title: acme
+title: acme.sh
 date: 2024-03-18 19:56:03
 tags:
-- 善用佳软
+  - 善用佳软
 description: acme.sh是一个非常简单易用的ACME协议的客户端，可以用来申请Let's Encrypt的免费SSL证书。
 ---
-在之前的帖子<a href="{% post_path 'configure-iis' %}#安装SSL证书">配置IIS实现反向代理</a>中已经带到过[acme.sh](https://github.com/acmesh-official/acme.sh)，这里详细介绍一下。
+
+在之前的帖子<a href="{% post_path 'configure-iis' %}#安装SSL证书">配置 IIS 实现反向代理</a>中已经带到过[acme.sh](https://github.com/acmesh-official/acme.sh)，这里详细介绍一下。
 
 ## 安装
 
@@ -13,15 +14,15 @@ description: acme.sh是一个非常简单易用的ACME协议的客户端，可�
 curl https://get.acme.sh | sh -s email=my@example.com
 ```
 
-无需root权限。
+无需 root 权限。
 
-1. 将acme.sh安装到`~/.acme.sh`，并创建一个shell的alias，`alias acme.sh=~/.acme.sh/acme.sh`，放进`.bashrc`。
+1. 将 acme.sh 安装到`~/.acme.sh`，并创建一个 shell 的 alias，`alias acme.sh=~/.acme.sh/acme.sh`，放进`.bashrc`。
 
-2. 创建cronjob，每天0点检测所有证书是否需要更新。
+2. 创建 cronjob，每天 0 点检测所有证书是否需要更新。
 
 ## 验证域名所有权，获取证书
 
-验证域名有两种方式，http和dns。
+验证域名有两种方式，http 和 dns。
 
 ### http
 
@@ -33,7 +34,7 @@ acme.sh --issue --webroot /var/www/example.com -d example.com -d www.example.com
 
 ### dns
 
-不建议使用dns验证，要配合dns api，比较麻烦。
+不建议使用 dns 验证，要配合 dns api，比较麻烦。
 
 ## 安装证书
 
@@ -46,9 +47,10 @@ acme.sh --install-cert -d example.com \
 --reloadcmd     "service nginx force-reload"
 ```
 
-nginx有两处需要注意：
+nginx 有两处需要注意：
+
 1. `ssl_certificate`指向`/etc/nginx/ssl/fullchain.cer`，而非`/etc/nginx/ssl/<domain>.cer`。
-2. 使用`service nginx force-reload`而不是`reload`，因为`reload`不会重新加载`ssl_certificate`。
+2. 使用`service nginx force-reload`而不是`reload`，因为`reload`不会重新加载`ssl_certificate`。使用`nginx -s reload`也可以。
 
 ## 查看已安装证书信息
 
@@ -58,7 +60,7 @@ acme.sh --info -d example.com
 DOMAIN_CONF=/root/.acme.sh/example.com/example.com.conf
 Le_Domain=example.com
 Le_Alt=no
-Le_Webroot=dns_ali
+Le_Webroot=/var/www/example.com
 Le_PreHook=
 Le_PostHook=
 Le_RenewHook=
@@ -80,7 +82,7 @@ Le_RealFullChainPath=/usr/share/certs/example.com.fullchain
 
 ## 更新证书
 
-证书会在60天后自动更新，可以查看cronjob是否生效。
+证书会在 60 天后自动更新，可以查看 cronjob 是否生效。
 
 ```bash
 crontab  -l
@@ -88,16 +90,40 @@ crontab  -l
 56 * * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null
 ```
 
-## 更新acme.sh
+### 手动更新证书
 
-手动更新acme.sh。
+默认每 60 天自动更新一次，但也可以手动强行更新。
+
+```bash
+acme.sh --renew -d example.com --force
+```
+
+### 重新验证域名
+
+注意，更新证书时需要重新验证域名。如果域名验证失败，证书更新也会失败。
+所以`Le_Webroot`需要一直指向正确的网站根目录。
+
+如果 webroot 使用的是 docker volume，那么`Le_Webroot`可以这样指向：
+
+- linux: `/var/lib/docker/volumes/${volume_name}/_data`。
+- windows: `\\wsl$\docker-desktop-data\data\docker\volumes\${volume_name}\_data`。
+
+### docker
+
+如果 webroot 在 docker 里面，可以用一个 container 来将 webroot 挂载到宿主机上。
+
+配置文件可参见[附录](#挂载Webroot)。
+
+## 更新 acme.sh
+
+手动更新 acme.sh。
 
 ```bash
 acme.sh --upgrade
 ```
 
 或者开启自动更新：
-  
+
 ```bash
 acme.sh --upgrade --auto-upgrade
 ```
@@ -120,7 +146,7 @@ acme.sh --issue --debug --webroot /var/www/example.com -d example.com -d www.exa
 
 ## 附录
 
-### nginx配置
+### nginx 配置
 
 ```nginx
 server {
@@ -156,7 +182,7 @@ server {
   proxy_send_timeout 300;
   proxy_read_timeout 300;
   send_timeout 300;
-  
+
   client_max_body_size 100M;
 
   location / {
@@ -171,7 +197,7 @@ server {
 }
 ```
 
-在https配置成功后，可以将http重定向到https。注意使用的是308而不是301，这样对post等请求也生效，可以参看这篇[回复](https://stackoverflow.com/questions/13628831/apache-301-redirect-and-preserving-post-data)。
+在 https 配置成功后，可以将 http 重定向到 https。注意使用的是 308 而不是 301，这样对 post 等请求也生效，可以参看这篇[回复](https://stackoverflow.com/questions/13628831/apache-301-redirect-and-preserving-post-data)。
 
 ```nginx
 server {
