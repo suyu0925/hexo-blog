@@ -108,6 +108,8 @@ acme.sh --renew -d example.com --force
 - linux: `/var/lib/docker/volumes/${volume_name}/_data`。
 - windows: `\\wsl$\docker-desktop-data\data\docker\volumes\${volume_name}\_data`。
 
+可以使用命令`docker inspect my-volume`查看在 host 上的路径。
+
 ### docker
 
 如果 webroot 在 docker 里面，可以用一个 container 来将 webroot 挂载到宿主机上。
