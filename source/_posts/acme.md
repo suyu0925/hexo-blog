@@ -106,6 +106,7 @@ acme.sh --renew -d example.com --force
 如果 webroot 使用的是 docker volume，那么`Le_Webroot`可以这样指向：
 
 - linux: `/var/lib/docker/volumes/${volume_name}/_data`。
+- linux(snap): `/var/snap/docker/common/var-lib-docker/volumes`。
 - windows: `\\wsl$\docker-desktop-data\data\docker\volumes\${volume_name}\_data`。
 
 可以使用命令`docker inspect my-volume`查看在 host 上的路径。
