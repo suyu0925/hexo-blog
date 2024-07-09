@@ -45,6 +45,8 @@ List of devices attached
 2206123SC:/ $
 ```
 
+`adb.exe`在`c:\Program Files\NetEase\MuMu Player 12\shell\`目录下。
+
 更多的开发相关信息可以查看官方文档[MuMu 模拟器 12 开发者须知](https://mumu.163.com/help/20230504/35047_1086360.html)。
 
 ## root
@@ -53,16 +55,17 @@ List of devices attached
 
 {% asset_img enable-root.png 开启手机Root权限 %}
 
-比如不开启手机Root权限，将无法使用su命令:
+比如不开启手机 Root 权限，将无法使用 su 命令:
+
 ```sh
 > adb -s 127.0.0.1:16416 shell
 2206122SC:/ $ su
 /system/bin/sh: su: inaccessible or not found
 ```
 
-然后连接adb，使用`adb root`或者`adb shell`后运行`su`命令。
+然后连接 adb，使用`adb root`或者`adb shell`后运行`su`命令。
 
-此时模拟器会弹出请求root权限的提示，选择`永久记住选择`，然后`允许`即可。
+此时模拟器会弹出请求 root 权限的提示，选择`永久记住选择`，然后`允许`即可。
 
 {% asset_img require-root.png 请求root权限 %}
 
