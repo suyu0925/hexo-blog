@@ -266,3 +266,42 @@ kmod-ipt-nat: 已安装
 ```
 
 关于 Clash 作为透明代理，在[clash 项目](https://github.com/Dreamacro/clash)中有过[讨论](https://github.com/Dreamacro/clash/issues/158)。
+
+### BT/PT
+
+为了防止BT、P2P下载流量经过代理，可选中`覆写设置` -> `规则设备` -> `仅代理命中规则流量`。
+
+选中后将会在配置文件未尾添加：
+```
+- PROCESS-NAME,aria2c,DIRECT
+- PROCESS-NAME,BitComet,DIRECT
+- PROCESS-NAME,fdm,DIRECT
+- PROCESS-NAME,NetTransport,DIRECT
+- PROCESS-NAME,qbittorrent,DIRECT
+- PROCESS-NAME,Thunder,DIRECT
+- PROCESS-NAME,transmission-daemon,DIRECT
+- PROCESS-NAME,transmission-qt,DIRECT
+- PROCESS-NAME,uTorrent,DIRECT
+- PROCESS-NAME,WebTorrent,DIRECT
+- PROCESS-NAME,Folx,DIRECT
+- PROCESS-NAME,Transmission,DIRECT
+- PROCESS-NAME,WebTorrent Helper,DIRECT
+- PROCESS-NAME,v2ray,DIRECT
+- PROCESS-NAME,ss-local,DIRECT
+- PROCESS-NAME,ssr-local,DIRECT
+- PROCESS-NAME,ss-redir,DIRECT
+- PROCESS-NAME,ssr-redir,DIRECT
+- PROCESS-NAME,ss-server,DIRECT
+- PROCESS-NAME,trojan-go,DIRECT
+- PROCESS-NAME,xray,DIRECT
+- PROCESS-NAME,hysteria,DIRECT
+- PROCESS-NAME,singbox,DIRECT
+- PROCESS-NAME,UUBooster,DIRECT
+- PROCESS-NAME,uugamebooster,DIRECT
+- "DST-PORT,80,\U0001F41F 漏网之鱼"
+- "DST-PORT,443,\U0001F41F 漏网之鱼"
+- "DST-PORT,22,\U0001F41F 漏网之鱼"
+- MATCH,DIRECT
+```
+
+对于漏网之鱼只代理22、80、443端口的流量，其它则直连。
