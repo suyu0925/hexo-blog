@@ -135,7 +135,7 @@ Dism /Image:"C:\WinPE_amd64\mount" /Add-Package /PackagePath:"C:\Program Files (
 
 5. 破解
 
-在网上搜了下，有不少文章指向 reboot.pro 这个网站，比如[msfn 上的这篇](https://msfn.org/board/topic/167983-how-to-add-wow64-to-simple-win8pe)，但 reboot.pro 这个网站不能访问。
+搜索了下，有不少文章指向 reboot.pro 这个网站，比如[msfn 上的这篇](https://msfn.org/board/topic/167983-how-to-add-wow64-to-simple-win8pe)，和[superuser 上的这篇](https://superuser.com/questions/1532946/how-to-add-syswow64-support-to-the-windows-10-preinstallation-environment-vers)。但 reboot.pro 这个网站不能访问。
 
 后来在国内的[无忧论坛](http://bbs.wuyou.net/)上看到[[分享] (更新支持虚拟化程序)Win10X64 中运行 32 位程序的临时办法](http://bbs.wuyou.net/forum.php?mod=viewthread&tid=371490)，但也没讲原理。
 
