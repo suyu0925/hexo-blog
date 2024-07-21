@@ -6,6 +6,12 @@ description: 今年暑假打算去西双版纳看看。
 hidden: true
 ---
 
+目录
+
+- [路书](#day-1上海---昆明)
+- [行前准备](#行前准备)
+- [具体景点攻略](#具体景点攻略)
+
 行程一共 7 天，07-27 周六从上海出发，08-03 周六回上海。
 
 ## Day 1：上海 - 昆明
@@ -41,47 +47,53 @@ hidden: true
 
 上午去五华区，[翠湖公园](https://www.mafengwo.cn/poi/1558.html)，[演武堂](https://www.mafengwo.cn/poi/10744.html)，[云南大学](https://www.mafengwo.cn/poi/10855.html)，[西南联大](https://www.mafengwo.cn/poi/10854.html)都在这，且离得不远，可以全程步行。
 
-玩完后去[海梗公园](https://www.mafengwo.cn/poi/33570520.html)打个卡，就[出发前往普洱](https://map.baidu.com/dir/%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD/%E6%80%9D%E8%8C%85%E5%8C%BA/@11284476.851357624,2722760.600000036,9.8z?querytype=nav&c=108&sn=1$$fa01e937fd7d274b774ff115$$11429539.43,2853429.02$$%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD$$0$$$$&en=2$$$$$$%E6%80%9D%E8%8C%85%E5%8C%BA$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&sc=108&ec=108&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)，路程大约 5 个半小时。
+玩完后去[海梗公园](https://www.mafengwo.cn/poi/33570520.html)打个卡，就[出发前往普洱](<https://map.baidu.com/dir/%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD/%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97(%E6%99%AE%E6%B4%B1%E8%8C%B6%E6%BA%90%E5%B9%BF%E5%9C%BA%E5%BA%97)/@11283057.18620309,2720720.62,9.78z?querytype=nav&c=28&sn=1$$fa01e937fd7d274b774ff115$$11429539.43,2853429.02$$%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD$$0$$$$&en=2$$$$$$%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97(%E6%99%AE%E6%B4%B1%E8%8C%B6%E6%BA%90%E5%B9%BF%E5%9C%BA%E5%BA%97)$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&sc=28&ec=28&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)，路程大约 5 个半小时。
 
-普洱的吃住随机应变。
+晚上住[建国玉璞隐酒店](https://map.baidu.com/poi/%E7%8E%89%E6%BA%AA%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97/@11417555.535,2777859.41,19z?uid=b6fac53f9e4779f7b817e7a9&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)茶源广场店。
 
-## Day 4：普洱（普洱茶马古道） - 西双版纳（星光夜市）
+## Day 4：普洱（普洱茶马古道 - 犀牛坪） - 西双版纳（星光夜市）
 
 早上起来吃个普洱米粉。
 
-上午去[普洱茶马古道](https://www.mafengwo.cn/poi/6330137.html)，细节攻略见[这里](#茶马古道)。
+上午去[普洱茶马古道](https://www.mafengwo.cn/poi/6330137.html)，景点就在思茅市区，细节攻略见[这里](#茶马古道)。
 
-然后[驱车前往西双版纳](<https://map.baidu.com/dir/%E6%99%AE%E6%B4%B1%E8%8C%B6%E9%A9%AC%E5%8F%A4%E9%81%93%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)/@11216210.23205298,2546167.959999999,11.23z?querytype=nav&c=108&sn=2$$$$$$%E6%99%AE%E6%B4%B1%E8%8C%B6%E9%A9%AC%E5%8F%A4%E9%81%93%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&en=1$$24906172accd433843ab9a80$$11222404.77,2496669.52$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)$$0$$$$&sc=108&ec=108&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)，路程大概 2 个小时，入住酒店是泼水广场的[华美达安可酒店](<https://map.baidu.com/poi/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)/@11222412.73265762,2496704.338225351,19z?uid=24906172accd433843ab9a80&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl>)。
+然后去[犀牛坪](https://www.mafengwo.cn/poi/33648400.html)，又[叫太阳河森林公园](https://www.mafengwo.cn/poi/7055143.html)，[从茶马古道开车过去](https://map.baidu.com/dir/%E6%99%AE%E6%B4%B1%E8%8C%B6%E9%A9%AC%E5%8F%A4%E9%81%93%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA/%E6%99%AE%E6%B4%B1%E5%A4%AA%E9%98%B3%E6%B2%B3%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD/@11240947.788796907,2580403.974999984,12.98z?querytype=nav&c=108&sn=1$$700d8241939e144eb72655c8$$11243495.47,2595142.89$$%E6%99%AE%E6%B4%B1%E8%8C%B6%E9%A9%AC%E5%8F%A4%E9%81%93%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA$$0$$$$&en=2$$$$$$%E6%99%AE%E6%B4%B1%E5%A4%AA%E9%98%B3%E6%B2%B3%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&sc=108&ec=108&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)约 1 个小时，在去向西双版纳路上。
+
+然后[驱车前往西双版纳](<https://map.baidu.com/dir/%E6%99%AE%E6%B4%B1%E5%A4%AA%E9%98%B3%E6%B2%B3%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)/@11222682.751015453,2532831.87,11.68z?querytype=nav&c=109&sn=2$$$$$$%E6%99%AE%E6%B4%B1%E5%A4%AA%E9%98%B3%E6%B2%B3%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&en=1$$24906172accd433843ab9a80$$11222404.77,2496669.52$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)$$0$$$$&sc=109&ec=109&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)，路程大概 2 个小时，入住酒店是泼水广场的[华美达安可酒店](<https://map.baidu.com/poi/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)/@11222412.73265762,2496704.338225351,19z?uid=24906172accd433843ab9a80&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl>)。
 
 晚上根据体力和心情，告庄的[六国音乐现场](https://www.mafengwo.cn/poi/73154784.html)蹦傣迪、[星光夜市](https://www.mafengwo.cn/poi/7689226.html)拍写真，[曼斗村](https://www.mafengwo.cn/poi/120353264.html)吃烧烤、[江边夜市](https://www.mafengwo.cn/poi/6864497.html)逛吃随便选一个，剩下的在接下来几天的晚上也都会走一遍。
 
 ## Day 5：曼听公园 - 中科院植物园
 
-上午去[曼听公园](https://www.mafengwo.cn/poi/24681.html)，从[白塔](https://www.mafengwo.cn/poi/27082.html)出来，就是[总佛寺](https://www.mafengwo.cn/poi/27107.html)。
+上午去[曼听公园](https://www.mafengwo.cn/poi/24681.html)，从[白塔](https://www.mafengwo.cn/poi/27082.html)出来，就是[总佛寺](https://www.mafengwo.cn/poi/27107.html)。景洪市区不大，开车过去也就几分钟。
 
-下午去[中科院植物园](https://www.mafengwo.cn/poi/24612.html)，约夜游导览晚上抓昆虫。
+下午[开车去](https://map.baidu.com/dir/%E6%9B%BC%E5%90%AC%E5%BE%A1%E8%8A%B1%E5%9B%AD/%E4%B8%AD%E7%A7%91%E9%99%A2%E6%A4%8D%E7%89%A9%E5%9B%AD/@11239420.375232385,2490274.165,12.8z?querytype=nav&c=109&sn=1$$d5464cf8f6b95c56fda778e9$$11222822,2495292$$%E6%9B%BC%E5%90%AC%E5%BE%A1%E8%8A%B1%E5%9B%AD$$0$$$$&en=2$$$$$$%E4%B8%AD%E7%A7%91%E9%99%A2%E6%A4%8D%E7%89%A9%E5%9B%AD$$0$$$$&sc=109&ec=109&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)[中科院植物园](https://www.mafengwo.cn/poi/24612.html)，路程约 1 小时。
+
+记得预约夜游导览晚上看夏日萤火虫。
 
 晚上继续住华美达安可。
 
-## Day 6：西双版纳（基诺山 - 野象谷 - 曼掌村） - 普洱
+## Day 6：望天树 - 勐远仙境（可选）
 
 起床退房，离开景洪市区。
 
-上午[开车去](https://map.baidu.com/dir/%E6%99%AF%E6%B4%AA%E5%B8%82%E6%B3%BC%E6%B0%B4%E5%B9%BF%E5%9C%BA/%E5%9F%BA%E8%AF%BA%E5%B1%B1%E5%AF%A8%E6%99%AF%E5%8C%BA/@11221337.407637004,2494344.0292982613,12.99z?querytype=nav&da_src=shareurl&navtp=4&c=109&sc=1&ec=109&sy=0&drag=0&sn=0$$2a7a25eca1305b1e6c3e1bd3$$11222492.139,2496399.31177$$%E6%99%AF%E6%B4%AA%E5%B8%82%E6%B3%BC%E6%B0%B4%E5%B9%BF%E5%9C%BA$$$$$$&en=1$$undefined$$11242453.1104,2502411.66791$$%E5%9F%BA%E8%AF%BA%E5%B1%B1%E5%AF%A8%E6%99%AF%E5%8C%BA$$$$$$&sq=%E6%99%AF%E6%B4%AA%E5%B8%82%E6%B3%BC%E6%B0%B4%E5%B9%BF%E5%9C%BA%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E%E6%99%AF%E6%B4%AA%E5%B8%82&eq=%E5%9F%BA%E8%AF%BA%E5%B1%B1%E5%AF%A8%E6%99%AF%E5%8C%BA&version=4&mrs=1&route_traffic=1)[基诺山](https://www.mafengwo.cn/poi/73879832.html)徒步，行程大约 40 分钟。
-要记得在微信公众号《版纳安心游景区直通车》上预约。
+上午[开车去](<https://map.baidu.com/dir/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)/%E6%9C%9B%E5%A4%A9%E6%A0%91/@11250217.871247241,2468477.375,11.67z?querytype=nav&da_src=shareurl&navtp=4&c=1&sc=1&ec=1&sy=0&drag=0&sn=1$$undefined$$11222404.77,2496669.52$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)$$$$$$&en=0$$ec219991889aee7579b55c21$$11309511.365,2447996.30987$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%9C%9B%E5%A4%A9%E6%A0%91%E6%99%AF%E5%8C%BA$$$$$$&sq=%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E6%99%AF%E6%B4%AA%E5%8D%8E%E7%BE%8E%E8%BE%BE%E5%AE%89%E5%8F%AF%E9%85%92%E5%BA%97(%E5%8B%90%E6%B5%B7%E8%B7%AF%E5%BA%97)&eq=%E6%9C%9B%E5%A4%A9%E6%A0%91%E6%99%AF%E5%8C%BA-%E6%B8%B8%E5%AE%A2%E4%B8%AD%E5%BF%83&version=4&mrs=1&route_traffic=1>)望天树，望天树比较远，路上约 2 个半小时。
 
-中午[开车去](https://map.baidu.com/dir/%E5%9F%BA%E8%AF%BA%E5%B1%B1%E5%AF%A8%E6%99%AF%E5%8C%BA/%E6%9B%BC%E6%8E%8C%E6%9D%91/@11232612.124062968,2505485.4450000003,14.36z?querytype=nav&navtp=2&c=109&drag=1&sc=109&ec=109&sy=0&sn=1$$$$11242451.87,2502410.94$$%E5%9F%BA%E8%AF%BA%E5%B1%B1%E5%AF%A8%E6%99%AF%E5%8C%BA$$$$$$11242451.87,2502410.94$$&en=1$$$$11226768.9,2509780.08$$%E6%9B%BC%E6%8E%8C%E6%9D%91$$$$$$11226768.9,2509780.08$$&version=4&mrs=1&route_traffic=1&da_src=shareurl)[曼掌村](https://www.mafengwo.cn/poi/33661168.html)，路程大概半小时。
-在这吃中饭，玩亲子项目。淡季（旺季是 11 月-4 月）可能很多店没开门。
+望天树属于热带雨林，景色可以说是中国独一份。
 
-下午[开车去](https://map.baidu.com/dir/%E6%9B%BC%E6%8E%8C%E6%9D%91/%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA/@11227529.45571744,2511421.705,14.46z?querytype=nav&c=109&sn=2$$$$$$%E6%9B%BC%E6%8E%8C%E6%9D%91$$1$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E%E6%99%AF%E6%B4%AA%E5%B8%82$$&en=2$$$$$$%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA$$1$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E%E6%99%AF%E6%B4%AA%E5%B8%82$$&sc=109&ec=109&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)[野象谷](https://www.mafengwo.cn/poi/3151.html)，路程大概半小时。
-有大象食堂、大象学校、兰园、蝴蝶园。
+下午还有时间和体力的话就再去下[勐远仙境](https://www.mafengwo.cn/poi/5426869.html)，[从望天树过去](https://map.baidu.com/dir/%E6%9C%9B%E5%A4%A9%E6%A0%91/%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD%E5%8B%90%E8%BF%9C%E6%99%AF%E5%8C%BA/@11291342.212538632,2447135.615,13.01z?querytype=nav&c=109&sn=0$$ec219991889aee7579b55c21$$11309551.47,2447935.87$$%E6%9C%9B%E5%A4%A9%E6%A0%91$$0$$$$&en=0$$0513f266cae8744eb020a813$$11286701.5218,2461553.46872$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD%E5%8B%90%E8%BF%9C%E6%99%AF%E5%8C%BA$$0$$$$&sc=109&ec=109&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)路程约 1 小时。没心情就跳过。
 
-从野象谷出来[开车到普洱](https://map.baidu.com/dir/%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA/%E6%80%9D%E8%8C%85%E5%8C%BA/@11224738.055496689,2553114.59,11.64z?querytype=nav&c=109&sn=2$$$$$$%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA$$1$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E%E6%99%AF%E6%B4%AA%E5%B8%82$$&en=2$$$$$$%E6%80%9D%E8%8C%85%E5%8C%BA$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&sc=109&ec=109&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)住下，路上大约1个半小时。
+晚上住野象谷附近的[漫景轩民宿](https://map.baidu.com/poi/%E6%99%AF%E6%B4%AA%E6%BC%AB%E6%99%AF%E8%BD%A9%E6%B0%91%E5%AE%BF/@11229302.146826858,2508175.1083244416,19z?uid=fe7d57f946aab69a90114cd9&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)。
 
-## Day 7：普洱 - 昆明
+## Day 7：西双版纳（野象谷 - 曼掌村） - 昆明
 
-这天得回昆明住下，第二天中午的飞机。
-酒店订的[宜必思亲子房](<https://map.baidu.com/poi/%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)/@11441798.789823651,2856961.84745175,19z?uid=2442c8e08bf836703586f4d8&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl>)。
+上午先去[野象谷](https://www.mafengwo.cn/poi/3151.html)，民宿也在曼景坎村，[开车过去](https://map.baidu.com/dir/%E6%99%AF%E6%B4%AA%E6%BC%AB%E6%99%AF%E8%BD%A9%E6%B0%91%E5%AE%BF/%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA/@11228719.53071744,2511421.705,14.46z?querytype=nav&navtp=2&c=109&drag=1&sc=109&ec=109&sy=0&sn=1$$$$11229290.99,2508150.59$$%E6%99%AF%E6%B4%AA%E6%BC%AB%E6%99%AF%E8%BD%A9%E6%B0%91%E5%AE%BF$$$$$$11229290.99,2508150.59$$&en=1$$$$11229163.49,2515979.9$$%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA$$$$$$11229163.49,2515979.9$$&version=4&mrs=1&route_traffic=1&da_src=shareurl)只要半小时。
+
+中午去[曼掌村](https://www.mafengwo.cn/poi/33661168.html)，离野象谷很近，[开车过去](https://map.baidu.com/dir/%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA/%E6%9B%BC%E6%8E%8C/@11227498.82571744,2511421.705,14.46z?querytype=nav&c=28&sn=2$$$$$$%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA$$1$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E%E6%99%AF%E6%B4%AA%E5%B8%82$$&en=1$$bcaebff89283b755c9e33ce6$$11226768.9,2509780.08$$%E6%9B%BC%E6%8E%8C$$0$$$$&sc=28&ec=28&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)只要半小时。
+
+从曼掌村出来就直接回昆明准备明天坐飞机了，[开车过去](<https://map.baidu.com/dir/%E6%9B%BC%E6%8E%8C%E6%9D%91/%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)/@11259496.211854301,2681897.689999998,9.4z?querytype=nav&c=104&sn=2$$$$$$%E6%9B%BC%E6%8E%8C%E6%9D%91$$1$$%E8%A5%BF%E5%8F%8C%E7%89%88%E7%BA%B3%E5%82%A3%E6%97%8F%E8%87%AA%E6%B2%BB%E5%B7%9E%E6%99%AF%E6%B4%AA%E5%B8%82$$&en=1$$2442c8e08bf836703586f4d8$$11441752.95,2856906.95$$%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)$$0$$$$&sc=104&ec=104&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)要 6 个半小时，是这次旅途中最远的一次自驾。备上红牛和辣椒，路上一家人多聊聊天吧。
+
+晚上酒店订的[宜必思亲子房](<https://map.baidu.com/poi/%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)/@11441798.789823651,2856961.84745175,19z?uid=2442c8e08bf836703586f4d8&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl>)。
 
 ## Day 8：昆明 - 上海
 
@@ -97,7 +109,7 @@ hidden: true
 - 热带雨林徒步，望天树/基诺山
 - 中科院热带植物园
 - 傣秀
-- 
+-
 - 野象谷看大象，但经常看不到
 
 可以关注《告庄西双景》公众号，有活动会通知。
@@ -106,13 +118,20 @@ hidden: true
 
 ## 行前准备
 
-- 驱蚊喷雾，多多的带
-- 雨伞
-- 防晒
+### 装备与道具
 
-## 参考资料
+- 驱蚊喷雾，可以在京东买，送到昆明星程。
+- 雨伞，雨衣
+- 防晒衣，防晒霜
+- 便携晒衣架
 
-- B 站 UP 主[是坛坛坛子呀](https://space.bilibili.com/483942789)的[云南省旅游攻略](https://space.bilibili.com/483942789/channel/collectiondetail?sid=1396152)可以看看，有一集[西双版纳](https://www.bilibili.com/video/BV1yj411q72y/)。
+### 预约
+
+- 云南省博
+  在微信小程序《云游文博》上预订
+
+- 中科院植物园夜游
+  在微信小程序《游云南》上预订
 
 ## 具体景点攻略
 
@@ -186,3 +205,7 @@ hidden: true
 ### 基诺山雨林徒步
 
 在微信公众号《版纳安心游景区直通车》定基诺山的游玩行程。
+
+## 参考资料
+
+- B 站 UP 主[是坛坛坛子呀](https://space.bilibili.com/483942789)的[云南省旅游攻略](https://space.bilibili.com/483942789/channel/collectiondetail?sid=1396152)可以看看，有一集[西双版纳](https://www.bilibili.com/video/BV1yj411q72y/)。
