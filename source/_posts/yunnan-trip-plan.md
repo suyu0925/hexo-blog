@@ -11,6 +11,7 @@ hidden: true
 - [路书](#day-1上海---昆明)
 - [行前准备](#行前准备)
 - [具体景点攻略](#具体景点攻略)
+- [参考资料](#参考资料)
 
 行程一共 7 天，07-27 周六从上海出发，08-03 周六回上海。
 
@@ -208,4 +209,5 @@ hidden: true
 
 ## 参考资料
 
-- B 站 UP 主[是坛坛坛子呀](https://space.bilibili.com/483942789)的[云南省旅游攻略](https://space.bilibili.com/483942789/channel/collectiondetail?sid=1396152)可以看看，有一集[西双版纳](https://www.bilibili.com/video/BV1yj411q72y/)。
+- B 站 UP 主[是坛坛坛子呀](https://space.bilibili.com/483942789)的[云南省旅游攻略](https://space.bilibili.com/483942789/channel/collectiondetail?sid=1396152)中的[昆明](https://www.bilibili.com/video/BV1J14y1D7cJ)和[西双版纳](https://www.bilibili.com/video/BV1yj411q72y/)。
+- B 站 UP 主[开元心旅行](https://space.bilibili.com/570095551)的[合集·云南贵州四川](https://space.bilibili.com/570095551/channel/collectiondetail?sid=1058755)中的[昆明](https://www.bilibili.com/video/BV1T34y1F7EZ/)和[西双版纳](https://www.bilibili.com/video/BV1e84y1B7ei/)。
