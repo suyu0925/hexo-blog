@@ -11,6 +11,7 @@ hidden: true
 - [路书](#day-1上海---昆明)
 - [行前准备](#行前准备)
 - [具体景点攻略](#具体景点攻略)
+- [吃](#吃)
 - [参考资料](#参考资料)
 
 行程一共 7 天，07-27 周六从上海出发，08-03 周六回上海。
@@ -48,6 +49,8 @@ hidden: true
 
 上午去五华区，[翠湖公园](https://www.mafengwo.cn/poi/1558.html)，[演武堂](https://www.mafengwo.cn/poi/10744.html)，[云南大学](https://www.mafengwo.cn/poi/10855.html)，[西南联大](https://www.mafengwo.cn/poi/10854.html)都在这，且离得不远，可以全程步行。
 
+停车可以导航到[优玛特生鲜超市翠湖店](https://map.baidu.com/poi/%E4%BC%98%E7%8E%9B%E7%89%B9%E7%94%9F%E9%B2%9C%E8%B6%85%E5%B8%82/@11433777.371602774,2863723.8289348367,19z?uid=a26f3cf941c792441df74d4f&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)，离翠湖200米左右，车位较空，见小红书这个[帖子](https://www.xiaohongshu.com/explore/64cdcab400000000120192dc)。或者在小红书搜索“昆明 翠湖 停车”。
+
 玩完后去[海梗公园](https://www.mafengwo.cn/poi/33570520.html)打个卡，就[出发前往普洱](<https://map.baidu.com/dir/%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD/%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97(%E6%99%AE%E6%B4%B1%E8%8C%B6%E6%BA%90%E5%B9%BF%E5%9C%BA%E5%BA%97)/@11283057.18620309,2720720.62,9.78z?querytype=nav&c=28&sn=1$$fa01e937fd7d274b774ff115$$11429539.43,2853429.02$$%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD$$0$$$$&en=2$$$$$$%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97(%E6%99%AE%E6%B4%B1%E8%8C%B6%E6%BA%90%E5%B9%BF%E5%9C%BA%E5%BA%97)$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&sc=28&ec=28&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)，路程大约 5 个半小时。
 
 晚上住[建国玉璞隐酒店](https://map.baidu.com/poi/%E7%8E%89%E6%BA%AA%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97/@11417555.535,2777859.41,19z?uid=b6fac53f9e4779f7b817e7a9&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)茶源广场店。
@@ -67,6 +70,8 @@ hidden: true
 ## Day 5：曼听公园 - 中科院植物园
 
 上午去[曼听公园](https://www.mafengwo.cn/poi/24681.html)，从[白塔](https://www.mafengwo.cn/poi/27082.html)出来，就是[总佛寺](https://www.mafengwo.cn/poi/27107.html)。景洪市区不大，开车过去也就几分钟。
+
+注意曼听公园正门开进去就是免费停车场，不要停到别人乱标的临时停车场里。
 
 下午[开车去](https://map.baidu.com/dir/%E6%9B%BC%E5%90%AC%E5%BE%A1%E8%8A%B1%E5%9B%AD/%E4%B8%AD%E7%A7%91%E9%99%A2%E6%A4%8D%E7%89%A9%E5%9B%AD/@11239420.375232385,2490274.165,12.8z?querytype=nav&c=109&sn=1$$d5464cf8f6b95c56fda778e9$$11222822,2495292$$%E6%9B%BC%E5%90%AC%E5%BE%A1%E8%8A%B1%E5%9B%AD$$0$$$$&en=2$$$$$$%E4%B8%AD%E7%A7%91%E9%99%A2%E6%A4%8D%E7%89%A9%E5%9B%AD$$0$$$$&sc=109&ec=109&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl)[中科院植物园](https://www.mafengwo.cn/poi/24612.html)，路程约 1 小时。
 
@@ -206,6 +211,36 @@ hidden: true
 ### 基诺山雨林徒步
 
 在微信公众号《版纳安心游景区直通车》定基诺山的游玩行程。
+
+## 吃
+
+### 昆明
+
+滇味
+
+- 连锁店：[福照楼](https://www.dianping.com/search/keyword/267/0_%E7%A6%8F%E7%85%A7%E6%A5%BC)
+- [红豆园](https://www.dianping.com/shop/l1iBlAdJfSStWNtE)，离翠湖比较近
+
+石锅鱼
+
+- 连锁店：[云海肴](https://www.dianping.com/search/keyword/267/0_%E4%BA%91%E6%B5%B7%E8%82%B4)
+
+米线
+
+- 连锁店：[桥香园](https://www.dianping.com/search/keyword/267/0_%E6%A1%A5%E9%A6%99%E5%9B%AD)
+- 连锁店：[建新园](https://www.dianping.com/search/keyword/267/0_%E5%BB%BA%E6%96%B0%E5%9B%AD)
+
+烧烤
+
+- 连锁店：[塘屋烧烤](https://www.dianping.com/search/keyword/267/0_%E5%A1%98%E5%B1%8B%E7%83%A7%E7%83%A4)，记得点香茅草烤鱼和爆浆豆腐
+
+菌子
+
+- [南华山菌](https://www.dianping.com/shop/l4n8bBK5vVWzqivE)，菌子新鲜，但价格贵，而且远
+
+藏餐
+
+- [宏达金牛](https://www.dianping.com/shop/G8sRBpAMRdQgsi2i)，离翠湖近
 
 ## 参考资料
 
