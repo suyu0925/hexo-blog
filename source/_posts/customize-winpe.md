@@ -145,6 +145,28 @@ Dism /Image:"C:\WinPE_amd64\mount" /Add-Package /PackagePath:"C:\Program Files (
 
 还是想找到最原始的方法，我的叙求也就是运行一个 physdiskwrite 而已。
 
-6. 未完待续
+6. 尝试自行破解
 
-...
+首先，复制`C:\Windows\System32`下的`wow64*`文件到winpe。
+
+```sh
+copy C:\Windows\System32\wow64*.dll C:\WinPE_amd64\mount\Windows\System32\
+```
+
+然后，复制SysWOW64目录。
+
+```sh
+xcopy C:\Windows\SysWOW64 C:\WinPE_amd64\mount\Windows\SysWOW64 /s /e
+```
+
+最后，修改注册表。
+
+```sh
+reg load HKLM\WinPE_SysWOW64 C:\WinPE_amd64\mount\Windows\SysWOW64\config\SYSTEM
+reg add "HKLM\WinPE_SysWOW64\ControlSet001\Control\Session Manager\Environment" /v PROCESSOR_ARCHITECTURE /t REG_SZ /d AMD64 /f
+reg unload HKLM\WinPE_SysWOW64
+```
+
+失败。
+
+找到一篇文章：[WoW64 - Windows 10.0.*****](http://mistyprojects.co.uk/documents/winpe_tweaks/readme.files/WoW64_WinPE10.htm)，写的更详细了些。
