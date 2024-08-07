@@ -42,4 +42,6 @@ description: 记录一些下载电影的去处。
 [RARBG](https://en.wikipedia.org/wiki/RARBG)最近几年一直在[TorrentFreak](https://torrentfreak.com/)的[Top 10 Torrent Sites](https://torrentfreak.com/top-torrent-sites/)里。
 能够看得了生肉，或者愿意折腾字幕可以上这里。
 
+在`Top 10 Torrent Sites`中可以找到除开`RARBG`外的一些下载站，比如[YTS](https://yts.mx/)，[1337x](https://1337x.to/)、[EZTV](https://eztvx.to/)等。
+
 {% asset_img rarbg.png RARBG %}
