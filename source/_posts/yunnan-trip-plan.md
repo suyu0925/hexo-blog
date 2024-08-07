@@ -30,6 +30,10 @@ hidden: true
 
 吃完晚饭附近随便逛逛。
 
+> 到酒店安顿好后已经超过 9 点，茄子恰恰关店了。
+>
+> 在附近随便找了一家[烧烤店](https://www.dianping.com/shop/H8DH48HuEn8M82Tl)坐下，后来发现这是个错误的决定。又慢又热，不适合饥肠辘辘的我们。
+
 ## Day 2：云南省博物馆 - 石林
 
 想睡个懒觉的话可以在酒店吃早餐。但酒店送的早餐只有 2 人，可以选择一半人在酒店吃，一半人吃面包。
@@ -45,15 +49,37 @@ hidden: true
 
 石林的细节攻略见[这里](#石林)。
 
+> 99 元买了全员两天酒店早餐，不高兴分开吃。
+>
+> 上午错误的导航到了[昆明市博物馆](https://www.mafengwo.cn/poi/11127.html)，看到门口冷冷清清才反应过来走错了。
+>
+> 云南省博的主题是云南这块土地亿年来发生的故事，慢慢一个个看过去得要个大半天。
+>
+> 中饭随便找了家[老滇山寨](https://www.dianping.com/shop/H7rj8IhscEViSXe4)，非常惊喜，好吃量大还便宜，吃完才发现上了必吃榜。强烈推荐青椒炒牛肝菌和汽锅菌子肉饼。
+>
+> 吃完中饭又下起了雨，于是改了行程，不去石林，改成去[七彩云南欢乐世界](https://www.mafengwo.cn/poi/34763992.html)看火把节。夜票 90 元每人，意外的不错，下雨都挡不住游客的热情。
+
 ## Day 3: 昆明（西南联大、云南大学、演武堂、翠湖公园 - 海梗公园） - 普洱
 
 上午去五华区，[翠湖公园](https://www.mafengwo.cn/poi/1558.html)，[演武堂](https://www.mafengwo.cn/poi/10744.html)，[云南大学](https://www.mafengwo.cn/poi/10855.html)，[西南联大](https://www.mafengwo.cn/poi/10854.html)都在这，且离得不远，可以全程步行。
 
-停车可以导航到[优玛特生鲜超市翠湖店](https://map.baidu.com/poi/%E4%BC%98%E7%8E%9B%E7%89%B9%E7%94%9F%E9%B2%9C%E8%B6%85%E5%B8%82/@11433777.371602774,2863723.8289348367,19z?uid=a26f3cf941c792441df74d4f&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)，离翠湖200米左右，车位较空，见小红书这个[帖子](https://www.xiaohongshu.com/explore/64cdcab400000000120192dc)。或者在小红书搜索“昆明 翠湖 停车”。
+停车可以导航到[优玛特生鲜超市翠湖店](https://map.baidu.com/poi/%E4%BC%98%E7%8E%9B%E7%89%B9%E7%94%9F%E9%B2%9C%E8%B6%85%E5%B8%82/@11433777.371602774,2863723.8289348367,19z?uid=a26f3cf941c792441df74d4f&ugc_type=3&ugc_ver=1&device_ratio=2&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)，离翠湖 200 米左右，车位较空，见小红书这个[帖子](https://www.xiaohongshu.com/explore/64cdcab400000000120192dc)。或者在小红书搜索“昆明 翠湖 停车”。
 
 玩完后去[海梗公园](https://www.mafengwo.cn/poi/33570520.html)打个卡，就[出发前往普洱](<https://map.baidu.com/dir/%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD/%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97(%E6%99%AE%E6%B4%B1%E8%8C%B6%E6%BA%90%E5%B9%BF%E5%9C%BA%E5%BA%97)/@11283057.18620309,2720720.62,9.78z?querytype=nav&c=28&sn=1$$fa01e937fd7d274b774ff115$$11429539.43,2853429.02$$%E6%B5%B7%E5%9F%82%E5%85%AC%E5%9B%AD$$0$$$$&en=2$$$$$$%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97(%E6%99%AE%E6%B4%B1%E8%8C%B6%E6%BA%90%E5%B9%BF%E5%9C%BA%E5%BA%97)$$1$$%E6%99%AE%E6%B4%B1%E5%B8%82%E6%80%9D%E8%8C%85%E5%8C%BA$$&sc=28&ec=28&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)，路程大约 5 个半小时。
 
 晚上住[建国玉璞隐酒店](https://map.baidu.com/poi/%E7%8E%89%E6%BA%AA%E5%BB%BA%E5%9B%BD%E7%92%9E%E9%9A%90%E9%85%92%E5%BA%97/@11417555.535,2777859.41,19z?uid=b6fac53f9e4779f7b817e7a9&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)茶源广场店。
+
+> 翠湖比想象的小，不一会就逛完了。
+>
+> 原来周一不止省博关门，西南联大和讲武堂也关门，只能怪功课没做好。
+
+> 中饭吃了必吃榜的[文山荷鲜居](https://www.dianping.com/shop/k5YoGCsO6WqQNSk0)，便宜又好吃，很棒。
+>
+> 夏天没有海鸥，海梗公园不值得去。
+>
+> 去往普洱的高速比江浙沪弯和隧道多一些，但路况还好，不用担心。
+>
+> 晚上在酒店叫外卖叫得比较失败。
 
 ## Day 4：普洱（普洱茶马古道 - 犀牛坪） - 西双版纳（星光夜市）
 
@@ -67,6 +93,14 @@ hidden: true
 
 晚上根据体力和心情，告庄的[六国音乐现场](https://www.mafengwo.cn/poi/73154784.html)蹦傣迪、[星光夜市](https://www.mafengwo.cn/poi/7689226.html)拍写真，[曼斗村](https://www.mafengwo.cn/poi/120353264.html)吃烧烤、[江边夜市](https://www.mafengwo.cn/poi/6864497.html)逛吃随便选一个，剩下的在接下来几天的晚上也都会走一遍。
 
+> 早上图方便还是吃了酒店早餐，也有米粉，但挺一般。
+>
+> 上午去了茶马古道，但走反了方向，往市区方向逛了毫无价值的茶马古城，就没时间和心情再坐景区车上茶马古道景区了。
+>
+> 下午去了太阳河森林公园，有一大段路是省道，因为下大雨时不时能碰上小型滑坡，需要控制车速提高注意力。当天感觉景区还可以，后面去过版纳的中科院植物园和野象谷后就觉得下雨就没必要去了。
+>
+> 晚上在江边夜市的[傣江园](https://www.dianping.com/shop/k5C3ii0qnkPdWEe0)吃孔雀宴（不算好吃，但比在大理古城吃过的一家好），然后去星光夜市拍写真。雨一直在下，挺影响游玩体验的。
+
 ## Day 5：曼听公园 - 中科院植物园
 
 上午去[曼听公园](https://www.mafengwo.cn/poi/24681.html)，从[白塔](https://www.mafengwo.cn/poi/27082.html)出来，就是[总佛寺](https://www.mafengwo.cn/poi/27107.html)。景洪市区不大，开车过去也就几分钟。
@@ -78,6 +112,14 @@ hidden: true
 记得预约夜游导览晚上看夏日萤火虫。
 
 晚上继续住华美达安可。
+
+> 早饭吃的景洪必吃榜仅有的三家之一：[云味坊土鸡米线](https://www.dianping.com/shop/G20DZTCg6vAcllxO)，确实不错。鸡肉好吃汤更鲜美，价格还便宜。
+>
+> 上午继续雨中游曼听，雨越下越大，只是走马观花的逛了一遍。
+>
+> 下午和晚上玩中科院植物园。不愧是 5A 级，体验独一档，夜游也非常棒，有很多体验算得上全国独一份。
+>
+> 有机会再来的话不要用《游云南》公众号，而是直接使用中科院植物园的公众号约独立成团，拼团人还是太多，而且讲解员素质不如独立团。
 
 ## Day 6：望天树 - 勐远仙境（可选）
 
@@ -91,6 +133,14 @@ hidden: true
 
 晚上住野象谷附近的[漫景轩民宿](https://map.baidu.com/poi/%E6%99%AF%E6%B4%AA%E6%BC%AB%E6%99%AF%E8%BD%A9%E6%B0%91%E5%AE%BF/@11229302.146826858,2508175.1083244416,19z?uid=fe7d57f946aab69a90114cd9&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl)。
 
+> 到版纳后每天都玩到很晚，今天不高兴去过远的景点，修改行程，取消望天树，直接去野象谷。
+>
+> 因为连续下雨，不可能发现野象。但把野象谷栈道玩成了夜游植物园的白天版，发现了不少昆虫。
+>
+> 曼掌村的造纸也玩不了，需要晒太阳。随便逛了逛，这里可能更适合带幼儿的亲子家庭，对我们意义不大。
+>
+> 晚上住的漫景轩就开在旁边的曼景坎村里，装修很一般，不要报太高的期望。
+
 ## Day 7：西双版纳（野象谷 - 曼掌村） - 昆明
 
 上午先去[野象谷](https://www.mafengwo.cn/poi/3151.html)，民宿也在曼景坎村，[开车过去](https://map.baidu.com/dir/%E6%99%AF%E6%B4%AA%E6%BC%AB%E6%99%AF%E8%BD%A9%E6%B0%91%E5%AE%BF/%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA/@11228719.53071744,2511421.705,14.46z?querytype=nav&navtp=2&c=109&drag=1&sc=109&ec=109&sy=0&sn=1$$$$11229290.99,2508150.59$$%E6%99%AF%E6%B4%AA%E6%BC%AB%E6%99%AF%E8%BD%A9%E6%B0%91%E5%AE%BF$$$$$$11229290.99,2508150.59$$&en=1$$$$11229163.49,2515979.9$$%E9%87%8E%E8%B1%A1%E8%B0%B7%E7%83%AD%E5%B8%A6%E9%9B%A8%E6%9E%97%E6%99%AF%E5%8C%BA$$$$$$11229163.49,2515979.9$$&version=4&mrs=1&route_traffic=1&da_src=shareurl)只要半小时。
@@ -101,11 +151,23 @@ hidden: true
 
 晚上酒店订的[宜必思亲子房](<https://map.baidu.com/poi/%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)/@11441798.789823651,2856961.84745175,19z?uid=2442c8e08bf836703586f4d8&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl>)。
 
+> 早上饱饱睡到自然醒，启程回明昆。
+>
+> 路上顺路经过[墨江北回归线标志园](https://www.mafengwo.cn/poi/6631825.html)，这里不值得专门来，除非刚好碰上[双胞节](https://baike.baidu.com/item/%E5%A2%A8%E6%B1%9F%E5%9B%BD%E9%99%85%E5%8F%8C%E8%83%9E%E8%83%8E%E8%8A%82/17528473)。
+>
+> 晚上找干巴菌炒饭没找着，还是因为下雨的缘故，要卖到 2000 元一斤，很多饭店都暂时不做这道菜。
+
 ## Day 8：昆明 - 上海
 
 吃完早餐就[开车去](<https://map.baidu.com/dir/%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)/%E4%B8%80%E5%97%A8%E7%A7%9F%E8%BD%A6(%E9%95%BF%E6%B0%B4%E6%9C%BA%E5%9C%BA%E5%BA%97)/@11445730.93107946,2863068.929999998,13.99z?querytype=nav&c=104&sn=1$$2442c8e08bf836703586f4d8$$11441752.95,2856906.95$$%E5%AE%9C%E5%BF%85%E6%80%9D%E9%85%92%E5%BA%97(%E6%98%86%E6%98%8E%E8%87%AA%E8%B4%B8%E5%8C%BA%E4%BA%91%E5%A4%A7%E8%A5%BF%E8%B7%AF%E5%BA%97)$$0$$$$&en=2$$$$$$%E4%B8%80%E5%97%A8%E7%A7%9F%E8%BD%A6(%E9%95%BF%E6%B0%B4%E6%9C%BA%E5%9C%BA%E5%BA%97)$$1$$%E6%98%86%E6%98%8E%E5%B8%82%E5%AE%98%E6%B8%A1%E5%8C%BA$$&sc=104&ec=104&pn=0&rn=5&mrs=1&version=4&route_traffic=1&sy=0&da_src=shareurl>)[长水机场的一嗨](<https://map.baidu.com/poi/%E4%B8%80%E5%97%A8%E7%A7%9F%E8%BD%A6(%E9%95%BF%E6%B0%B4%E6%9C%BA%E5%9C%BA%E5%BA%97)/@11458576.627659721,2869877.843782339,18.62z?uid=6a38db94ea3cbb01d2f49e59&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl>)还车，路程大概半小时。
 
 东航航班[MU5775](https://flights.ctrip.com/actualtime/detail.html?flightNo=MU5775&departCity=KMG&arriveCity=PVG&date=2024-08-03)回上海。12:50 昆明长水出发，16:40 到达上海浦东 T1，经停井岗山，飞行约 4 小时。
+
+> 回程飞机碰上交通管制导致晚点，这两次航班经停的机场都是军民合用机场，很容易受到军机影响，以后尽量不要选经停的。
+>
+> 这次云南行虽然还留下不少遗憾，没有去望天树，没有看到野象，告庄也没有好好逛，但总体还是非常满意，俩娃都很开心。
+>
+> 总花销大概在 2 万 3，人均不到 6 千，算是性价比很高的一次旅行。
 
 ---
 
