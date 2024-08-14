@@ -56,7 +56,23 @@ Host github.com
 
 如果在创建ssh key时指定了密码，为了避免反复输入密码，可以使用[ssh-agent](https://man.openbsd.org/ssh-agent.1)。参见[Working with SSH key passphrases](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases)。
 
-## github连接出错
+## 切换仓库地址
+
+使用ssh key认证后，拉取仓库就需要使用ssh地址而不是https地址。
+
+```sh
+> git remote -v
+origin  https://github.com/username/repository.git (fetch)
+origin  https://github.com/username/repository.git (push)
+
+> git remote set-url origin git@github.com:username/repository.git
+
+> git remote -v
+origin  git@github.com:username/repository.git (fetch)
+origin  git@github.com:username/repository.git (push)
+```
+
+## 附录：github连接出错
 
 如果碰到了这个问题：
 
