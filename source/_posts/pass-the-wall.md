@@ -68,7 +68,7 @@ vps是一台虚拟服务器，除了搭配机场还可以用作其它用途，�
 
 网上会有一些搜集来的免费代理，非常不稳定，无法长期使用，但对一般人来说也够用。
 
-比如[get_subscribe](https://github.com/ermaozi/get_subscribe)、[v2rayNvpn](https://github.com/githubvpn007/v2rayNvpn)。
+比如[v2rayshare](https://v2rayshare.com/)、[get_subscribe](https://github.com/ermaozi/get_subscribe)、[v2rayNvpn](https://github.com/githubvpn007/v2rayNvpn)。
 
 在github搜索“免费机场”，会有[很多](https://github.com/search?q=%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA&type=repositories&s=stars&o=desc)。
 
