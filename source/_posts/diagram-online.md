@@ -18,4 +18,4 @@ description: 推荐几个在线画流程图的网站。
 
 [zenuml](https://app.zenuml.com/)可以直接从代码生成UML图，很方便。
 
-类图的cheat sheet可以去[wiki](https://en.wikipedia.org/wiki/Class_diagram)看。
+类图的cheatsheet可以去[wiki](https://en.wikipedia.org/wiki/Class_diagram)看。

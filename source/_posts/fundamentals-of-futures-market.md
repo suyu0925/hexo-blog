@@ -3,7 +3,7 @@ title: 期货市场的基础知识
 date: 2024-08-16 09:19:33
 tags:
 - quant
-description: cheat sheet。
+description: cheatsheet。
 ---
 ## 期货交易所
 
