@@ -8,7 +8,7 @@ hidden: true
 ---
 ## 期货交易所
 
-期货交易所由[证监会](http://www.csrc.gov.cn/)批准成立，交易所变动会在[证监会要闻](http://www.csrc.gov.cn/guestweb4/s?searchWord=%25E6%259C%259F%25E8%25B4%25A7%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580&column=%25E6%2596%25B0%25E9%2597%25BB%25E5%258F%2591%25E5%25B8%2583&pageSize=10&pageNum=0&siteCode=bm56000001&sonSiteCode=&checkHandle=1&searchSource=0&govWorkBean=%257B%257D&sonSiteCode=&areaSearchFlag=-1&secondSearchWords=&topical=&docName=&label=&countKey=0&uc=0&left_right_index=0&searchBoxSettingsIndex=&manualWord=%25E6%259C%259F%25E8%25B4%25A7%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580&orderBy=0&startTime=&endTime=&timeStamp=0&strFileType=&wordPlace=0)上公示。
+期货交易所由[证监会](http://www.csrc.gov.cn/)批准成立，交易所变动会在[证监会要闻](http://www.csrc.gov.cn/guestweb4/s?searchWord=%25E6%259C%259F%25E8%25B4%25A7%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580&column=%25E6%2596%25B0%25E9%2597%25BB%25E5%258F%2591%25E5%25B8%2583&pageSize=10&pageNum=0&siteCode=bm56000001&sonSiteCode=&checkHandle=1&searchSource=0&govWorkBean=%257B%257D&sonSiteCode=&areaSearchFlag=-1&secondSearchWords=&topical=&docName=&label=&countKey=0&uc=0&left_right_index=0&searchBoxSettingsIndex=&manualWord=%25E6%259C%259F%25E8%25B4%25A7%25E4%25BA%25A4%25E6%2598%2593%25E6%2589%2580&orderBy=0&startTime=&endTime=&timeStamp=0&strFileType=&wordPlace=0)上公示。证监会网站的`统计信息`栏会定期发布期货市场的周报和月报。
 
 截止发帖时间，中国的期货交易所一共有6个。
 
@@ -21,13 +21,13 @@ hidden: true
 - [郑州商品交易所（CZCE）](http://www.czce.com.cn/)，简称郑商所。
   - 在郑州粮食批发市场的基础上发展起来，品种以农产品和轻工业为主。
   - 重要品种：[菜籽粕](http://www.czce.com.cn/cn/sspz/czp/H770211index_1.htm)、[纯碱](http://www.czce.com.cn/cn/sspz/cjqh/H770224index_1.htm)、[PTA](http://www.czce.com.cn/cn/sspz/pta/H770205index_1.htm)、[玻璃](http://www.czce.com.cn/cn/sspz/bl/H770209index_1.htm)等。
-- [中国金融期货交易所（CFFE）](http://www.cffex.com.cn/)，简称中金所。
+- [中国金融期货交易所（CFFEX）](http://www.cffex.com.cn/)，简称中金所。
   - 由上期所、郑商所、大商所、上交所和深交所共同发起设立，产品有股指和国债。
   - 重要品种：[沪深300](http://www.cffex.com.cn/hs300/)、[中证1000](http://www.cffex.com.cn/zz1000/)、[10年期国债](http://www.cffex.com.cn/10tf/)等。
 - [上海国际能源交易中心（INE）](https://www.ine.cn/)，简称上期能源。
   - 由上海期化交易所出资设立，面向全球投资者的国际性交易场所，品种为能源相关。
   - 重要品种：[原油](https://www.ine.cn/products/sc/)、[SCFIS欧线](https://www.ine.cn/products/ec/)、[铜(BC)，又称阴极铜](https://www.ine.cn/products/bc/)等。
-- [广州期货交易所（GFE）](http://www.gfex.com.cn/)，简称广期所。
+- [广州期货交易所（GFEX）](http://www.gfex.com.cn/)，简称广期所。
   - 最新成立的交易所，未来规划有碳排放、电力、中证商品指数、稀土、咖啡等品种。
   - 目前仅上市2个品种：[碳酸锂](http://www.gfex.com.cn/gfex/tsl/sspz.shtml)、[工业硅](http://www.gfex.com.cn/gfex/gyeg/sspz.shtml)。
 
