@@ -44,7 +44,9 @@ chmod -R 777 /root/aria2/download
 
 使用[trackers_best_ip.txt](https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt)，注意要将2个换行符替换成`,`来适配语法。
 
-{% asset_img "openwrt-aria2-bt-trackers" "BitTorrent Trackers" %}
+{% asset_img "openwrt-aria2-bt-trackers.png" "BitTorrent Trackers" %}
+
+国内可以使用[trackerslist.com](https://github.com/XIU2/TrackersListCollection)的[best.txt](https://cf.trackerslist.com/best.txt)。
 
 ## 内网穿透
 
