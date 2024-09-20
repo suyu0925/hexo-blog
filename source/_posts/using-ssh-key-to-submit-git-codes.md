@@ -103,3 +103,25 @@ Host github.com
     IdentitiesOnly yes
     Port 443
 ```
+
+## 附录：使用ssh key登录云服务器
+
+使用ssh key来登录云服务器也非常方便。
+
+首先在云服务器端，将公钥添加到`~/.ssh/authorized_keys`文件中。
+
+```sh
+cat cloud_id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
+然后在客户机可以这样定义config:
+
+```ini
+# cloud
+Host cloud
+    HostName 11.22.33.44
+    User root
+    IdentityFile ~/.ssh/cloud_id_rsa
+```
+
+接着只要使用`ssh cloud`就可以登录云服务器了。
