@@ -97,7 +97,9 @@ vps是一台虚拟服务器，除了搭配机场还可以用作其它用途，�
 
 ### android
 
+- [v2rayNG](https://github.com/2dust/v2rayNG)
 - [shadowsocks-android](https://github.com/shadowsocks/shadowsocks-android)
+- ~~[ClashForAndroid](https://web.archive.org/web/20231103070004/https://github.com/Kr328/ClashForAndroid/)~~ ClashForAndroid作者已经删库跑路
 
 ### openwrt(路由器)
 
