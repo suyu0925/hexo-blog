@@ -8,13 +8,34 @@ categories:
 - computer science
 ---
 
-# 检查端口使用情况
 
-## powershell on windows
+# windows
+
+## 使用netstat
+
+```sh
+netstat -ano | findstr LISTENING
+```
+
+查到进程号后，再调用`tasklist`查看进程名。
+
+```sh
+tasklist /FI "PID eq <PID>"
+```
+
+如果有**管理员权限**，可以直接使用`-b`参数查看进程名。
+
+```sh
+netstat -bano | Select-String ":5000" -Context 0,1
+```
+
+## 使用powershell
 
 ```bash
-Get-Process -Id (Get-NetTCPConnection -LocalPort YourPortNumberHere).OwningProcess
+Get-Process -Id (Get-NetTCPConnection -LocalPort <YourPortNumberHere>).OwningProcess
 ```
+
+# linux
 
 ## lsof
 
@@ -41,13 +62,6 @@ $ netstat -tulpn | grep LISTEN
 ```bash
 $ netstat -anp tcp | grep LISTEN
 $ netstat -anp udp | grep LISTEN
-```
-
-**Windows**
-```bash
-netstat -bano | more
-netstat -bano | findstr LISTENING
-netstat -bano | findstr /R /C:"[LISTEING]"
 ```
 
 ## nmap(需要安装)
