@@ -156,9 +156,18 @@ kex=X25519MLKEM768
 }
 ```
 
-### discoard
+### claude 和 chatgpt
 
-[discoard](https://discord.com/)使用了`cdn-cgi`：[https://discord.com/cdn-cgi/trace](https://discord.com/cdn-cgi/trace)。
+[chatgpt](https://chatgpt.com/)和[claude](https://claude.ai/)都使用了`cdn-cgi`:
+
+- [https://chatgpt.com/cdn-cgi/trace](https://chatgpt.com/cdn-cgi/trace)。
+- [https://claude.ai/cdn-cgi/trace](https://claude.ai/cdn-cgi/trace)。
+
+这个可以用来测试代理分流（使用 AI 接口时最好使用美国节点）。
+
+### 其他`cdn-cgi`
+
+[discoard](https://discord.com/)：[https://discord.com/cdn-cgi/trace](https://discord.com/cdn-cgi/trace)。
 
 ### cloudflare
 
@@ -177,6 +186,29 @@ kex=X25519MLKEM768
   "country": "HK",
   "latitude": "22.29080",
   "longitude": "114.15010"
+}
+```
+
+### ip-api
+
+[ip-api](http://ip-api.com)提供了网址：[http://ip-api.com/json/](http://ip-api.com/json/)，格式为 json。
+
+```json
+{
+  "status": "success",
+  "country": "Hong Kong",
+  "countryCode": "HK",
+  "region": "KKT",
+  "regionName": "Kwun Tong",
+  "city": "Kowloon Bay",
+  "zip": "",
+  "lat": 22.3327,
+  "lon": 114.2116,
+  "timezone": "Asia/Hong_Kong",
+  "isp": "Hong Kong Telecommunications (HKT) Limited Mass Internet",
+  "org": "Hong Kong Telecommunications (HKT) Limited",
+  "as": "AS4760 HKT Limited",
+  "query": "203.198.13.125"
 }
 ```
 
