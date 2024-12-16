@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "7.2.0"
+    "version": "7.3.0"
   },
   "scripts": {
     "new": "hexo new",
@@ -13,10 +13,10 @@
     "dist": "yarn build && ./dist.bat"
   },
   "dependencies": {
-    "hexo": "^7.2.0",
+    "hexo": "^7.3.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
     "hexo-generator-searchdb": "^1.4.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-hide-posts": "^0.4.3",
@@ -26,7 +26,7 @@
     "hexo-server": "^3.0.0",
     "hexo-sliding-spoiler": "^1.2.1",
     "hexo-static-math": "0.1.0",
-    "hexo-theme-next": "^8.19.2"
+    "hexo-theme-next": "^8.21.1"
   },
   "devDependencies": {
     "hexo-cli": "^4.3.2"

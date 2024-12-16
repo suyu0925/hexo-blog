@@ -1257,11 +1257,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hex-blog@workspace:."
   dependencies:
-    hexo: "npm:^7.2.0"
+    hexo: "npm:^7.3.0"
     hexo-cli: "npm:^4.3.2"
     hexo-generator-archive: "npm:^2.0.0"
     hexo-generator-category: "npm:^2.0.0"
-    hexo-generator-index: "npm:^3.0.0"
+    hexo-generator-index: "npm:^4.0.0"
     hexo-generator-searchdb: "npm:^1.4.1"
     hexo-generator-tag: "npm:^2.0.0"
     hexo-hide-posts: "npm:^0.4.3"
@@ -1271,7 +1271,7 @@ __metadata:
     hexo-server: "npm:^3.0.0"
     hexo-sliding-spoiler: "npm:^1.2.1"
     hexo-static-math: "npm:0.1.0"
-    hexo-theme-next: "npm:^8.19.2"
+    hexo-theme-next: "npm:^8.21.1"
   languageName: unknown
   linkType: soft
 
@@ -1358,12 +1358,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hexo-generator-index@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "hexo-generator-index@npm:3.0.0"
+"hexo-generator-index@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "hexo-generator-index@npm:4.0.0"
   dependencies:
     hexo-pagination: "npm:3.0.0"
-  checksum: 10c0/e0eadf32d44ad12e3a58706df866b32131d22a2e412f57f8b57a98b1d465fa6996485ecbf55be9111b8bda6a7c21d909595f1464f687e6b86df670e9390f664a
+  checksum: 10c0/e8108d85d4e7912170862a5d13a1341ae6f1bb2f67586835a5eba6722f3e0e064cd445b0fe2e6126a2deb196f3b19ef20dc84dc53717868b7eb1bf3675833952
   languageName: node
   linkType: hard
 
@@ -1485,10 +1485,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hexo-theme-next@npm:^8.19.2":
-  version: 8.19.2
-  resolution: "hexo-theme-next@npm:8.19.2"
-  checksum: 10c0/2cf70a43e35a4eacbf7682a8b96159050fcd5c84748394b2fd38cfa27fab7cd61795b054dbba6aa12d2974e2222761da56e3f53686b0cca6fd901433cacceca4
+"hexo-theme-next@npm:^8.21.1":
+  version: 8.21.1
+  resolution: "hexo-theme-next@npm:8.21.1"
+  checksum: 10c0/b2cd11efbfff95042402f6951341ac97e8adb8b13a62e2543295c311ce13dc8aaebb3b2ae579c6124d08818ba465da13bb329f9b9694296589858b921c7b8bbc
   languageName: node
   linkType: hard
 
@@ -1538,9 +1538,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hexo@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "hexo@npm:7.2.0"
+"hexo@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "hexo@npm:7.3.0"
   dependencies:
     abbrev: "npm:^2.0.0"
     archy: "npm:^1.0.0"
@@ -1568,7 +1568,7 @@ __metadata:
     warehouse: "npm:^5.0.1"
   bin:
     hexo: bin/hexo
-  checksum: 10c0/acd78f79c7047dcfc29afc9bcfa00521e56b67cda778c5ebd1929435c276df3d94ffdc784742781bab89f9c712f04d737b1238ae29ce3e912cd75d02ef36b1b0
+  checksum: 10c0/db41379b9f10ebd183677a43874dc170b215c8d368a603f594e463fd3fb03d37110958daa66e1f80ba66641c15fe08a8c2fc5a2289c1875e6a47f02645a2e228
   languageName: node
   linkType: hard
 
