@@ -6,6 +6,16 @@ tags:
 description: docker在近日被墙，码农们拼命自救，感谢大善人cf。
 ---
 
+2025年2月12日补充：cf缩紧了worker的使用限制，当前使用worker来代理docker image已经不可用。于2024年12月3号发布的[最新用户协议](https://www.cloudflare.com/zh-cn/terms/)中明确指出：
+
+```txt
+2.2.1 Restrictions
+
+(j) use the Services to provide a virtual private network or other similar proxy services.
+```
+
+更多公共镜像站可以参见[DaoCloud](https://www.daocloud.io/)创建的[镜像加速服务状态监控](https://status.daocloud.io/status/docker)。
+
 ## worker
 
 不废话直接上代码，这段代码来自B站文章[运维 Tips | 巧用CF的Workers完美解决Docker镜像国内无法拉取](https://www.bilibili.com/read/cv35330365/)：
