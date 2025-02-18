@@ -10,10 +10,10 @@ description: 可以说软路由最重要的作用就是科学上网了，在Open
 
 ## 下载
 
-首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.46.011-beta](https://github.com/vernesong/OpenClash/releases/tag/v0.46.011-beta)。
+首先手动下载`.ipk`包文件。截止这篇文章，最新版本为[v0.46.075](https://github.com/vernesong/OpenClash/releases/tag/v0.46.075)。
 
 ```bash
-wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.46.011-beta/luci-app-openclash_0.46.011-beta_all.ipk
+wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/download/v0.46.075/luci-app-openclash_0.46.075_all.ipk
 ```
 
 如果在 OpenWrt 中无法下载，那么可在宿主机通过代理下载后再拷贝上去。
@@ -22,10 +22,10 @@ wget -O luci-app-openclash.ipk https://github.com/vernesong/OpenClash/releases/d
 scp ./luci-app-openclash.ipk root@192.168.88.1:/root/
 ```
 
-再下载一个[v1.11.0-7-g5497ada 版本的 Dev 内核](https://github.com/vernesong/OpenClash/releases/tag/Clash)备用。
+再下载一个[meta 内核](https://github.com/vernesong/OpenClash/tree/core/master/meta)备用。
 
 ```bash
-wget -O https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-amd64.tar.gz clash-linux-amd64.tar.gz
+wget -O https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz clash-linux-amd64.tar.gz
 ```
 
 ## 安装
@@ -48,70 +48,16 @@ openclash 使用了 dnsmasq-full，为了避免冲突，需要先卸载 dnsmasq�
 
 ### 内核
 
-OpenClash 使用的 dev 内核是已经跑路的[Clash 项目](https://github.com/Dreamacro/clash)，会[自动定期编译](https://github.com/vernesong/OpenClash/actions)。
+[dev 内核](https://github.com/Dreamacro/clash)已经跑路，目前openclash只使用一个meta内核。
+
+如果无法下载，可以将之前下载的meta内核手动上传到`/etc/openclash/core`。
 
 ```bash
-GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/Dreamacro/clash/constant.Version=v1.17.0-5-ge1ec0d2" -X "github.com/Dreamacro/clash/constant.BuildTime=Sat Jul 29 19:08:17 UTC 2023" -w -s -buildid=' -o bin/clash
-```
-
-编译好的内核文件没有放在`ipk`包中，初次使用时需要根据 Openwrt 系统自助下载内核。
-如果是 arm 路由器比如使用 aarch64_cortex-a53 的[EasyPi ARS2](https://doc.linkease.com/zh/guide/easepi/)，则需要编译对应的版本，比如 AUK9527 做的[iStore 扩展插件包](https://github.com/AUK9527/Are-u-ok/tree/main/apps)。
-
-{% asset_img "openclash-core-config.png" "内核" %}
-
-内核的下载地址是 github 仓库，github 会间歇性的抽风，当抽风时无法在控制台下载。
-
-```log
-2022-07-25 07:26:34 【Dev】版本内核更新失败，请确认设备闪存空间足够后再试！
-2022-07-25 07:26:34 【Dev】版本内核下载成功，开始更新...
-2022-07-25 07:26:04 【Dev】版本内核正在下载，如下载失败请尝试手动下载并上传...
-2022-07-25 07:23:56 警告：OpenClash 目前处于未启用状态，请从插件页面启动本插件，脚本退出...
-```
-
-不要被日志中的`请确认设备闪存空间足够后再试`骗了，其实是网络错误而不是闪存空间不足。
-
-这时需要像下载`ipk`那样，手动下载再上传到 OpenWrt 上。
-
-```bash
-wget -O clash-linux-amd64.tar.gz https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-amd64.tar.gz
 scp clash-linux-amd64.tar.gz root@192.168.88.1:/etc/openclash/core
-```
-
-内核下载地址
-
-- 老的 Release 页面
-  - [Dev 内核](https://github.com/vernesong/OpenClash/releases/tag/Clash)
-  - [Tun 内核](https://github.com/vernesong/OpenClash/releases/tag/TUN-Premium)
-  - [Tun 游戏内核](https://github.com/vernesong/OpenClash/releases/tag/TUN)
-- 当前发布的最新内核
-  - [Dev 内核](https://github.com/vernesong/OpenClash/tree/core/master/dev)
-  - [Tun 内核](https://github.com/vernesong/OpenClash/tree/core/master/premium)
-  - [Meta 内核](https://github.com/vernesong/OpenClash/tree/core/master/meta)
-
-注意：
-
-> 新的内核只支持 fake-ip，如果使用了**在线订阅模板**，最好使用老的内核。
-> 否则会出现`invalid mode： redir-host`的错误，可参见这个[issue](https://github.com/Dreamacro/clash/issues/2559)。
-
-上传到 OpenWrt`/etc/openclash/core`下的对应位置。
-
-- Dev 内核: clash
-- Tun 内核: clash_tun
-- Meta 内核: clash_meta
-
-```bash
-cd /etc/openclash/core
 tar -zxvf clash-linux-amd64.tar.gz
+mv clash clash_meta
 rm clash-linux-amd64.tar.gz
 ```
-
-`clash`内核的权限应该为`nobody:nogroup`，可以手动修改权限，也可以让 openclash 自行修改。
-
-```bash
-chown nobody:nogroup /etc/openclash/core/* 2>/dev/null
-```
-
-下载 Dev 内核并应用后，就可以配置好代理，之后使用控制台来更新内核了。
 
 **UDP**
 
