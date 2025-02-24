@@ -46,17 +46,7 @@ git config --global url."https://ghproxy.com/https://github.com".insteadOf "http
 
 ### 国内源
 
-- [~~网易数帆~~](https://sf.163.com/help/documents/56918246390157312)
-
-~~https://hub-mirror.c.163.com~~
-
-- [百度云](https://cloud.baidu.com/doc/CCE/s/Yjxppt74z#%E4%BD%BF%E7%94%A8dockerhub%E5%8A%A0%E9%80%9F%E5%99%A8)
-
-https://mirror.baidubce.com
-
-- [阿里云-需登录](https://www.aliyun.com/product/acr)
-
-需要登录后，去管理控制台中的镜像加速器查看自己的id，以获取加速器地址：https://`${your_id}`.mirror.aliyuncs.com
+高校和云服务器的docker源都已经下架，公共镜像站可以参见[DaoCloud](https://www.daocloud.io/)创建的[镜像加速服务状态监控](https://status.daocloud.io/status/docker)。建议使用`https://docker.1ms.run/`。
 
 ### 使用方法
 
